@@ -183,4 +183,16 @@ public class TextButton extends StyledButton {
     public void setText(String text) {
         this.text = text;
     }
+
+    public String getCurrentFont() {
+        return currentFont;
+    }
+
+    public void setCurrentFont(String currentFont) {
+        this.currentFont = currentFont;
+    }
+
+    public Color getCurrentTextColor() {
+        return currentTextColor;
+    }
 }

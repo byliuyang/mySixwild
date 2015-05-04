@@ -97,19 +97,19 @@ public class MenuScreen extends Screen {
         getAboutButton().setBounds(ABOUT_BUTTON_BOUNDS);
 
 //        Add controller to buttons
-        ContinueGameButtonController continueGameButtonController = new ContinueGameButtonController(continueButton);
+        ContinueGameButtonController continueGameButtonController = new ContinueGameButtonController(continueButton, app);
         getContinueButton().addMouseListener(continueGameButtonController);
         getContinueButton().addMouseMotionListener(continueGameButtonController);
 
-        ViewLevelsButtonController viewLevelsButtonController = new ViewLevelsButtonController(levelsButton);
+        ViewLevelsButtonController viewLevelsButtonController = new ViewLevelsButtonController(levelsButton,app);
         getLevelsButton().addMouseListener(viewLevelsButtonController);
         getLevelsButton().addMouseMotionListener(viewLevelsButtonController);
 
-        AchievementButtonController achievementButtonController = new AchievementButtonController(badgeButton);
+        AchievementButtonController achievementButtonController = new AchievementButtonController(badgeButton,app);
         getBadgeButton().addMouseListener(achievementButtonController);
         getBadgeButton().addMouseMotionListener(achievementButtonController);
 
-        AboutButtonController aboutButtonController = new AboutButtonController(aboutButton);
+        AboutButtonController aboutButtonController = new AboutButtonController(aboutButton,app);
         getAboutButton().addMouseListener(aboutButtonController);
         getAboutButton().addMouseMotionListener(aboutButtonController);
 

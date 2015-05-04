@@ -19,7 +19,7 @@ public class Screen extends TransitableView {
     //    Status bar padding left
     final int PADDING_LEFT = 0;
 //    Screen background color
-    final Color SCREEN_BACK_COLOR = new Color(249, 246, 242);
+    public static final Color SCREEN_BACK_COLOR = new Color(249, 246, 242);
 
     //    Title of the screen
     String title;

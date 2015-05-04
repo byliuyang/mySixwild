@@ -29,6 +29,8 @@ public class StyledButton extends JComponent{
     //    Padding left
     final int PADDING_LEFT = 0;
 
+    boolean activeState;
+
     /**
      * @param normalBackColor  Normal background color
      * @param hoveredBackColor   Mouse enter background color
@@ -40,6 +42,7 @@ public class StyledButton extends JComponent{
         this.hoveredBackColor = hoveredBackColor;
         this.activedBackColor = activedBackColor;
         this.disabledBackColor = disabledBackColor;
+        this.activeState = false;
 
         currentBackColor = normalBackColor;
     }
@@ -48,35 +51,48 @@ public class StyledButton extends JComponent{
      * @return
      */
     public void normal() {
-        currentBackColor = normalBackColor;
-        repaint();
+        if( !activeState) {
+            currentBackColor = normalBackColor;
+            repaint();
+        }
     }
 
     /**
      * @return
      */
     public void actived() {
+        this.activeState = true;
         currentBackColor = activedBackColor;
         repaint();
+    }
+
+    public void inactive() {
+        this.activeState = false;
+        normal();
     }
 
     /**
      * @return
      */
     public void disabled() {
-        currentBackColor = disabledBackColor;
-        repaint();
+        if( !activeState) {
+            this.activeState = false;
+            currentBackColor = disabledBackColor;
+            repaint();
+        }
     }
 
     /**
      * @return
      */
     public void hovered() {
-        currentBackColor = hoveredBackColor;
-        repaint();
+        if(!activeState) {
+            currentBackColor = hoveredBackColor;
+            repaint();
+        }
     }
 
-    void ensureImageAvailable() {
+    public void ensureImageAvailable() {
         if (bufferImage == null) {
             bufferImage = this.createImage((int) getPreferredSize().getWidth(), (int) getPreferredSize().getHeight());
 
@@ -140,5 +156,19 @@ public class StyledButton extends JComponent{
         this.disabledBackColor = disabledBackColor;
     }
 
+    public Graphics2D getGraphics2D() {
+        return graphics2D;
+    }
 
+    public Color getCurrentBackColor() {
+        return currentBackColor;
+    }
+
+    public void setCurrentBackColor(Color currentBackColor) {
+        this.currentBackColor = currentBackColor;
+    }
+
+    public void setActiveState(boolean activeState) {
+        this.activeState = activeState;
+    }
 }

@@ -2,8 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08f5d030-2172-4ee9-ab97-6eebcdb659e5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/AnimationTimerTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/DetailPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelButton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/ViewLevelScreen/LevelButtonController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelFlipPagePanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/LockableButtonController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButtonView.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/StarLarge_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/lastPage_game.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/nextPage_game.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/AnimationManager.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/AnimationManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Application.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/FlipPagePanel.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/FlipPagePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/FlipPageScreen.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/FlipPageScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Contracts/ImageContract.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Contracts/ImageContract.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/LargeStarsView.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/LargeStarsView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelView.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/ListPanel.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/ListPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Models/Score.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Models/Score.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/SmallStarsView.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/SmallStarsView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/StarsView.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/StarsView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/StyledButton.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/StyledButton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/TextButton.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Views/Components/TextButton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Models/TransitableValue.class" afterPath="$PROJECT_DIR$/out/production/mySixesWild/SixesWild/Models/TransitableValue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AboutButtonController.java" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AboutButtonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Application.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java" afterPath="$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/LargeStarsView.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/LargeStarsView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/ListPanel.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/ListPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Models/Score.java" afterPath="$PROJECT_DIR$/src/SixesWild/Models/Score.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/SmallStarsView.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/SmallStarsView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/StarsView.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/StarsView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java" afterPath="$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Models/TransitableValue.java" afterPath="$PROJECT_DIR$/src/SixesWild/Models/TransitableValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java" afterPath="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mySixesWild.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,6 +71,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/mySixesWild$Main.coverage" NAME="Main Coverage Results" MODIFIED="1430694001126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -26,36 +83,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AchievementButtonController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeveloperIntroPicture.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.04200323">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Screen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1640#1641#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyledLabel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StyledLabel.java">
+      <file leaf-file-name="BadgeCanvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyledButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java">
+      <file leaf-file-name="LevelView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AchievementButtonController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StarsView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StarsView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,11 +175,10 @@
         <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,66 +188,10 @@
         <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnimationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuScreen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36079547">
-              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="129" column="63" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="63" />
-              <folding>
-                <element signature="e#1944#1945#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#3775#3776#0" expanded="true" />
-                <element signature="e#3813#3814#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/ImageButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="94" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -167,57 +221,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/ImageContract.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Contracts/ToolKitContract.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/CloseWindowButtonController.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/NavigableToolBar.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Contracts/TipContract.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledLabel.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/NavigationBar.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelsScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/FlipPageScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgesScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/AboutScreenPicture.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/DeveloperIntroPicture.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StatusBar.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/TransitableView.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/MenuScreenBanner.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreen/MenuScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreen/MenuScreenBanner.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/NavigableScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreen/AboutScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreen/DeveloperIntroPicture.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreen/BadgeCanvas.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/GridView.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreen/LevelView.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreen/TileView.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreen/IntegerView.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreen/TimeNavigationBar.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/SpecialMoveView.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgesScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/GameScreen.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/IntegerLabelNavigationBar.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreenBanner.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/LevelButtonController.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/LevelButtonController.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/PastLevelButtonController.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueButtonController.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/AnimationTimerTask.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Models/TransitableValue.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/LargeStarsView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Models/Score.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/StyledView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/StyledButtonView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/ListPanelButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/ListPanelViewButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButtonView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButtonView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/ViewLevelScreen/LevelButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/DetailPanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/FlipPageScreen.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelFlipPagePanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/LockableButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/ListPanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/SmallStarsView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StarsView.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AboutButtonController.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java" />
         <option value="$PROJECT_DIR$/src/SixesWild/Views/Application.java" />
-        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java" />
+        <option value="$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java" />
       </list>
     </option>
   </component>
@@ -229,7 +283,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="2" />
+    <option name="y" value="24" />
     <option name="width" value="1680" />
     <option name="height" value="963" />
   </component>
@@ -256,6 +311,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -415,6 +471,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="LevelScreenPackage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BadgeScreenPackage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="AboutScreenPackage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -463,7 +579,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Moves" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ViewLevelScreen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,14 +679,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mySixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SixesWild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Contracts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -514,6 +721,7 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/harryliu/projects/mySixesWild/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -786,6 +994,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
@@ -808,15 +1022,17 @@
       <workItem from="1430411778421" duration="486000" />
       <workItem from="1430413429658" duration="330000" />
       <workItem from="1430575913888" duration="36093000" />
-      <workItem from="1430620016284" duration="11580000" />
+      <workItem from="1430620016284" duration="13938000" />
+      <workItem from="1430661367940" duration="6460000" />
+      <workItem from="1430673204282" duration="26387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48574000" />
+    <option name="totallyTimeSpent" value="83779000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="963" extended-state="0" />
+    <frame x="2" y="24" width="1680" height="963" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -824,22 +1040,23 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3165548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27083334" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18120806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27628636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -858,7 +1075,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -867,178 +1084,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/NavigationBar.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Models/SpecialMoveLeft.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/javax/imageio/ImageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1300" column="0" selection-start-line="1300" selection-start-column="0" selection-end-line="1300" selection-end-column="0" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/IModelUpdated.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StatusBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/TransitableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7948718">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeDetailPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/GridView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/IntegerCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/TileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/IntegerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/TimeNavigationBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/SpecialMoveView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgesScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/FlipPageScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/GameScreenPackage/IntegerLabelNavigationBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1053,32 +1110,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/GridView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14914773">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33238637">
+          <caret line="2396" column="0" selection-start-line="2396" selection-start-column="0" selection-end-line="2396" selection-end-column="0" />
+          <folding>
+            <element signature="e#82992#82993#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/PageIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="31" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Contracts/TipContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/LargeStarsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.909091">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Models/Level.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="e#1565#1566#0" expanded="false" />
-            <element signature="e#1600#1601#0" expanded="false" />
-            <element signature="e#1626#1627#0" expanded="false" />
-          </folding>
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/ClearTileSpecialMoveController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/ImageButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="106" column="109" selection-start-line="97" selection-start-column="8" selection-end-line="106" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Models/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1091,76 +1194,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/LastPageButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/RestartLevelController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelDetailPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/StatusBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/FlipPageScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/StartLevelButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/ResetBoardSpecialMoveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/NextPageButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreenBanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="false" />
+            <element signature="e#1650#1651#0" expanded="false" />
+            <element signature="e#1686#1687#0" expanded="false" />
+            <element signature="e#1844#1845#0" expanded="false" />
+            <element signature="e#1878#1879#0" expanded="false" />
+            <element signature="e#1937#1938#0" expanded="false" />
+            <element signature="e#1983#1984#0" expanded="false" />
+            <element signature="e#2030#2031#0" expanded="false" />
+            <element signature="e#2066#2067#0" expanded="false" />
+            <element signature="e#2131#2132#0" expanded="false" />
+            <element signature="e#2181#2182#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/DetailPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelsScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/LockableButtonController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
@@ -1170,81 +1268,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/CloseWindowButtonController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButtonView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/ClearBadgeButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/ButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/SwapSquareSpecialMoveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AboutButtonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/ViewLevelScreen/LevelButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StyledLabel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-          </folding>
+          <caret line="122" column="141" selection-start-line="114" selection-start-column="8" selection-end-line="122" selection-end-column="141" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/FlipPagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1252,23 +1321,84 @@
     <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StyledButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding>
+            <element signature="e#3187#3188#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3888#3889#0" expanded="true" />
+            <element signature="e#3946#3947#0" expanded="true" />
+            <element signature="e#3987#3988#0" expanded="true" />
+            <element signature="e#4020#4021#0" expanded="true" />
+            <element signature="e#4062#4063#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4164#4165#0" expanded="true" />
+            <element signature="e#4220#4221#0" expanded="true" />
+            <element signature="e#4275#4276#0" expanded="true" />
+            <element signature="e#4321#4322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StatusBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StyledLabel.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/SmallStarsView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Contracts/ImageContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/ImageButton.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/ListPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="94" selection-end-column="34" />
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2609#2610#0" expanded="true" />
+            <element signature="e#2653#2654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelFlipPagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/awt/Font.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1053" column="0" selection-start-line="1053" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1276,36 +1406,176 @@
     <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/TextButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="63" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="63" />
-          <folding>
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#3775#3776#0" expanded="true" />
-            <element signature="e#3813#3814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/AnimationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="29" />
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/LockableButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4406#4407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreenBanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/MenuScreenPackage/MenuScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36079547">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="114" selection-start-line="107" selection-start-column="114" selection-end-line="107" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/CloseWindowButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/GoBackButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AboutButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/AchievementButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ContinueGameButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Controllers/MenuScreen/ViewLevelsButtonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/BadgeScreenPackage/BadgeCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/LevelScreenPackage/LevelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Components/StarsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/AboutScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SixesWild/Views/Screens/AboutScreenPackage/DeveloperIntroPicture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.04200323">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding />
         </state>
       </provider>
