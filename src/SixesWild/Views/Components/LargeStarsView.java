@@ -5,10 +5,10 @@ package SixesWild.Views.Components;
  */
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Utilities;
 import SixesWild.Views.Application;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.File;
 
 /**
@@ -17,9 +17,6 @@ import java.io.File;
 public class LargeStarsView extends StarsView {
     //    Distance between stars
     final int GAP_BETWEEN_STARS = 12;
-
-    //    Large star view default dimension
-    final Dimension LARGE_STAR_VIEW_SIZE = new Dimension(140, 28);
 
     public LargeStarsView(int star) {
         super(star);
@@ -31,9 +28,21 @@ public class LargeStarsView extends StarsView {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
 
-        setPreferredSize(LARGE_STAR_VIEW_SIZE);
-        redrawState();
-        repaint();
+    @Override
+    void redrawState() {
+        ensureImageAvaliable();
+        Utilities.setHighQuality(graphics2D);
+
+        graphics2D.setColor(DetailPanel.DETAIL_PANEL_BACK_COLOR);
+
+        graphics2D.fillRect(
+                PADDING_LEFT,
+                PADDING_TOP,
+                (int) getPreferredSize().getWidth(),
+                (int) getPreferredSize().getHeight()
+        );
+        super.redrawState();
     }
 }

@@ -4,6 +4,7 @@ import SixesWild.Utilities;
 import SixesWild.Views.Screens.Screen;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public abstract class StarsView extends Canvas {
 
@@ -19,7 +20,7 @@ public abstract class StarsView extends Canvas {
     //    Number of stars
     int star;
     //    Buffer image
-    Image bufferedImage;
+    BufferedImage bufferedImage;
     //    Graphics2D object
     Graphics2D graphics2D;
     //    Gap between stars
@@ -31,9 +32,10 @@ public abstract class StarsView extends Canvas {
 
     void ensureImageAvaliable() {
         if (bufferedImage == null) {
-            bufferedImage = this.createImage(
-                    (int) getPreferredSize().getWidth(),
-                    (int) getPreferredSize().getHeight()
+            bufferedImage = new BufferedImage(
+                    (int) getMinimumSize().getWidth(),
+                    (int) getMinimumSize().getHeight(),
+                    BufferedImage.TYPE_4BYTE_ABGR
             );
 
             graphics2D = (Graphics2D) bufferedImage.getGraphics();
@@ -43,16 +45,6 @@ public abstract class StarsView extends Canvas {
     void redrawState() {
         ensureImageAvaliable();
         Utilities.setHighQuality(graphics2D);
-
-        graphics2D.setColor(Screen.SCREEN_BACK_COLOR);
-
-        graphics2D.fillRect(
-                PADDING_LEFT,
-                PADDING_TOP,
-                (int) getPreferredSize().getWidth(),
-                (int) getPreferredSize().getHeight()
-        );
-
         switch (star) {
             case 1:
                 drawOneStar();
@@ -71,8 +63,6 @@ public abstract class StarsView extends Canvas {
         if (g == null) {
             return;
         }
-
-        redrawState();
 
         Utilities.setHighQuality(g);
 
@@ -212,7 +202,13 @@ public abstract class StarsView extends Canvas {
         return bufferedImage;
     }
 
-    public void setBufferedImage(Image bufferedImage) {
+    public void setBufferedImage(BufferedImage bufferedImage) {
         this.bufferedImage = bufferedImage;
+    }
+
+    @Override
+    public void repaint() {
+        redrawState();
+        super.repaint();
     }
 }

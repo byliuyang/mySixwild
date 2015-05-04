@@ -64,18 +64,16 @@ public class LevelButton extends LockableButton {
             ex.printStackTrace();
         }
 
-        if (isLocked()) {
-            disabled();
-        }
-
         setRegularFont();
     }
 
-    protected void redrawState() {
-        super.redrawState();
-        int containerWidth = (int) getPreferredSize().getWidth();
-        int containerHeight = (int) getPreferredSize().getHeight();
+    @Override
+    public void redrawState() {
+        int containerWidth = (int) getMinimumSize().getWidth();
+        int containerHeight = (int) getMinimumSize().getHeight();
         if (isLocked() == false) {
+
+            super.redrawState();
             //  Setup font
             Font font;
 
@@ -107,6 +105,10 @@ public class LevelButton extends LockableButton {
             getGraphics2D().drawString(text, textPaddingLeft, textPaddingTop);
 
         } else {
+            if(!isActiveState()) {
+                setCurrentBackColor(getDisabledBackColor());
+            }
+            super.redrawState();
 
             int imageWidth = lockedImage.getWidth(this);
             int imageHeight = lockedImage.getHeight(this);

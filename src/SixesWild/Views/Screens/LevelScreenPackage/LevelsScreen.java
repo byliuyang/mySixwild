@@ -30,10 +30,16 @@ public class LevelsScreen extends FlipPageScreen {
         levels = null;
 
         getLevelDetailPanel().setPreferredSize(DetailPanel.DETAIL_PANEL_SIZE);
+        getLevelDetailPanel().setMinimumSize(DetailPanel.DETAIL_PANEL_SIZE);
+        getLevelDetailPanel().setMaximumSize(DetailPanel.DETAIL_PANEL_SIZE);
+
         getLevelDetailPanel().setBounds(DETAIL_PANEL_BOUNDS);
         add(getLevelDetailPanel());
 
         getLevelFlipPagePanel().setPreferredSize(FLIP_PAGE_PANEL_SIZE);
+        getLevelFlipPagePanel().setMinimumSize(FLIP_PAGE_PANEL_SIZE);
+        getLevelFlipPagePanel().setMaximumSize(FLIP_PAGE_PANEL_SIZE);
+
         getLevelFlipPagePanel().setBounds(FLIP_PAGE_PANEL_BOUNDS);
         add(getLevelFlipPagePanel());
 

@@ -13,7 +13,7 @@ public abstract class ListPanel extends JPanel {
     public static final Dimension LIST_PANEL_SIZE = new Dimension(632, 228);
 
     //  List panel bounds
-    public static final Rectangle LIST_PANEL_BOUNDS = new Rectangle(196,150,632, 228);
+    public static final Rectangle LIST_PANEL_BOUNDS = new Rectangle(196, 150, 632, 228);
 
     //    View size
     public static final Dimension VIEW_SIZE = new Dimension(72, 92);
@@ -80,6 +80,30 @@ public abstract class ListPanel extends JPanel {
         }
     }
 
+    public void nextPage() {
+        if (!isAtListEnd()) {
+            currentPage++;
+            removeAll();
+            showViews();
+        }
+    }
+
+    public void lastPage() {
+        if (!isAtListHead()) {
+            currentPage--;
+            removeAll();
+            showViews();
+        }
+    }
+
+    public boolean isAtListEnd() {
+        return (currentPage + 1) * NUMBER_LINE_EACH_PAGE * NUMBER_VIEWS_EACH_LINE >= views.size();
+    }
+
+    public boolean isAtListHead() {
+        return currentPage <= 0;
+    }
+
     abstract public void setUpViews();
 
     public ArrayList<LockableButtonView> getViews() {
@@ -98,20 +122,8 @@ public abstract class ListPanel extends JPanel {
         this.activeView = activeView;
     }
 
-    public DetailPanel getDetailPanel() {
-        return detailPanel;
-    }
-
-    public void setDetailPanel(DetailPanel detailPanel) {
-        this.detailPanel = detailPanel;
-    }
-
     public int getCurrentPage() {
         return currentPage;
-    }
-
-    public void setCurrentPage(int currentPage) {
-        this.currentPage = currentPage;
     }
 
 

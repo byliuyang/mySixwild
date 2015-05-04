@@ -19,8 +19,13 @@ public class LevelFlipPagePanel extends FlipPagePanel {
         this.levels = levels;
 
         getLevelListPanel().setPreferredSize(ListPanel.LIST_PANEL_SIZE);
+        getLevelListPanel().setMaximumSize(ListPanel.LIST_PANEL_SIZE);
+        getLevelListPanel().setMinimumSize(ListPanel.LIST_PANEL_SIZE);
+
         getLevelListPanel().setBounds(ListPanel.LIST_PANEL_BOUNDS);
         add(getLevelListPanel());
+
+        initialize();
     }
 
     public LevelListPanel getLevelListPanel() {

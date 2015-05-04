@@ -13,6 +13,10 @@ public class ImageContract {
     //    Back button image
     public static final String BACK_BUTTON_IMAGE = ASSETS_PATH + "/backButton.png";
 
+    //    Start level button images
+    public static final String START_LEVEL_BUTTON_NORMAL_IMAGE = ASSETS_PATH + "/startLevelButton.png";
+    public static final String START_LEVEL_BUTTON_HOVERED_IMAGE = ASSETS_PATH + "/startLevelButtonHovered.png";
+
     //    Last page button image
     public static final String LAST_PAGE_BUTTON_IMAGE = ASSETS_PATH + "/lastPageButton.png";
     public static final String LAST_PAGE_BUTTON_HOVERED_IMAGE = ASSETS_PATH + "/lastPageButtonHovered.png";
@@ -23,8 +27,8 @@ public class ImageContract {
     public static final String NEXT_PAGE_BUTTON_HOVERED_IMAGE = ASSETS_PATH + "/nextPageButtonHovered.png";
     public static final String NEXT_PAGE_BUTTON_DISABLED_IMAGE = ASSETS_PATH + "/nextPageButtonDisabled.png";
 
-//    Level button locked image
-    public static final String LEVEL_BUTTON_LOCKED_IMAGE = ASSETS_PATH  + "/levelLocked.png";
+    //    Level button locked image
+    public static final String LEVEL_BUTTON_LOCKED_IMAGE = ASSETS_PATH + "/levelLocked.png";
 
     //    Stars images
     public static final String STAR_SMALL_ACTIVE_IMAGE = ASSETS_PATH + "/starSmallActive.png";

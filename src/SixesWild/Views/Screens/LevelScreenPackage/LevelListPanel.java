@@ -17,7 +17,6 @@ public class LevelListPanel extends ListPanel {
     public LevelListPanel(ArrayList<Level> levels, LevelDetailPanel levelDetailPanel) {
         super(levelDetailPanel);
         this.levels = levels;
-        this.levelDetailPanel = levelDetailPanel;
 
         setPreferredSize(LIST_PANEL_SIZE);
     }
@@ -34,7 +33,10 @@ public class LevelListPanel extends ListPanel {
         for (int i = 0; i < 16; i++) {
 
             LevelView levelView = new LevelView(null, this,levelDetailPanel);
+
             levelView.setPreferredSize(ListPanel.VIEW_SIZE);
+            levelView.setMinimumSize(ListPanel.VIEW_SIZE);
+            levelView.setMaximumSize(ListPanel.VIEW_SIZE);
 
             if(i % 2 == 0) {
                 levelView.getLevelButton().unlock();

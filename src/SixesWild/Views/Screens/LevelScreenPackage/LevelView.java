@@ -27,12 +27,16 @@ public class LevelView extends LockableButtonView {
             (int) LEVEL_BUTTON_SIZE.getHeight()
     );
 
+
+    //    Small star view default dimension
+    final Dimension SMALL_STAR_VIEW_SIZE = new Dimension(72, 16);
+
     //    Star view bounds
     final Rectangle SMALL_STAR_VIEW_BOUNDS = new Rectangle(
             0,
-            (int) (ListPanel.VIEW_SIZE.getHeight() - SmallStarsView.SMALL_STAR_VIEW_SIZE.getHeight()),
-            (int) SmallStarsView.SMALL_STAR_VIEW_SIZE.getWidth(),
-            (int) SmallStarsView.SMALL_STAR_VIEW_SIZE.getHeight()
+            (int) (ListPanel.VIEW_SIZE.getHeight() - SMALL_STAR_VIEW_SIZE.getHeight()),
+            (int) SMALL_STAR_VIEW_SIZE.getWidth(),
+            (int) SMALL_STAR_VIEW_SIZE.getHeight()
     );
 
     //    Level button background color
@@ -61,6 +65,9 @@ public class LevelView extends LockableButtonView {
     void initialize() {
 
         setPreferredSize(ListPanel.VIEW_SIZE);
+        setMinimumSize(ListPanel.VIEW_SIZE);
+        setMaximumSize(ListPanel.VIEW_SIZE);
+
         setLayout(null);
         setOpaque(false);
 
@@ -79,6 +86,9 @@ public class LevelView extends LockableButtonView {
         getSmallStars().setBounds(SMALL_STAR_VIEW_BOUNDS);
 
         add(getSmallStars());
+
+        getLevelButton().repaint();
+        getSmallStars().repaint();
     }
 
     public LockableButton getLevelButton() {
@@ -103,6 +113,8 @@ public class LevelView extends LockableButtonView {
                     ));
 
             getButton().setPreferredSize(LEVEL_BUTTON_SIZE);
+            getButton().setMinimumSize(LEVEL_BUTTON_SIZE);
+            getButton().setMaximumSize(LEVEL_BUTTON_SIZE);
 
         }
         return getButton();
@@ -115,7 +127,9 @@ public class LevelView extends LockableButtonView {
 
             smallStars = new SmallStarsView(starNumber);
 
-            smallStars.setPreferredSize(SmallStarsView.SMALL_STAR_VIEW_SIZE);
+            smallStars.setPreferredSize(SMALL_STAR_VIEW_SIZE);
+            smallStars.setMinimumSize(SMALL_STAR_VIEW_SIZE);
+            smallStars.setMaximumSize(SMALL_STAR_VIEW_SIZE);
         }
         return smallStars;
     }

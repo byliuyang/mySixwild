@@ -5,7 +5,9 @@ package SixesWild.Views.Components;
  */
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Utilities;
 import SixesWild.Views.Application;
+import SixesWild.Views.Screens.Screen;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -19,9 +21,6 @@ public class SmallStarsView extends StarsView {
     //    Distance between stars
     final int GAP_BETWEEN_STARS = 6;
 
-    //    Small star view default dimension
-    public static final Dimension SMALL_STAR_VIEW_SIZE = new Dimension(72, 16);
-
 
     public SmallStarsView(int star) {
         super(star);
@@ -34,7 +33,22 @@ public class SmallStarsView extends StarsView {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
 
-        setPreferredSize(SMALL_STAR_VIEW_SIZE);
+    @Override
+    void redrawState() {
+        ensureImageAvaliable();
+        Utilities.setHighQuality(graphics2D);
+
+        graphics2D.setColor(Screen.SCREEN_BACK_COLOR);
+
+        graphics2D.fillRect(
+                PADDING_LEFT,
+                PADDING_TOP,
+                (int) getPreferredSize().getWidth(),
+                (int) getPreferredSize().getHeight()
+        );
+
+        super.redrawState();
     }
 }
