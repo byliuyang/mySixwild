@@ -4,13 +4,7 @@ import SixesWild.Models.Grid;
 import SixesWild.Models.Score;
 import SixesWild.Models.SpecialMoveLeft;
 import SixesWild.Models.Value;
-import SixesWild.Moves.ISpecialMove;
 
-import java.util.Stack;
-
-/**
- *
- */
 public class PuzzleLevel extends Level {
 
     Value swapNeighborMoveLeft;
@@ -37,8 +31,8 @@ public class PuzzleLevel extends Level {
     }
 
     @Override
-    public void finishMakingMove() {
-        super.finishMakingMove();
+    public void updateScore(Value amount) {
+        super.updateScore(amount);
         swapNeighborMoveLeft.decrease(1);
     }
 }

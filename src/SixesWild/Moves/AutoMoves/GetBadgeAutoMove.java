@@ -1,17 +1,18 @@
-package SixesWild.Moves;
+package SixesWild.Moves.AutoMoves;
 
 import SixesWild.Models.Levels.Level;
+import SixesWild.Moves.IMove;
 import SixesWild.Views.Application;
 
 /**
  *
  */
-public class GetBadgeMove implements IMove {
+public class GetBadgeAutoMove implements IMove {
 
 
     Level level;
 
-    public GetBadgeMove(Level level) {
+    public GetBadgeAutoMove(Level level) {
         this.level = level;
     }
 

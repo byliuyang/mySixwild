@@ -61,7 +61,7 @@ public class NumberRemainNavigationBar extends ScoreSpecialMoveNavigationBar imp
 
     @Override
     public void modelChanged() {
-        numberView.modelChanged();
         super.modelChanged();
+        numberView.modelChanged();
     }
 }

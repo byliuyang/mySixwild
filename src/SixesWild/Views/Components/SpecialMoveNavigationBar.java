@@ -156,16 +156,27 @@ public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpd
         return clearSquareSpecialMoveView;
     }
 
+    public SpecialMoveLeft getSpecialMoveLeft() {
+        return specialMoveLeft;
+    }
+
+    public void setSpecialMoveLeft(SpecialMoveLeft specialMoveLeft) {
+        this.specialMoveLeft = specialMoveLeft;
+    }
+
     public void setAllMoveButtonNormal() {
+        modelChanged();
         getSwapSquareSpecialMoveView().inactive();
         getResetBoardSpecialMoveView().inactive();
         getClearSquareSpecialMoveView().inactive();
+
     }
 
     @Override
     public void modelChanged() {
         getSwapSquareSpecialMoveView().modelChanged();
         getResetBoardSpecialMoveView().modelChanged();
+
         getClearSquareSpecialMoveView().modelChanged();
     }
 }

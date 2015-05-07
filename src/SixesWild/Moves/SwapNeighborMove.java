@@ -67,7 +67,10 @@ public class SwapNeighborMove implements IMove {
                 grid.getActiveSquare().get(i).setTile(null);
             }
 
+            app.getGameScreen().getTileDisapperSound().play();
+
             app.getGameScreen().updateScore(count);
+
             return true;
 
         } else {

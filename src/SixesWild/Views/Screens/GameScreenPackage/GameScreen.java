@@ -1,16 +1,12 @@
 package SixesWild.Views.Screens.GameScreenPackage;
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Contracts.SoundsContract;
 import SixesWild.Contracts.TextContact;
 import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.GameScreen.RestartLevelController;
-import SixesWild.Models.Levels.EliminationLevel;
-import SixesWild.Models.Levels.Level;
-import SixesWild.Models.Levels.LightningLevel;
-import SixesWild.Models.Levels.PuzzleLevel;
-import SixesWild.Models.Levels.ReleaseLevel;
+import SixesWild.Models.Levels.*;
 import SixesWild.Models.Value;
-import SixesWild.Moves.ISpecialMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.ImageButton;
 import SixesWild.Views.Components.LevelNavigationBar;
@@ -19,12 +15,15 @@ import SixesWild.Views.Components.ScoreSpecialMoveNavigationBar;
 import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.NavigableScreen;
 
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.*;
+import java.io.File;
 
 /**
  *
  */
-public class GameScreen extends NavigableScreen implements IModelUpdated{
+public class GameScreen extends NavigableScreen implements IModelUpdated {
     //    Refresh button round
     final int RESET_BUTTON_ROUND = 10;
 
@@ -52,6 +51,9 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
     PopupBox popupBox;
     ImageButton refreshButton;
     GridView gridView;
+    AudioClip winLevelSound;
+    AudioClip tileDisapperSound;
+    AudioClip removeTileSpecialMoveSound;
 
     public GameScreen(String title, Application app, Level level) {
 
@@ -68,7 +70,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
 
         remove(getNavigationBar());
 
-        if(!(level instanceof LightningLevel)) {
+        if (!(level instanceof LightningLevel)) {
             LevelNavigationBar levelNavigationBar = null;
             if (level instanceof PuzzleLevel) {
                 levelNavigationBar = new LevelNavigationBar(
@@ -79,16 +81,16 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
                         TextContact.MOVE_LEFT_LABEL_TEXT,
                         level.getId()
                 );
-            } else if(level instanceof EliminationLevel) {
+            } else if (level instanceof EliminationLevel) {
                 levelNavigationBar = new LevelNavigationBar(
                         app,
                         level.getSpecialMoveLeft(),
                         level.getScore(),
-                        ((EliminationLevel)level).getNotMakred(),
+                        ((EliminationLevel) level).getNotMakred(),
                         TextContact.NOT_MARKED_LABEL_TEXT,
                         level.getId()
                 );
-            } else if(level instanceof ReleaseLevel) {
+            } else if (level instanceof ReleaseLevel) {
                 levelNavigationBar = new LevelNavigationBar(
                         app,
                         level.getSpecialMoveLeft(),
@@ -99,11 +101,12 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
                 );
             }
 
-            if(levelNavigationBar != null) {
+            if (levelNavigationBar != null) {
                 setNavigationBar(levelNavigationBar);
                 levelNavigationBar.setBounds(NAV_BAR_BOUNDS);
                 add(levelNavigationBar);
             }
+
         }
 
 //        Setup score progress view
@@ -115,7 +118,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
 
         getRefreshButton().setBounds(RESET_BUTTON_BOUNDS);
 
-        RestartLevelController restartLevelController = new RestartLevelController(getRefreshButton(),this);
+        RestartLevelController restartLevelController = new RestartLevelController(getRefreshButton(), app);
         getRefreshButton().addMouseListener(restartLevelController);
         getRefreshButton().addMouseMotionListener(restartLevelController);
         getRefreshButton().setToolTipText(TipContract.RESTART_LEVEL_BUTTON_TIP);
@@ -123,6 +126,18 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
         add(getRefreshButton());
 
         getRefreshButton().repaint();
+
+//        Sounds
+        try {
+
+            winLevelSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.WIN_LEVEL_SOUND).toURL());
+            tileDisapperSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.DROP_TILE_SOUND).toURL());
+            removeTileSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.REMOVE_TILE_SPECIAL_MOVE_SOUND).toURL());
+
+        } catch (Exception ex) {
+
+        }
+
 
     }
 
@@ -164,20 +179,32 @@ public class GameScreen extends NavigableScreen implements IModelUpdated{
         return scoreProgressView;
     }
 
+    public Level getLevel() {
+        return level;
+    }
+
     public void updateScore(Value amount) {
-        level.getScore().getCurrentScore().increase(amount.getValue());
+        level.updateScore(amount);
         getScoreProgressView().modelChanged();
-        modelChanged();
+        ((ScoreSpecialMoveNavigationBar) getNavigationBar()).modelChanged();
     }
 
     @Override
     public void modelChanged() {
-        ((ScoreSpecialMoveNavigationBar)getNavigationBar()).modelChanged();
+        ((ScoreSpecialMoveNavigationBar) getNavigationBar()).modelChanged();
+        getScoreProgressView().modelChanged();
+        getGridView().modelChanged();
     }
 
-    public void restartLevel() {
-        level.restart();
-        gridView.modelChanged();
-        modelChanged();
+    public AudioClip getWinLevelSound() {
+        return winLevelSound;
+    }
+
+    public AudioClip getTileDisapperSound() {
+        return tileDisapperSound;
+    }
+
+    public AudioClip getRemoveTileSpecialMoveSound() {
+        return removeTileSpecialMoveSound;
     }
 }

@@ -53,9 +53,8 @@ public abstract class Level extends Unlockable {
         makeingMove = false;
     }
 
-    public void restart() {
-        score.getCurrentScore().multiply(0);
-        grid.reset();
+    public void updateScore(Value amount) {
+        score.getCurrentScore().increase(amount.getValue());
     }
 
     public boolean isMakeingMove() {

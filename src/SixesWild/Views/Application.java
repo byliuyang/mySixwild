@@ -177,13 +177,13 @@ public class Application extends JFrame {
         );
 
         Probabilities probabilities = new Probabilities(
-                new Value(10),
-                new Value(20),
+                new Value(30),
                 new Value(50),
                 new Value(70),
+                new Value(90),
                 new Value(100),
-                new Value(10),
-                new Value(30),
+                new Value(60),
+                new Value(80),
                 new Value(100)
         );
 
@@ -208,7 +208,7 @@ public class Application extends JFrame {
 
         SpecialMoveLeft specialMoveLeft = new SpecialMoveLeft(
                 new Value(5),
-                new Value(6),
+                new Value(20),
                 new Value(7)
         );
 

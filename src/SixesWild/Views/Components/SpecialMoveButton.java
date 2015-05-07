@@ -80,7 +80,6 @@ public class SpecialMoveButton extends ImageButton implements IModelUpdated{
         );
 
 //        Special move left number
-
         graphics2D.setColor(Color.WHITE);
 
         graphics2D.fillOval(
@@ -123,6 +122,10 @@ public class SpecialMoveButton extends ImageButton implements IModelUpdated{
 
     @Override
     public void modelChanged() {
-        repaint();
+        if(moveLeft.getValue()<=0) {
+            disabled();
+        } else {
+            repaint();
+        }
     }
 }

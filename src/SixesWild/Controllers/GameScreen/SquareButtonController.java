@@ -1,9 +1,12 @@
 package SixesWild.Controllers.GameScreen;
 
 import SixesWild.Controllers.ButtonController;
+import SixesWild.Models.Value;
+import SixesWild.Moves.AutoMoves.DropDownAutoMove;
 import SixesWild.Moves.SpecialMoves.ClearTileSpecialMove;
 import SixesWild.Moves.SwapNeighborMove;
 import SixesWild.Views.Application;
+import SixesWild.Views.Components.SpecialMoveNavigationBar;
 import SixesWild.Views.Components.StyledButton;
 import SixesWild.Views.Screens.GameScreenPackage.GridView;
 import SixesWild.Views.Screens.GameScreenPackage.SquareView;
@@ -31,11 +34,6 @@ public class SquareButtonController extends ButtonController {
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {
-        mouseReleased(e);
-    }
-
-    @Override
     public void mousePressed(MouseEvent e) {
         if (((SquareView) button).getSquare().getTile() != null) {
             if (gridView.getSpecialMove() instanceof ClearTileSpecialMove) {
@@ -43,16 +41,27 @@ public class SquareButtonController extends ButtonController {
                 mouseEntered(e);
 
                 ClearTileSpecialMove move = (ClearTileSpecialMove) gridView.getSpecialMove();
+                gridView.setSpecialMove(move);
+
                 if (move.isValid()) {
                     move.doMove(app);
 
-                    gridView.setSpecialMove(null);
-                    button.repaint();
+                    DropDownAutoMove dropDownAutoMove = new DropDownAutoMove(
+                            app.getGameScreen().getLevel(),
+                            app.getGameScreen().getGridView().getGrid()
+                    );
+                    if (dropDownAutoMove.isValid()) {
+                        dropDownAutoMove.doMove(app);
+                    }
+
                 } else {
                     java.awt.Toolkit.getDefaultToolkit().beep();
                 }
+
                 gridView.finishMakingMove();
+
             } else if (!gridView.hasSpecialMove()) {
+
                 gridView.beginMakeingMove();
                 mouseEntered(e);
             }
@@ -81,16 +90,35 @@ public class SquareButtonController extends ButtonController {
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        if (((SquareView) button).getSquare().getTile() != null) {
-            if (!gridView.hasSpecialMove()) {
-                SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid());
-                if (move.isValid()) {
-                    move.doMove(app);
-                } else {
-                    java.awt.Toolkit.getDefaultToolkit().beep();
+
+        if (!gridView.hasSpecialMove()) {
+            SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid());
+            if (move.isValid()) {
+                move.doMove(app);
+
+                DropDownAutoMove dropDownAutoMove = new DropDownAutoMove(
+                        app.getGameScreen().getLevel(),
+                        app.getGameScreen().getGridView().getGrid()
+                );
+                if (dropDownAutoMove.isValid()) {
+                    dropDownAutoMove.doMove(app);
                 }
+
+            } else {
+                app.getGameScreen().updateScore(new Value(0));
+                java.awt.Toolkit.getDefaultToolkit().beep();
             }
-            gridView.finishMakingMove();
+        } else if (gridView.getSpecialMove() instanceof ClearTileSpecialMove) {
+            SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
+
+            specialMoveNavigationBar.getSpecialMoveLeft().getRemoveTileSpecialMove().decrease(1);
+            specialMoveNavigationBar.setAllMoveButtonNormal();
+
+            specialMoveNavigationBar.getClearSquareSpecialMoveView().modelChanged();
+
+            gridView.setSpecialMove(null);
+
         }
+        gridView.finishMakingMove();
     }
 }

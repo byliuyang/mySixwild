@@ -64,6 +64,7 @@ public class ScoreSpecialMoveNavigationBar extends SpecialMoveNavigationBar impl
 
     @Override
     public void modelChanged() {
+        super.modelChanged();
         scoreView.modelChanged();
     }
 }

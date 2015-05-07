@@ -3,7 +3,6 @@ package SixesWild.Views.Screens.GameScreenPackage;
 import SixesWild.Controllers.GameScreen.SquareButtonController;
 import SixesWild.Models.Grid;
 import SixesWild.Models.Levels.Level;
-import SixesWild.Models.Location;
 import SixesWild.Models.Square;
 import SixesWild.Moves.ISpecialMove;
 import SixesWild.Views.Application;
@@ -20,7 +19,7 @@ import java.util.Iterator;
 /**
  *
  */
-public class GridView extends TransitableView implements IModelUpdated{
+public class GridView extends TransitableView implements IModelUpdated {
 
     //    Grid view size
     final Dimension GRID_VIEW_SIZE = new Dimension(654, 654);
@@ -33,7 +32,7 @@ public class GridView extends TransitableView implements IModelUpdated{
     final Color SQUARE_DISABLED_BACK_COLOR = new Color(165, 165, 165);
 
     ArrayList<SquareView> activeSquareViews;
-    ArrayList<SquareView> squareViews;
+    SquareView[][] squareViews;
     Application app;
 
     Grid grid;
@@ -59,7 +58,7 @@ public class GridView extends TransitableView implements IModelUpdated{
         setLayout(null);
 
         activeSquareViews = new ArrayList<SquareView>();
-        squareViews = new ArrayList<SquareView>();
+        squareViews = new SquareView[Grid.MAX_ROWS][Grid.MAX_COLUMNS];
 
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
@@ -76,7 +75,7 @@ public class GridView extends TransitableView implements IModelUpdated{
                             NavigationBar.NO_ROUND
                     );
 
-                    squareViews.add(squareView);
+                    squareViews[row][column] = squareView;
 
                     squareView.setPreferredSize(SquareView.SQUARE_VIEW_SIZE);
                     squareView.setMaximumSize(SquareView.SQUARE_VIEW_SIZE);
@@ -125,9 +124,8 @@ public class GridView extends TransitableView implements IModelUpdated{
 
         grid.getActiveSquare().clear();
 
-        app.getGameScreen().modelChanged();
-
         if (level.hasWon()) {
+            app.getGameScreen().getWinLevelSound().play();
             JOptionPane.showMessageDialog(app, "Game over!");
         }
     }
@@ -152,11 +150,18 @@ public class GridView extends TransitableView implements IModelUpdated{
         return grid;
     }
 
+    public SquareView[][] getSquareViews() {
+        return squareViews;
+    }
+
     @Override
     public void modelChanged() {
-        for(Iterator<SquareView> squareViewIterator = squareViews.iterator(); squareViewIterator.hasNext();) {
-            SquareView squareView = squareViewIterator.next();
-            squareView.repaint();
+        for (int row = 0; row < 9; row++) {
+            for (int column = 0; column < 9; column++) {
+                if (squareViews[row][column] != null) {
+                    squareViews[row][column].repaint();
+                }
+            }
         }
     }
 }
