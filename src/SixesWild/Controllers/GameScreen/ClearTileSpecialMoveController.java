@@ -31,7 +31,7 @@ public class ClearTileSpecialMoveController extends SpecialMoveButtonController 
     @Override
     public void mousePressed(MouseEvent e) {
         if (specialMoveNavigationBar.getSpecialMoveLeft().getRemoveTileSpecialMove().getValue() > 0) {
-            app.getGameScreen().getGridView().setSpecialMove(new ClearTileSpecialMove(app.getGameScreen().getGridView().getGrid()));
+            app.getGameScreen().getGridView().setSpecialMove(new ClearTileSpecialMove(app.getGameScreen().getGridView().getGrid(),app.getGameScreen().getLevel()));
             super.mousePressed(e);
         } else {
             java.awt.Toolkit.getDefaultToolkit().beep();

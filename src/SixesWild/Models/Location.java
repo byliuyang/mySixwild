@@ -40,7 +40,7 @@ public class Location {
 
         if (location.getColumn().getValue() == column.getValue()
                 && ((location.getRow().getValue() == row.getValue() + 1)
-                || (location.getColumn().getValue() == row.getValue() - 1))) {
+                || (location.getRow().getValue() == row.getValue() - 1))) {
             validation = true;
         }
 

@@ -1,4 +1,4 @@
-package SixesWild.Models.Levels;
+package SixesWild.Models;
 
 import SixesWild.Models.Value;
 
@@ -12,20 +12,19 @@ public class Probabilities {
     Value tileThree;
     Value tileFour;
     Value tileFive;
+    Value tileSix;
 
     Value multiplierOne;
     Value multiplierTwo;
     Value multiplierThree;
 
-    public Probabilities() {
-    }
-
-    public Probabilities(Value tileOne, Value tileTwo, Value tileThree, Value tileFour, Value tileFive, Value multiplierOne, Value multiplierTwo, Value multiplierThree) {
+    public Probabilities(Value tileOne, Value tileTwo, Value tileThree, Value tileFour, Value tileFive, Value tileSix, Value multiplierOne, Value multiplierTwo, Value multiplierThree) {
         this.tileOne = tileOne;
         this.tileTwo = tileTwo;
         this.tileThree = tileThree;
         this.tileFour = tileFour;
         this.tileFive = tileFive;
+        this.tileSix = tileSix;
         this.multiplierOne = multiplierOne;
         this.multiplierTwo = multiplierTwo;
         this.multiplierThree = multiplierThree;
@@ -93,5 +92,13 @@ public class Probabilities {
 
     public void setMultiplierThree(Value multiplierThree) {
         this.multiplierThree = multiplierThree;
+    }
+
+    public Value getTileSix() {
+        return tileSix;
+    }
+
+    public void setTileSix(Value tileSix) {
+        this.tileSix = tileSix;
     }
 }

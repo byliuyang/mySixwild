@@ -1,9 +1,6 @@
 package SixesWild.Models.Levels;
 
-import SixesWild.Models.Grid;
-import SixesWild.Models.Score;
-import SixesWild.Models.SpecialMoveLeft;
-import SixesWild.Models.Value;
+import SixesWild.Models.*;
 
 public class PuzzleLevel extends Level {
 

@@ -1,6 +1,5 @@
 package SixesWild.Models;
 
-import SixesWild.Models.Levels.Probabilities;
 import SixesWild.Utilities;
 
 import java.util.ArrayList;
@@ -134,6 +133,9 @@ public class Grid {
         } else if (randomInt > probabilities.getTileFour().getValue() && randomInt <= probabilities.getTileFive().getValue()) {
 
             tile = new Tile(new Value(Utilities.FIVE), multiplier);
+        } else if (randomInt > probabilities.getTileFive().getValue() && randomInt <= probabilities.getTileSix().getValue()) {
+
+            tile = new Tile(new Value(Utilities.SIX), null);
         }
 
         return tile;

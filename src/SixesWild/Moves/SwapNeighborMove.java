@@ -1,11 +1,12 @@
 package SixesWild.Moves;
 
+import SixesWild.Models.BonusMultiplier;
 import SixesWild.Models.Grid;
+import SixesWild.Models.Levels.Level;
 import SixesWild.Models.Square;
 import SixesWild.Models.Value;
 import SixesWild.Utilities;
 import SixesWild.Views.Application;
-import SixesWild.Views.Components.ScoreSpecialMoveNavigationBar;
 
 import java.util.ArrayList;
 
@@ -17,14 +18,20 @@ public class SwapNeighborMove implements IMove {
     final int BASE_SCORE = 10;
 
     Grid grid;
+    Level level;
 
-    public SwapNeighborMove(Grid grid) {
+    public SwapNeighborMove(Grid grid, Level level) {
         this.grid = grid;
+        this.level = level;
     }
 
     @Override
     public boolean isValid() {
         boolean validation = true;
+
+        if (level.hasWon()) {
+            validation = false;
+        }
 
         Value count = new Value(0);
 
@@ -45,9 +52,9 @@ public class SwapNeighborMove implements IMove {
             count.increase(activeSquares.get(numberActived - 1).getTile().getNumber().getValue());
             if (count.getValue() != Utilities.SIX) {
                 validation = false;
+            } else if (numberActived == 1) {
+                validation = false;
             }
-        } else {
-            validation = false;
         }
 
         return validation;
@@ -63,8 +70,11 @@ public class SwapNeighborMove implements IMove {
             count.increase(BASE_SCORE * numberActived);
 
             for (int i = 0; i < numberActived; i++) {
-                count.multiply(activeSquares.get(i).getTile().getMutiplier().getMultiplier().getValue());
-                grid.getActiveSquare().get(i).setTile(null);
+                BonusMultiplier multiplier = activeSquares.get(i).getTile().getMutiplier();
+                if (multiplier != null) {
+                    count.multiply(activeSquares.get(i).getTile().getMutiplier().getMultiplier().getValue());
+                    grid.getActiveSquare().get(i).setTile(null);
+                }
             }
 
             app.getGameScreen().getTileDisapperSound().play();

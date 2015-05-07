@@ -1,9 +1,8 @@
 package SixesWild.Views;
 
 import SixesWild.Models.*;
-import SixesWild.Models.Levels.Probabilities;
+import SixesWild.Models.Probabilities;
 import SixesWild.Models.Levels.PuzzleLevel;
-import SixesWild.Moves.ISpecialMove;
 import SixesWild.Utilities;
 import SixesWild.Views.Animation.AnimationManager;
 import SixesWild.Views.Screens.AboutScreenPackage.AboutScreen;
@@ -15,7 +14,6 @@ import SixesWild.Views.Screens.Screen;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Stack;
 
 /**
  *
@@ -177,9 +175,10 @@ public class Application extends JFrame {
         );
 
         Probabilities probabilities = new Probabilities(
-                new Value(30),
-                new Value(50),
-                new Value(70),
+                new Value(20),
+                new Value(40),
+                new Value(60),
+                new Value(80),
                 new Value(90),
                 new Value(100),
                 new Value(60),

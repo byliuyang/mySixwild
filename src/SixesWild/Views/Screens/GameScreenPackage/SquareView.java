@@ -132,30 +132,32 @@ public class SquareView extends StyledButton {
 
 
 //        Draw multiplier
-            text = MULTIPLY_SIGN + square.getTile().getMutiplier().getMultiplier().toString();
-            Utilities.normalFont = Utilities.normalFont.deriveFont(MULTIPLIER_FONT_SIZE);
-            metrics = graphics2D.getFontMetrics(Utilities.normalFont);
-            fontWidth = metrics.stringWidth(text);
+            if(square.getTile().getMutiplier()!=null) {
+                text = MULTIPLY_SIGN + square.getTile().getMutiplier().getMultiplier().toString();
+                Utilities.normalFont = Utilities.normalFont.deriveFont(MULTIPLIER_FONT_SIZE);
+                metrics = graphics2D.getFontMetrics(Utilities.normalFont);
+                fontWidth = metrics.stringWidth(text);
 
-            renderContext = graphics2D.getFontRenderContext();
-            glyphVector = Utilities.normalFont.createGlyphVector(renderContext, text);
-            visualBounds = glyphVector.getVisualBounds().getBounds();
+                renderContext = graphics2D.getFontRenderContext();
+                glyphVector = Utilities.normalFont.createGlyphVector(renderContext, text);
+                visualBounds = glyphVector.getVisualBounds().getBounds();
 
-            textPaddingTop = containerHeight
-                    - visualBounds.y
-                    - visualBounds.height
-                    - MULTIPLIER_PADDING_BOTTOM
-                    - (int) SQUARE_VIEW_SIZE.getHeight() / 2
-                    + (int) TILE_VIEW_SIZE.getHeight() / 2;
-            textPaddingLeft = containerWidth
-                    - fontWidth
-                    - MULTIPLIER_PADDING_RIGHT
-                    - (int) SQUARE_VIEW_SIZE.getWidth() / 2
-                    + (int) TILE_VIEW_SIZE.getWidth() / 2;
+                textPaddingTop = containerHeight
+                        - visualBounds.y
+                        - visualBounds.height
+                        - MULTIPLIER_PADDING_BOTTOM
+                        - (int) SQUARE_VIEW_SIZE.getHeight() / 2
+                        + (int) TILE_VIEW_SIZE.getHeight() / 2;
+                textPaddingLeft = containerWidth
+                        - fontWidth
+                        - MULTIPLIER_PADDING_RIGHT
+                        - (int) SQUARE_VIEW_SIZE.getWidth() / 2
+                        + (int) TILE_VIEW_SIZE.getWidth() / 2;
 
-            graphics2D.setColor(Color.WHITE);
-            graphics2D.setFont(Utilities.normalFont);
-            graphics2D.drawString(text, textPaddingLeft, textPaddingTop);
+                graphics2D.setColor(Color.WHITE);
+                graphics2D.setFont(Utilities.normalFont);
+                graphics2D.drawString(text, textPaddingLeft, textPaddingTop);
+            }
         }
 
         if(!isActiveState()) {

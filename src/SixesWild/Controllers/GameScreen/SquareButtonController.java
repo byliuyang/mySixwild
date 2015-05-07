@@ -92,7 +92,7 @@ public class SquareButtonController extends ButtonController {
     public void mouseReleased(MouseEvent e) {
 
         if (!gridView.hasSpecialMove()) {
-            SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid());
+            SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid(),app.getGameScreen().getLevel());
             if (move.isValid()) {
                 move.doMove(app);
 

@@ -1,9 +1,6 @@
 package SixesWild.Models.Levels;
 
 import SixesWild.Models.*;
-import SixesWild.Moves.ISpecialMove;
-
-import java.util.Stack;
 
 /**
  *

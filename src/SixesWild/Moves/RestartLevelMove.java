@@ -2,7 +2,7 @@ package SixesWild.Moves;
 
 import SixesWild.Models.*;
 import SixesWild.Models.Levels.Level;
-import SixesWild.Models.Levels.Probabilities;
+import SixesWild.Models.Probabilities;
 import SixesWild.Utilities;
 import SixesWild.Views.Application;
 

@@ -1,7 +1,7 @@
 package SixesWild.Moves.SpecialMoves;
 
 import SixesWild.Models.Grid;
-import SixesWild.Models.Square;
+import SixesWild.Models.Levels.Level;
 import SixesWild.Moves.ISpecialMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.SpecialMoveNavigationBar;
@@ -12,15 +12,17 @@ import SixesWild.Views.Components.SpecialMoveNavigationBar;
 public class ClearTileSpecialMove implements ISpecialMove {
 
     Grid grid;
+    Level level;
 
-    public ClearTileSpecialMove(Grid grid) {
+    public ClearTileSpecialMove(Grid grid, Level level) {
         this.grid = grid;
+        this.level = level;
     }
 
     @Override
     public boolean isValid() {
         boolean validation = false;
-        if(grid.getActiveSquare().size()>0 && grid.getActiveSquare().get(0).getTile()!=null){
+        if ((!level.hasWon()) && grid.getActiveSquare().size() > 0 && grid.getActiveSquare().get(0).getTile() != null) {
             validation = true;
         }
 
@@ -29,9 +31,9 @@ public class ClearTileSpecialMove implements ISpecialMove {
 
     @Override
     public boolean doMove(Application app) {
-        if(isValid()) {
+        if (isValid()) {
             grid.getActiveSquare().get(0).setTile(null);
-            ((SpecialMoveNavigationBar)app.getGameScreen().getNavigationBar()).modelChanged();
+            ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar()).modelChanged();
 
             app.getGameScreen().getRemoveTileSpecialMoveSound().play();
 
