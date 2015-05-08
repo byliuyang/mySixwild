@@ -20,7 +20,7 @@ public class Grid {
 
 
     Square[][] squares;
-    Value numberNotMarked;
+
 
     ArrayList<Square> activeSquare;
     Probabilities probabilities;
@@ -45,8 +45,6 @@ public class Grid {
                 squares[row][column] = new Square(location, null);
             }
         }
-
-        numberNotMarked = new Value(MAX_ROWS * MAX_COLUMNS);
     }
 
     public void addSquare(Square square) {
@@ -66,7 +64,7 @@ public class Grid {
     public void generateTiles() {
         for (int row = 0; row < MAX_ROWS; row++) {
             for (int column = 0; column < MAX_COLUMNS; column++) {
-                if (squares[row][column] != null && squares[row][column].isEmpty()) {
+                if (squares[row][column] != null && squares[row][column].isEmpty() && !squares[row][column].isContainer()) {
                     squares[row][column].setTile(getNewTile());
                 }
             }
@@ -146,34 +144,5 @@ public class Grid {
         }
 
         return tile;
-    }
-
-    public Value getNotMakred() {
-
-        int count = 0;
-        for (int row = 0; row < MAX_ROWS; row++) {
-            for (int column = 0; column < MAX_COLUMNS; column++) {
-                if (squares[row][column] !=null && !squares[row][column].isMarked()) {
-                    count++;
-                }
-            }
-        }
-
-        numberNotMarked.setValue(count);
-
-        return numberNotMarked;
-    }
-
-    public int getLargestMarkable(){
-        int count=0;
-        for (int row = 0; row < MAX_ROWS; row++) {
-            for (int column = 0; column < MAX_COLUMNS; column++) {
-                if (squares[row][column] !=null) {
-                    count++;
-                }
-            }
-        }
-
-        return count;
     }
 }

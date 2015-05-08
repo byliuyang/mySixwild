@@ -94,7 +94,7 @@ public class GridView extends TransitableView implements IModelUpdated {
                     squareView.addMouseListener(squareButtonController);
                     squareView.addMouseMotionListener(squareButtonController);
 
-                    squareView.repaint();
+                    squareView.normal();
                 }
             }
         }

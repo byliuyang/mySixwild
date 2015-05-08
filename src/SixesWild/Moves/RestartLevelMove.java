@@ -35,59 +35,66 @@ public class RestartLevelMove implements IMove {
 
             for (int row = 0; row < Grid.MAX_ROWS; row++) {
                 for (int column = 0; column < Grid.MAX_COLUMNS; column++) {
-                    if (squares[row][column] != null && !squares[row][column].isContainer()) {
-                        //                    Generate multiplier
-                        BonusMultiplier multiplier = null;
+                    if (squares[row][column] != null) {
 
-                        Random random = new Random();
-                        int randomInt = random.nextInt(Utilities.ONE_HUNDRED);
-                        if (randomInt <= probabilities.getMultiplierOne().getValue()) {
-                            multiplier = new BonusMultiplier(new Value(Utilities.ONE));
-
-                        } else if (randomInt > probabilities.getMultiplierOne().getValue()
-                                && randomInt <= probabilities.getMultiplierTwo().getValue()) {
-
-                            multiplier = new BonusMultiplier(new Value(Utilities.TWO));
-
-                        } else if (randomInt > probabilities.getMultiplierTwo().getValue()
-                                && randomInt <= probabilities.getMultiplierThree().getValue()) {
-                            multiplier = new BonusMultiplier(new Value(Utilities.THREE));
-                        }
-
-//                    Generate tile
                         Tile tile = null;
 
-                        random = new Random();
-                        randomInt = random.nextInt(Utilities.ONE_HUNDRED);
+                        if (!squares[row][column].isContainer()) {
+                            //                    Generate multiplier
+                            BonusMultiplier multiplier = null;
 
-                        if (randomInt <= probabilities.getTileOne().getValue()) {
+                            Random random = new Random();
+                            int randomInt = random.nextInt(Utilities.ONE_HUNDRED);
+                            if (randomInt <= probabilities.getMultiplierOne().getValue()) {
+                                multiplier = new BonusMultiplier(new Value(Utilities.ONE));
 
-                            tile = new Tile(new Value(Utilities.ONE), multiplier);
+                            } else if (randomInt > probabilities.getMultiplierOne().getValue()
+                                    && randomInt <= probabilities.getMultiplierTwo().getValue()) {
 
-                        } else if (randomInt > probabilities.getTileOne().getValue()
-                                && randomInt <= probabilities.getTileTwo().getValue()) {
+                                multiplier = new BonusMultiplier(new Value(Utilities.TWO));
 
-                            tile = new Tile(new Value(Utilities.TWO), multiplier);
+                            } else if (randomInt > probabilities.getMultiplierTwo().getValue()
+                                    && randomInt <= probabilities.getMultiplierThree().getValue()) {
+                                multiplier = new BonusMultiplier(new Value(Utilities.THREE));
+                            }
 
-                        } else if (randomInt > probabilities.getTileTwo().getValue()
-                                && randomInt <= probabilities.getTileThree().getValue()) {
+//                    Generate tile
 
-                            tile = new Tile(new Value(Utilities.THREE), multiplier);
+                            random = new Random();
+                            randomInt = random.nextInt(Utilities.ONE_HUNDRED);
 
-                        } else if (randomInt > probabilities.getTileThree().getValue()
-                                && randomInt <= probabilities.getTileFour().getValue()) {
+                            if (randomInt <= probabilities.getTileOne().getValue()) {
 
-                            tile = new Tile(new Value(Utilities.FOUR), multiplier);
+                                tile = new Tile(new Value(Utilities.ONE), multiplier);
 
-                        } else if (randomInt > probabilities.getTileFour().getValue() && randomInt <= probabilities.getTileFive().getValue()) {
+                            } else if (randomInt > probabilities.getTileOne().getValue()
+                                    && randomInt <= probabilities.getTileTwo().getValue()) {
 
-                            tile = new Tile(new Value(Utilities.FIVE), multiplier);
-                        } else if (randomInt > probabilities.getTileFive().getValue() && randomInt <= probabilities.getTileSix().getValue()) {
+                                tile = new Tile(new Value(Utilities.TWO), multiplier);
 
-                            tile = new Tile(new Value(Utilities.SIX), multiplier);
+                            } else if (randomInt > probabilities.getTileTwo().getValue()
+                                    && randomInt <= probabilities.getTileThree().getValue()) {
+
+                                tile = new Tile(new Value(Utilities.THREE), multiplier);
+
+                            } else if (randomInt > probabilities.getTileThree().getValue()
+                                    && randomInt <= probabilities.getTileFour().getValue()) {
+
+                                tile = new Tile(new Value(Utilities.FOUR), multiplier);
+
+                            } else if (randomInt > probabilities.getTileFour().getValue() && randomInt <= probabilities.getTileFive().getValue()) {
+
+                                tile = new Tile(new Value(Utilities.FIVE), multiplier);
+                            } else if (randomInt > probabilities.getTileFive().getValue() && randomInt <= probabilities.getTileSix().getValue()) {
+
+                                tile = new Tile(new Value(Utilities.SIX), multiplier);
+                            }
+                        } else {
+                            tile = null;
                         }
 
                         squares[row][column].setTile(tile);
+
                     }
                 }
             }

@@ -26,6 +26,7 @@ public class ResetBoardSpecialMoveController extends SpecialMoveButtonController
     @Override
     public void mousePressed(MouseEvent e) {
         if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMoveLetf().getValue() > 0) {
+            super.mousePressed(e);
             ResetBoardSpecialMove move = new ResetBoardSpecialMove(app.getGameScreen().getGridView().getGrid(),app.getGameScreen().getLevel());
             if(move.isValid()) {
                 move.doMove(app);

@@ -102,14 +102,7 @@ public class SquareButtonController extends ButtonController {
             if (move.isValid()) {
                 move.doMove(app);
                 gridView.finishMakingMove();
-
-                DropDownAutoMove dropDownAutoMove = new DropDownAutoMove(
-                        app.getGameScreen().getLevel(),
-                        app.getGameScreen().getGridView().getGrid()
-                );
-                if (dropDownAutoMove.isValid()) {
-                    dropDownAutoMove.doMove(app);
-                }
+                dropDown();
 
             } else {
                 app.getGameScreen().updateScore(new Value(0));
@@ -118,6 +111,9 @@ public class SquareButtonController extends ButtonController {
 
             gridView.finishMakingMove();
         } else if (gridView.getSpecialMove() instanceof ClearTileSpecialMove) {
+            gridView.finishMakingMove();
+            dropDown();
+
             SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
 
             specialMoveNavigationBar.getSpecialMoveLeft().getRemoveTileSpecialMove().decrease(1);
@@ -127,25 +123,33 @@ public class SquareButtonController extends ButtonController {
 
             gridView.setSpecialMove(null);
 
-            gridView.finishMakingMove();
-
         } else if(gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
             SwapSquareSpecialMove move = (SwapSquareSpecialMove)gridView.getSpecialMove();
             if(move.isValid()) {
 
                 move.doMove(app);
+                gridView.finishMakingMove();
+                dropDown();
 
                 SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
-
                 specialMoveNavigationBar.getSpecialMoveLeft().getSwapTileSpecialMove().decrease(1);
                 specialMoveNavigationBar.setAllMoveButtonNormal();
-
                 specialMoveNavigationBar.getSwapSquareSpecialMoveView().modelChanged();
 
                 gridView.setSpecialMove(null);
 
-                gridView.finishMakingMove();
+
             }
+        }
+    }
+
+    private void dropDown() {
+        DropDownAutoMove dropDownAutoMove = new DropDownAutoMove(
+                app.getGameScreen().getLevel(),
+                app.getGameScreen().getGridView().getGrid()
+        );
+        if (dropDownAutoMove.isValid()) {
+            dropDownAutoMove.doMove(app);
         }
     }
 }

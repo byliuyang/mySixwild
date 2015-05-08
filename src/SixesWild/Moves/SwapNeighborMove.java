@@ -83,7 +83,9 @@ public class SwapNeighborMove implements IMove {
                 }
             }
 
-            grid.getNotMakred();
+            if(level instanceof EliminationLevel) {
+                ((EliminationLevel)level).getNotMarked();
+            }
 
             app.getGameScreen().getTileDisappearSound().play();
 

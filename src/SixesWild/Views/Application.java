@@ -116,8 +116,8 @@ public class Application extends JFrame {
         if (gameScreen == null) {
 //            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
 //            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyLightningLevel());
-            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyEliminationLevel());
-//            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyReleaseLevel());
+//            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyEliminationLevel());
+            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyReleaseLevel());
 
             getGameScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(gameScreen);
@@ -341,8 +341,6 @@ public class Application extends JFrame {
                 new Value(7)
         );
 
-        Value swapNeighborMoveLeft = new Value(20);
-
         EliminationLevel eliminationLevel = new EliminationLevel(
                 unlockState,
                 id,
@@ -383,25 +381,15 @@ public class Application extends JFrame {
             for (int column = 0; column < 9; column++) {
                 Location location = new Location(new Value(row), new Value(column));
                 Square square = new Square(location, null);
-
                 grid.addSquare(square);
             }
         }
-
-        grid.removeSquare(0, 0);
-        grid.removeSquare(5, 7);
-        grid.removeSquare(8, 4);
-        grid.removeSquare(8, 3);
-
-        grid.generateTiles();
 
         SpecialMoveLeft specialMoveLeft = new SpecialMoveLeft(
                 new Value(5),
                 new Value(20),
                 new Value(7)
         );
-
-        Value swapNeighborMoveLeft = new Value(20);
 
         ReleaseLevel releaseLevel = new ReleaseLevel(
                 unlockState,
@@ -411,6 +399,18 @@ public class Application extends JFrame {
                 specialMoveLeft,
                 probabilities
         );
+
+        grid.removeSquare(0, 0);
+        grid.removeSquare(5, 7);
+        grid.removeSquare(8, 4);
+        grid.removeSquare(8, 3);
+
+        releaseLevel.addContainer(3,4);
+        releaseLevel.addContainer(2,7);
+        releaseLevel.addContainer(1,4);
+        releaseLevel.addContainer(7,3);
+
+        grid.generateTiles();
 
         return releaseLevel;
     }

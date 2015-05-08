@@ -66,7 +66,6 @@ public class SquareView extends StyledButton {
     public void redrawState() {
         super.redrawState();
         if (square.isContainer()) {
-
             int containerWidth = (int) getMinimumSize().getWidth();
             int containerHeight = (int) getMinimumSize().getHeight();
 
@@ -89,7 +88,6 @@ public class SquareView extends StyledButton {
             graphics2D.setColor(Color.WHITE);
             graphics2D.setFont(Utilities.normalFont);
             graphics2D.drawString(SIX, textPaddingLeft, textPaddingTop);
-
         }
 
         if (square.getTile() != null) {

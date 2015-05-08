@@ -2,6 +2,7 @@ package SixesWild.Moves.AutoMoves;
 
 import SixesWild.Models.Grid;
 import SixesWild.Models.Levels.Level;
+import SixesWild.Models.Levels.ReleaseLevel;
 import SixesWild.Models.Square;
 import SixesWild.Moves.IMove;
 import SixesWild.Views.Application;
@@ -46,27 +47,6 @@ public class DropDownAutoMove implements IMove {
                     if (squares[row][column] != null && squares[row][column].getTile() != null) {
 
                         dropDown(squares, squareViews, row, column);
-                    } else {
-//                        System.out.println(row +"-"+column);
-//                        if (squares[row + 1][column] == null
-//
-//                        if (column - 1 >= 0 && squares[row][column - 1] != null && squares[row][column] != null && squares[row][column].getTile() != null) {
-//
-//                            squares[row][column - 1].setTile(squares[row][column].getTile());
-//                            squares[row][column].setTile(null);
-//                            squareViews[row][column - 1].repaint();
-//                            squareViews[row][column].repaint();
-//
-//                            dropDown(squares, squareViews, row, column - 1);
-//
-//                        } else if (column + 1 < Grid.MAX_COLUMNS && squares[row][column + 1] != null && squares[row][column] != null && squares[row][column].getTile() != null) {
-//                            squares[row][column + 1].setTile(squares[row][column].getTile());
-//                            squares[row][column].setTile(null);
-//                            squareViews[row][column + 1].repaint();
-//                            squareViews[row][column].repaint();
-//
-//                            dropDown(squares, squareViews, row, column + 1);
-//                        }
                     }
                 }
             }
