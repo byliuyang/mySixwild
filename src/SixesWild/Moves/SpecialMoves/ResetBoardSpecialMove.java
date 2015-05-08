@@ -38,7 +38,7 @@ public class ResetBoardSpecialMove implements ISpecialMove {
             Stack<Tile> tiles = new Stack<Tile>();
             for (int row = 0; row < Grid.MAX_ROWS; row++) {
                 for (int column = 0; column < Grid.MAX_COLUMNS; column++) {
-                    if(grid.getSquares()[row][column]!=null && !grid.getSquares()[row][column].isContainer() && grid.getSquares()[row][column].getTile()!=null) {
+                    if(grid.getSquares()[row][column]!=null && grid.getSquares()[row][column].getTile()!=null) {
                         tiles.push(grid.getSquares()[row][column].getTile());
                         grid.getSquares()[row][column].setTile(null);
                     }

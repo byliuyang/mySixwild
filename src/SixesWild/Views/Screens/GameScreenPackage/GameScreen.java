@@ -93,7 +93,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                         app,
                         level.getSpecialMoveLeft(),
                         level.getScore(),
-                        ((EliminationLevel) level).getNotMakred(),
+                        ((EliminationLevel) level).getNotMarked(),
                         TextContact.NOT_MARKED_LABEL_TEXT,
                         level.getId()
                 );
@@ -178,8 +178,10 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                             + SoundsContract.SWAP_SQUARE_SPECIAL_MOVE_SOUND).toURI().toURL()
             );
 
-        } catch (Exception ex) {
+            winLevelSound.play();
 
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
 

@@ -23,12 +23,7 @@ public class RestartLevelMove implements IMove {
     @Override
     public boolean isValid() {
 
-        boolean validation = false;
-
-        if (!level.hasWon()) {
-            validation = true;
-        }
-
+        boolean validation = true;
         return validation;
     }
 

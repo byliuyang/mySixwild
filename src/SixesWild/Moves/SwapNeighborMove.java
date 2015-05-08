@@ -2,6 +2,7 @@ package SixesWild.Moves;
 
 import SixesWild.Models.BonusMultiplier;
 import SixesWild.Models.Grid;
+import SixesWild.Models.Levels.EliminationLevel;
 import SixesWild.Models.Levels.Level;
 import SixesWild.Models.Square;
 import SixesWild.Models.Value;
@@ -74,8 +75,15 @@ public class SwapNeighborMove implements IMove {
                 if (multiplier != null) {
                     count.multiply(activeSquares.get(i).getTile().getMutiplier().getMultiplier().getValue());
                     grid.getActiveSquare().get(i).setTile(null);
+
+                    if(level instanceof EliminationLevel) {
+                        grid.getActiveSquare().get(i).mark();
+                        app.getGameScreen().getGridView().getActiveSquareViews().get(i).repaint();
+                    }
                 }
             }
+
+            grid.getNotMakred();
 
             app.getGameScreen().getTileDisappearSound().play();
 

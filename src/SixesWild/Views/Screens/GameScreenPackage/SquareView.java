@@ -1,7 +1,6 @@
 package SixesWild.Views.Screens.GameScreenPackage;
 
 import SixesWild.Models.Square;
-import SixesWild.Models.Tile;
 import SixesWild.Models.Value;
 import SixesWild.Utilities;
 import SixesWild.Views.Components.StyledButton;
@@ -10,7 +9,6 @@ import SixesWild.Views.Screens.Screen;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
-import java.util.Random;
 
 /**
  *
@@ -60,14 +58,13 @@ public class SquareView extends StyledButton {
 
     Square square;
 
-    public SquareView(Color normalBackColor, Color hoveredBackColor, Color activedBackColor, Color disabledBackColor, Square square,int roundRadius) {
+    public SquareView(Color normalBackColor, Color hoveredBackColor, Color activedBackColor, Color disabledBackColor, Square square, int roundRadius) {
         super(normalBackColor, hoveredBackColor, activedBackColor, disabledBackColor, roundRadius);
         this.square = square;
     }
 
     public void redrawState() {
         super.redrawState();
-
         if (square.isContainer()) {
 
             int containerWidth = (int) getMinimumSize().getWidth();
@@ -99,7 +96,7 @@ public class SquareView extends StyledButton {
 
             Value tileNumber = square.getTile().getNumber();
 
-            graphics2D.setColor(TILE_BACK_COLOR[(int)tileNumber.getValue() - 1]);
+            graphics2D.setColor(TILE_BACK_COLOR[(int) tileNumber.getValue() - 1]);
 
             graphics2D.fillRoundRect(
                     (int) ((SQUARE_VIEW_SIZE.getWidth() - TILE_VIEW_SIZE.getWidth()) / 2),
@@ -132,7 +129,7 @@ public class SquareView extends StyledButton {
 
 
 //        Draw multiplier
-            if(square.getTile().getMutiplier()!=null) {
+            if (square.getTile().getMutiplier() != null) {
                 text = MULTIPLY_SIGN + square.getTile().getMutiplier().getMultiplier().toString();
                 Utilities.normalFont = Utilities.normalFont.deriveFont(MULTIPLIER_FONT_SIZE);
                 metrics = graphics2D.getFontMetrics(Utilities.normalFont);
@@ -160,21 +157,24 @@ public class SquareView extends StyledButton {
             }
         }
 
-        if(!isActiveState()) {
-            graphics2D.setColor(Screen.BORDER_COLOR);
-            graphics2D.drawRect(PADDING_LEFT, PADDING_TOP, (int) SQUARE_VIEW_SIZE.getWidth() - 1, (int) SQUARE_VIEW_SIZE.getHeight() - 1);
+        if (!square.isMarked()) {
+            if (!isActiveState()) {
+                graphics2D.setColor(Screen.BORDER_COLOR);
+                graphics2D.drawRect(PADDING_LEFT, PADDING_TOP, (int) SQUARE_VIEW_SIZE.getWidth() - 1, (int) SQUARE_VIEW_SIZE.getHeight() - 1);
+            }
         }
     }
 
     @Override
     public void normal() {
-        if (square.isContainer()) {
+        if (square.isContainer() || square.isMarked()) {
             currentBackColor = disabledBackColor;
             super.repaint();
         } else {
             super.normal();
         }
     }
+
 
     public Square getSquare() {
         return square;

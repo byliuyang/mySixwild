@@ -43,7 +43,7 @@ public class DropDownAutoMove implements IMove {
 
             for (int column = 0; column < Grid.MAX_COLUMNS; column++) {
                 for (int row = Grid.MAX_ROWS - 2; row >= 0; row--) {
-                    if (squares[row][column] != null && !squares[row][column].isContainer() && squares[row][column].getTile() != null) {
+                    if (squares[row][column] != null && squares[row][column].getTile() != null) {
 
                         dropDown(squares, squareViews, row, column);
                     } else {

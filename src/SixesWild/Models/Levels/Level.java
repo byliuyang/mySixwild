@@ -33,6 +33,8 @@ public abstract class Level extends Unlockable {
         this.specialMoveLeft = specialMoveLeft;
         this.probabilities = probabilities;
         this.makeingMove = false;
+
+
     }
 
     public boolean hasSpecialMove() {

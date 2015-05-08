@@ -2,31 +2,28 @@ package SixesWild.Models.Levels;
 
 import SixesWild.Models.*;
 
-import java.util.ArrayList;
-
 /**
  *
  */
 public class EliminationLevel extends Level {
 
-    ArrayList<Square> markedSquares;
+    int largestMarkable;
 
     public EliminationLevel(boolean unlockState) {
         super(unlockState);
-        this.markedSquares = new ArrayList<Square>();
+        largestMarkable = grid.getLargestMarkable();
     }
 
     public EliminationLevel(boolean unlockState, Value id, Score score, Grid grid, SpecialMoveLeft specialMoveLeft, Probabilities probabilities) {
         super(unlockState, id, score, grid, specialMoveLeft, probabilities);
-        this.markedSquares = new ArrayList<Square>();
     }
 
     public boolean hasWon() {
-        return false;
+        return getNotMarked().getValue() == largestMarkable;
     }
 
-    public Value getNotMakred() {
-        return new Value(Grid.MAX_TILES - markedSquares.size());
+    public Value getNotMarked() {
+        return grid.getNotMakred();
     }
 
 }
