@@ -51,9 +51,13 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
     PopupBox popupBox;
     ImageButton refreshButton;
     GridView gridView;
+
     AudioClip winLevelSound;
-    AudioClip tileDisapperSound;
+    AudioClip tileDisappearSound;
     AudioClip removeTileSpecialMoveSound;
+    AudioClip swapSquaresSpecialMoveSound;
+    AudioClip resetBoardSpecialMoveSound;
+    AudioClip restartLevelSpecialMoveSound;
 
     public GameScreen(String title, Application app, Level level) {
 
@@ -130,9 +134,12 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 //        Sounds
         try {
 
-            winLevelSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.WIN_LEVEL_SOUND).toURL());
-            tileDisapperSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.DROP_TILE_SOUND).toURL());
-            removeTileSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.REMOVE_TILE_SPECIAL_MOVE_SOUND).toURL());
+            winLevelSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.WIN_LEVEL_SOUND).toURI().toURL());
+            tileDisappearSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.DROP_TILE_SOUND).toURI().toURL());
+            removeTileSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.REMOVE_TILE_SPECIAL_MOVE_SOUND).toURI().toURL());
+            resetBoardSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.RESET_BOARD_SPECIAL_MOVE_SOUND).toURI().toURL());
+            restartLevelSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.RESTART_LEVEL_SOUND).toURI().toURL());
+            swapSquaresSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.SWAP_SQUARE_SPECIAL_MOVE_SOUND).toURI().toURL());
 
         } catch (Exception ex) {
 
@@ -200,11 +207,25 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
         return winLevelSound;
     }
 
-    public AudioClip getTileDisapperSound() {
-        return tileDisapperSound;
-    }
-
     public AudioClip getRemoveTileSpecialMoveSound() {
         return removeTileSpecialMoveSound;
     }
+
+    public AudioClip getTileDisappearSound() {
+        return tileDisappearSound;
+    }
+
+    public AudioClip getResetBoardSpecialMoveSound() {
+        return resetBoardSpecialMoveSound;
+    }
+
+    public AudioClip getRestartLevelSpecialMoveSound() {
+        return restartLevelSpecialMoveSound;
+    }
+
+    public AudioClip getSwapSquaresSpecialMoveSound() {
+        return swapSquaresSpecialMoveSound;
+    }
+
+
 }

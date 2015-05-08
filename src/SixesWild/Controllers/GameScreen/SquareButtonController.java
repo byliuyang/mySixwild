@@ -4,6 +4,7 @@ import SixesWild.Controllers.ButtonController;
 import SixesWild.Models.Value;
 import SixesWild.Moves.AutoMoves.DropDownAutoMove;
 import SixesWild.Moves.SpecialMoves.ClearTileSpecialMove;
+import SixesWild.Moves.SpecialMoves.SwapSquareSpecialMove;
 import SixesWild.Moves.SwapNeighborMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.SpecialMoveNavigationBar;
@@ -60,7 +61,12 @@ public class SquareButtonController extends ButtonController {
 
                 gridView.finishMakingMove();
 
-            } else if (!gridView.hasSpecialMove()) {
+            } else if(gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
+
+                gridView.addActiveSquareView((SquareView) button);
+                button.actived();
+            }
+            else if (!gridView.hasSpecialMove()) {
 
                 gridView.beginMakeingMove();
                 mouseEntered(e);
@@ -95,6 +101,7 @@ public class SquareButtonController extends ButtonController {
             SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid(),app.getGameScreen().getLevel());
             if (move.isValid()) {
                 move.doMove(app);
+                gridView.finishMakingMove();
 
                 DropDownAutoMove dropDownAutoMove = new DropDownAutoMove(
                         app.getGameScreen().getLevel(),
@@ -108,6 +115,8 @@ public class SquareButtonController extends ButtonController {
                 app.getGameScreen().updateScore(new Value(0));
                 java.awt.Toolkit.getDefaultToolkit().beep();
             }
+
+            gridView.finishMakingMove();
         } else if (gridView.getSpecialMove() instanceof ClearTileSpecialMove) {
             SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
 
@@ -118,7 +127,25 @@ public class SquareButtonController extends ButtonController {
 
             gridView.setSpecialMove(null);
 
+            gridView.finishMakingMove();
+
+        } else if(gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
+            SwapSquareSpecialMove move = (SwapSquareSpecialMove)gridView.getSpecialMove();
+            if(move.isValid()) {
+
+                move.doMove(app);
+
+                SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
+
+                specialMoveNavigationBar.getSpecialMoveLeft().getSwapTileSpecialMove().decrease(1);
+                specialMoveNavigationBar.setAllMoveButtonNormal();
+
+                specialMoveNavigationBar.getSwapSquareSpecialMoveView().modelChanged();
+
+                gridView.setSpecialMove(null);
+
+                gridView.finishMakingMove();
+            }
         }
-        gridView.finishMakingMove();
     }
 }

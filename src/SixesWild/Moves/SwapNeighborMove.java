@@ -77,7 +77,7 @@ public class SwapNeighborMove implements IMove {
                 }
             }
 
-            app.getGameScreen().getTileDisapperSound().play();
+            app.getGameScreen().getTileDisappearSound().play();
 
             app.getGameScreen().updateScore(count);
 

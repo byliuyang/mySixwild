@@ -22,7 +22,6 @@ public class RestartLevelMove implements IMove {
     @Override
     public boolean isValid() {
 
-        System.out.println(level.hasWon());
         boolean validation = false;
 
         if(!level.hasWon()) {
@@ -87,12 +86,18 @@ public class RestartLevelMove implements IMove {
                         } else if (randomInt > probabilities.getTileFour().getValue() && randomInt <= probabilities.getTileFive().getValue()) {
 
                             tile = new Tile(new Value(Utilities.FIVE), multiplier);
+                        } else if (randomInt > probabilities.getTileFive().getValue() && randomInt <= probabilities.getTileSix().getValue()) {
+
+                            tile = new Tile(new Value(Utilities.SIX), multiplier);
                         }
 
                         squares[row][column].setTile(tile);
                     }
                 }
             }
+
+            app.getGameScreen().getRestartLevelSpecialMoveSound().play();
+
             return true;
         }
         else {

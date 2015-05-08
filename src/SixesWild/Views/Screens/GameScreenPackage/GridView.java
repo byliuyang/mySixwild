@@ -164,4 +164,8 @@ public class GridView extends TransitableView implements IModelUpdated {
             }
         }
     }
+
+    public ArrayList<SquareView> getActiveSquareViews() {
+        return activeSquareViews;
+    }
 }
