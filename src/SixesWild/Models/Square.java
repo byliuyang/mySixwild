@@ -5,9 +5,11 @@ public class Square {
     Location location;
     Tile tile;
     boolean markState;
+    boolean containerState;
 
     public Square() {
         markState = false;
+        containerState = false;
     }
 
     public Square(Location location, Tile tile) {
@@ -44,7 +46,7 @@ public class Square {
     }
 
     public boolean isContainer() {
-        return false;
+        return containerState;
     }
 
     public void mark(){
@@ -53,6 +55,10 @@ public class Square {
 
     public boolean isMarked() {
         return markState;
+    }
+
+    public void container(){
+        containerState = true;
     }
 
 }

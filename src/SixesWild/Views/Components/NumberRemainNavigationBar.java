@@ -14,16 +14,16 @@ import java.awt.*;
  */
 public class NumberRemainNavigationBar extends ScoreSpecialMoveNavigationBar implements IModelUpdated{
     //    Number  view text width
-    final int NUM_VIEW_TEXT_WIDTH = 120;
+    final int NUM_VIEW_TEXT_WIDTH = 154;
     //    Number view size
-    final Dimension NUM_VIEW_SIZE = new Dimension(200, 58);
+    final Dimension NUM_VIEW_SIZE = new Dimension(240, 58);
     //    Number view font size
     final float NUM_VIEW_FONT_SIZE = 22l;
     //    Number view integer underline thickness
     final int NUM_VIEW_UNDERLINE_THICKNESS = 2;
 
     //    Number view bounds
-    final Rectangle NUM_VIEW_BOUNDS = new Rectangle(320, 0, 200, 58);
+    final Rectangle NUM_VIEW_BOUNDS = new Rectangle(320, 0, 240, 58);
 
     IntegerLabelView numberView;
     Value numberLeft;
