@@ -8,10 +8,7 @@ import SixesWild.Controllers.GameScreen.RestartLevelController;
 import SixesWild.Models.Levels.*;
 import SixesWild.Models.Value;
 import SixesWild.Views.Application;
-import SixesWild.Views.Components.ImageButton;
-import SixesWild.Views.Components.LevelNavigationBar;
-import SixesWild.Views.Components.PopupBox;
-import SixesWild.Views.Components.ScoreSpecialMoveNavigationBar;
+import SixesWild.Views.Components.*;
 import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.NavigableScreen;
 

@@ -40,8 +40,6 @@ public class BufferedCanvas extends Canvas {
             return;
         }
 
-        Utilities.setHighQuality(g);
-
         g.drawImage(bufferedImage, PADDING_TOP, PADDING_LEFT, (int) getMinimumSize().getWidth(), (int) getMinimumSize().getHeight(), this);
     }
 

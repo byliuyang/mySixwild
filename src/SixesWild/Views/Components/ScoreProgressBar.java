@@ -1,4 +1,4 @@
-package SixesWild.Views.Screens.GameScreenPackage;
+package SixesWild.Views.Components;
 
 import SixesWild.Models.Value;
 import SixesWild.Views.Components.BufferedCanvas;
@@ -37,6 +37,7 @@ public class ScoreProgressBar extends BufferedCanvas implements IModelUpdated{
     @Override
     protected void redrawState() {
         super.redrawState();
+
         graphics2D.setColor(Color.WHITE);
         graphics2D.fillRect(PADDING_LEFT, PADDING_TOP, (int) SCORE_PROGRESS_BAR_SIZE.getWidth(), (int) SCORE_PROGRESS_BAR_SIZE.getHeight());
 

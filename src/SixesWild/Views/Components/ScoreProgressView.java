@@ -1,10 +1,10 @@
-package SixesWild.Views.Screens.GameScreenPackage;
+package SixesWild.Views.Components;
 
 import SixesWild.Models.Score;
 import SixesWild.Models.Value;
 import SixesWild.Utilities;
-import SixesWild.Views.Components.LargeStarsView;
 import SixesWild.Views.IModelUpdated;
+import SixesWild.Views.Screens.GameScreenPackage.GameScreen;
 
 import javax.swing.*;
 import java.awt.*;
