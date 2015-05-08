@@ -24,8 +24,6 @@ public class LevelFlipPagePanel extends FlipPagePanel {
 
         getLevelListPanel().setBounds(ListPanel.LIST_PANEL_BOUNDS);
         add(getLevelListPanel());
-
-        initialize();
     }
 
     public LevelListPanel getLevelListPanel() {

@@ -50,7 +50,7 @@ public class NavigationBar extends JPanel {
         initialize();
     }
 
-    void initialize() {
+    private void initialize() {
         setBackground(Nav_BAR_COLOR);
         setLayout(null);
 
@@ -70,7 +70,7 @@ public class NavigationBar extends JPanel {
         backButton.setMinimumSize(BACK_BUTTON_SIZE);
 
         backButton.setBounds(BACK_BUTTON_BOUNDS);
-        backButton.setToolTipText(TipContract.BACK_TO_MAIN_MENU_BUTTON_TIP);
+//        backButton.setToolTipText(TipContract.BACK_TO_MAIN_MENU_BUTTON_TIP);
         backButton.addMouseListener(new GoBackButtonController(backButton, app));
 
         add(backButton);

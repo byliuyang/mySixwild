@@ -19,7 +19,7 @@ public class LightningLevel extends Level {
     }
 
     public boolean hasWon() {
-        return false;
+        return time.isUsedUp();
     }
 
     public Time getTime() {

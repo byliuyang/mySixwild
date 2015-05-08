@@ -18,6 +18,10 @@ public class Utilities {
     public static final int FIVE = 5;
     public static final int SIX = 6;
 
+//    Time
+    public static final int ONE_SECOND = 1000;
+    public static final int NO_DELAY = 0;
+
 //    Percentage
     public static final int ONE_HUNDRED = 100;
     public static final int ZERO = 0;
@@ -33,9 +37,6 @@ public class Utilities {
 
         Graphics2D graphics2D=(Graphics2D)g;
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        graphics2D.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
-        graphics2D.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
-        graphics2D.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
         graphics2D.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
     }
 

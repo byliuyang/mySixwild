@@ -1,7 +1,7 @@
 package SixesWild.Views;
 
 import SixesWild.Models.*;
-import SixesWild.Models.Probabilities;
+import SixesWild.Models.Levels.LightningLevel;
 import SixesWild.Models.Levels.PuzzleLevel;
 import SixesWild.Utilities;
 import SixesWild.Views.Animation.AnimationManager;
@@ -112,7 +112,8 @@ public class Application extends JFrame {
 
     public GameScreen getGameScreen() {
         if (gameScreen == null) {
-            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
+//            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
+            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyLightningLevel());
 
             getGameScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(gameScreen);
@@ -166,7 +167,7 @@ public class Application extends JFrame {
     }
 
     PuzzleLevel generateDummyPuzzleLevel() {
-        boolean unlockState=false;
+        boolean unlockState = false;
         Value id = new Value(1);
         Score score = new Score(
                 new Value(2000),
@@ -191,17 +192,17 @@ public class Application extends JFrame {
 
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
-                Location location = new Location(new Value(row),new Value(column));
+                Location location = new Location(new Value(row), new Value(column));
                 Square square = new Square(location, null);
 
                 grid.addSquare(square);
             }
         }
 
-        grid.removeSquare(0,0);
-        grid.removeSquare(5,7);
-        grid.removeSquare(8,4);
-        grid.removeSquare(8,3);
+        grid.removeSquare(0, 0);
+        grid.removeSquare(5, 7);
+        grid.removeSquare(8, 4);
+        grid.removeSquare(8, 3);
 
         grid.generateTiles();
 
@@ -224,5 +225,69 @@ public class Application extends JFrame {
         );
 
         return puzzleLevel;
+    }
+
+    LightningLevel generateDummyLightningLevel() {
+        boolean unlockState = false;
+        Value id = new Value(1);
+        Score score = new Score(
+                new Value(2000),
+                new Value(7000),
+                new Value(10000)
+        );
+
+        Probabilities probabilities = new Probabilities(
+                new Value(20),
+                new Value(40),
+                new Value(60),
+                new Value(80),
+                new Value(90),
+                new Value(100),
+                new Value(60),
+                new Value(80),
+                new Value(100)
+        );
+
+
+        Grid grid = new Grid(probabilities);
+
+        for (int row = 0; row < 9; row++) {
+            for (int column = 0; column < 9; column++) {
+                Location location = new Location(new Value(row), new Value(column));
+                Square square = new Square(location, null);
+
+                grid.addSquare(square);
+            }
+        }
+
+        grid.removeSquare(0, 0);
+        grid.removeSquare(5, 7);
+        grid.removeSquare(8, 4);
+        grid.removeSquare(8, 3);
+        grid.removeSquare(6, 2);
+        grid.removeSquare(6, 1);
+        grid.removeSquare(6, 0);
+
+        grid.generateTiles();
+
+        SpecialMoveLeft specialMoveLeft = new SpecialMoveLeft(
+                new Value(5),
+                new Value(20),
+                new Value(7)
+        );
+
+        Time time = new Time(10);
+
+        LightningLevel lightningLevel = new LightningLevel(
+                unlockState,
+                id,
+                score,
+                grid,
+                specialMoveLeft,
+                probabilities,
+                time
+        );
+
+        return lightningLevel;
     }
 }

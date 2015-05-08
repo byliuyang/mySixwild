@@ -7,15 +7,19 @@ import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.GameScreen.RestartLevelController;
 import SixesWild.Models.Levels.*;
 import SixesWild.Models.Value;
+import SixesWild.Moves.TimerAutoMove;
+import SixesWild.Utilities;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.*;
 import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.NavigableScreen;
 
+import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.awt.*;
 import java.io.File;
+import java.util.Timer;
 
 /**
  *
@@ -48,6 +52,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
     PopupBox popupBox;
     ImageButton refreshButton;
     GridView gridView;
+    Timer timer;
 
     AudioClip winLevelSound;
     AudioClip tileDisappearSound;
@@ -71,10 +76,11 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 
         remove(getNavigationBar());
 
+        ScoreSpecialMoveNavigationBar scoreSpecialMoveNavigationBar = null;
+
         if (!(level instanceof LightningLevel)) {
-            LevelNavigationBar levelNavigationBar = null;
             if (level instanceof PuzzleLevel) {
-                levelNavigationBar = new LevelNavigationBar(
+                scoreSpecialMoveNavigationBar = new LevelNavigationBar(
                         app,
                         level.getSpecialMoveLeft(),
                         level.getScore(),
@@ -83,7 +89,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                         level.getId()
                 );
             } else if (level instanceof EliminationLevel) {
-                levelNavigationBar = new LevelNavigationBar(
+                scoreSpecialMoveNavigationBar = new LevelNavigationBar(
                         app,
                         level.getSpecialMoveLeft(),
                         level.getScore(),
@@ -92,7 +98,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                         level.getId()
                 );
             } else if (level instanceof ReleaseLevel) {
-                levelNavigationBar = new LevelNavigationBar(
+                scoreSpecialMoveNavigationBar = new LevelNavigationBar(
                         app,
                         level.getSpecialMoveLeft(),
                         level.getScore(),
@@ -102,12 +108,24 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                 );
             }
 
-            if (levelNavigationBar != null) {
-                setNavigationBar(levelNavigationBar);
-                levelNavigationBar.setBounds(NAV_BAR_BOUNDS);
-                add(levelNavigationBar);
-            }
+        } else {
+            scoreSpecialMoveNavigationBar = new LevelTimeRemainNavigationBar(
+                    app,
+                    level.getSpecialMoveLeft(),
+                    level.getScore(),
+                    ((LightningLevel) level).getTime(),
+                    level.getId()
+            );
 
+            timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
+
+        }
+
+        if (scoreSpecialMoveNavigationBar != null) {
+            setNavigationBar(scoreSpecialMoveNavigationBar);
+            scoreSpecialMoveNavigationBar.setBounds(NAV_BAR_BOUNDS);
+            add(scoreSpecialMoveNavigationBar);
         }
 
 //        Setup score progress view
@@ -131,12 +149,34 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 //        Sounds
         try {
 
-            winLevelSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.WIN_LEVEL_SOUND).toURI().toURL());
-            tileDisappearSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.DROP_TILE_SOUND).toURI().toURL());
-            removeTileSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.REMOVE_TILE_SPECIAL_MOVE_SOUND).toURI().toURL());
-            resetBoardSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.RESET_BOARD_SPECIAL_MOVE_SOUND).toURI().toURL());
-            restartLevelSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.RESTART_LEVEL_SOUND).toURI().toURL());
-            swapSquaresSpecialMoveSound = Applet.newAudioClip(new File(System.getProperty(Application.ROOT_PATH) + SoundsContract.SWAP_SQUARE_SPECIAL_MOVE_SOUND).toURI().toURL());
+            winLevelSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.WIN_LEVEL_SOUND).toURI().toURL()
+            );
+
+            tileDisappearSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.DROP_TILE_SOUND).toURI().toURL()
+            );
+            removeTileSpecialMoveSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.REMOVE_TILE_SPECIAL_MOVE_SOUND).toURI().toURL()
+            );
+
+            resetBoardSpecialMoveSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.RESET_BOARD_SPECIAL_MOVE_SOUND).toURI().toURL()
+            );
+
+            restartLevelSpecialMoveSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.RESTART_LEVEL_SOUND).toURI().toURL()
+            );
+
+            swapSquaresSpecialMoveSound = Applet.newAudioClip(
+                    new File(System.getProperty(Application.ROOT_PATH)
+                            + SoundsContract.SWAP_SQUARE_SPECIAL_MOVE_SOUND).toURI().toURL()
+            );
 
         } catch (Exception ex) {
 
@@ -200,6 +240,18 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
         getGridView().modelChanged();
     }
 
+    public void gameOver() {
+        if (level.hasWon()) {
+            if(level instanceof LightningLevel) {
+                if(timer!=null) {
+                    timer.cancel();
+                }
+            }
+            app.getGameScreen().getWinLevelSound().play();
+            JOptionPane.showMessageDialog(app, "Game over!");
+        }
+    }
+
     public AudioClip getWinLevelSound() {
         return winLevelSound;
     }
@@ -224,5 +276,11 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
         return swapSquaresSpecialMoveSound;
     }
 
+    public Timer getTimer() {
+        return timer;
+    }
 
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+    }
 }

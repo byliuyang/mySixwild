@@ -2,11 +2,12 @@ package SixesWild.Moves;
 
 import SixesWild.Models.*;
 import SixesWild.Models.Levels.Level;
-import SixesWild.Models.Probabilities;
+import SixesWild.Models.Levels.LightningLevel;
 import SixesWild.Utilities;
 import SixesWild.Views.Application;
 
 import java.util.Random;
+import java.util.Timer;
 
 /**
  * Created by harryliu on 5/6/15.
@@ -24,7 +25,7 @@ public class RestartLevelMove implements IMove {
 
         boolean validation = false;
 
-        if(!level.hasWon()) {
+        if (!level.hasWon()) {
             validation = true;
         }
 
@@ -33,7 +34,7 @@ public class RestartLevelMove implements IMove {
 
     @Override
     public boolean doMove(Application app) {
-        if(isValid()) {
+        if (isValid()) {
             Square[][] squares = level.getGrid().getSquares();
             Probabilities probabilities = level.getGrid().getProbabilities();
 
@@ -96,11 +97,23 @@ public class RestartLevelMove implements IMove {
                 }
             }
 
+            if (level instanceof LightningLevel) {
+                if (app.getGameScreen().getTimer() != null) {
+
+                    app.getGameScreen().getTimer().cancel();
+
+                    ((LightningLevel) level).getTime().setCurrentTime(new Value(0));
+
+                    Timer timer = new Timer();
+                    app.getGameScreen().setTimer(timer);
+                    timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
+                }
+            }
+
             app.getGameScreen().getRestartLevelSpecialMoveSound().play();
 
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

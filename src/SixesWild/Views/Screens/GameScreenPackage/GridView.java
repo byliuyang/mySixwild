@@ -124,9 +124,8 @@ public class GridView extends TransitableView implements IModelUpdated {
 
         grid.getActiveSquare().clear();
 
-        if (level.hasWon()) {
-            app.getGameScreen().getWinLevelSound().play();
-            JOptionPane.showMessageDialog(app, "Game over!");
+        if(level.hasWon()) {
+            app.getGameScreen().gameOver();
         }
     }
 

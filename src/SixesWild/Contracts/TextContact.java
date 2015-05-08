@@ -13,5 +13,7 @@ public class TextContact {
 
     public static final String EMPTY_LABEL_TEXT = "Empty container: ";
 
+    public static final String TIME_REMAIN_LABEL_TEXT = "Time: ";
+
     public static final String LEVEL_ID = "Level: ";
 }

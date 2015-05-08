@@ -42,6 +42,7 @@ public class LevelsScreen extends FlipPageScreen {
 
         getLevelFlipPagePanel().setBounds(FLIP_PAGE_PANEL_BOUNDS);
         add(getLevelFlipPagePanel());
+        getLevelFlipPagePanel().initialize();
 
     }
 
