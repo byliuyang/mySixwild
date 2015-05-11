@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
 
-public class IntegerView extends StyledLabel implements IModelUpdated{
+public class IntegerView extends StyledLabel implements IModelUpdated {
     //    Space between integer and line
     final int GAP_INTEGER_LINE = 4;
 

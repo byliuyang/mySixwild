@@ -7,7 +7,6 @@ import SixesWild.Views.Components.BufferedCanvas;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
-import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**

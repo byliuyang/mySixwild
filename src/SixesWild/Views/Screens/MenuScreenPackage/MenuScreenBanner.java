@@ -11,6 +11,8 @@ import java.awt.*;
  */
 public class MenuScreenBanner extends JPanel {
 
+    //    Banner bar dimension
+    public static final Dimension BANNER_SIZE = new Dimension(Application.WINDOW_WIDTH, 200);
     //    Banner title font size
     final float TITLE_FONT_SIZE = 64L;
     //    Banner title text alignment. True when left aligns, and false when center aligns.
@@ -20,10 +22,6 @@ public class MenuScreenBanner extends JPanel {
     //    Banner title label bounds
     final int TITLE_TEXT_PADDING_LEFT = 0;
     final int TITLE_TEXT_PADDING_TOP = 0;
-
-    //    Banner bar dimension
-    public static final Dimension BANNER_SIZE = new Dimension(Application.WINDOW_WIDTH, 200);
-
     //    Banner title
     String title;
     //    Banner background color

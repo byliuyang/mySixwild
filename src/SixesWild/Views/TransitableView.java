@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  *
  */
-public class TransitableView extends JPanel{
+public class TransitableView extends JPanel {
 
     TransitableValue left;
 

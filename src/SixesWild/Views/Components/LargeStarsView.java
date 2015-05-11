@@ -5,7 +5,6 @@ package SixesWild.Views.Components;
  */
 
 import SixesWild.Contracts.ImageContract;
-import SixesWild.Utilities;
 import SixesWild.Views.Application;
 
 import javax.imageio.ImageIO;
@@ -36,7 +35,7 @@ public class LargeStarsView extends StarsView {
 //        1rd star
         int smallStarPaddingLeft = ((int) getPreferredSize().getWidth()
                 + starActiveImage.getWidth(this)) / 2
-                +gapBetweenStars;
+                + gapBetweenStars;
         graphics2D.drawImage(
                 starActiveImage,
                 smallStarPaddingLeft,
@@ -64,7 +63,7 @@ public class LargeStarsView extends StarsView {
         //        2rd star
         smallStarPaddingLeft = ((int) getPreferredSize().getWidth()
                 + starActiveImage.getWidth(this)) / 2
-                +gapBetweenStars;
+                + gapBetweenStars;
         graphics2D.drawImage(
                 starActiveImage,
                 smallStarPaddingLeft,

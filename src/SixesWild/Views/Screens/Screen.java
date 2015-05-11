@@ -15,16 +15,15 @@ public class Screen extends TransitableView {
     public static final Color BORDER_COLOR = new Color(229, 229, 229);
     //    Status bar height
     public static final int STATUS_BAR_HEIGHT = 30;
+    //    Screen background color
+    public static final Color SCREEN_BACK_COLOR = new Color(249, 246, 242);
     //    Status bar padding top
     final int PADDING_TOP = 0;
     //    Status bar padding left
     final int PADDING_LEFT = 0;
-//    Screen background color
-    public static final Color SCREEN_BACK_COLOR = new Color(249, 246, 242);
-
+    protected Application app;
     //    Title of the screen
     String title;
-    protected Application app;
 
     public Screen(String title, Application app) {
         this.title = title;

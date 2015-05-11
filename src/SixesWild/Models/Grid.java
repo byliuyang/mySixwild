@@ -2,13 +2,15 @@ package SixesWild.Models;
 
 import SixesWild.Utilities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
  *
  */
-public class Grid {
+
+public class Grid implements Serializable {
 
     //    Max number of rows
     public static final int MAX_ROWS = 9;

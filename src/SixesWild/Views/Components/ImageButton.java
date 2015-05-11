@@ -49,7 +49,7 @@ public class ImageButton extends StyledButton {
                        Color activeBackColor,
                        Color disableBackColor,
                        int roundRadius) {
-        super(normalBackColor, hoverBackColor, activeBackColor, disableBackColor,roundRadius);
+        super(normalBackColor, hoverBackColor, activeBackColor, disableBackColor, roundRadius);
 
         try {
 
@@ -70,7 +70,7 @@ public class ImageButton extends StyledButton {
 
     @Override
     public void normal() {
-        if(!super.isDisableState()) {
+        if (!super.isDisableState()) {
             currentImage = normalImage;
             super.normal();
         }
@@ -90,7 +90,7 @@ public class ImageButton extends StyledButton {
 
     @Override
     public void hovered() {
-        if(!super.isDisableState()) {
+        if (!super.isDisableState()) {
             currentImage = hoveredImage;
             super.hovered();
         }

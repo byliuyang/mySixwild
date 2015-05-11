@@ -2,6 +2,8 @@ package SixesWild.Models.Levels;
 
 import SixesWild.Models.*;
 
+import java.io.Serializable;
+
 /**
  *
  */
@@ -13,7 +15,13 @@ public class LightningLevel extends Level {
         super(unlockState);
     }
 
-    public LightningLevel(boolean unlockState, Value id, Score score, Grid grid, SpecialMoveLeft specialMoveLeft, Probabilities probabilities, Time time) {
+    public LightningLevel(boolean unlockState,
+                          Value id,
+                          Score score,
+                          Grid grid,
+                          SpecialMoveLeft specialMoveLeft,
+                          Probabilities probabilities,
+                          Time time) {
         super(unlockState, id, score, grid, specialMoveLeft, probabilities);
         this.time = time;
     }

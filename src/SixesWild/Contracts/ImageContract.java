@@ -5,9 +5,8 @@ package SixesWild.Contracts;
  */
 public class ImageContract {
 
+    public static final int A_BADGE = 0;
     static final String ASSETS_PATH = "/assets";
-    static final String BADGES_PATH = "/badges";
-
     //    Close windows button image
     public static final String CLOSE_WINDOWS_BUTTON_IMAGE = ASSETS_PATH + "/closeWindowsButton.png";
 
@@ -38,7 +37,7 @@ public class ImageContract {
     public static final String BADGE_RESET_BUTTON_NORMAL_IMAGE = ASSETS_PATH + "/resetBadgeButton.png";
     public static final String BADGE_RESET_BUTTON_HOVERED_IMAGE = ASSETS_PATH + "/resetBadgeButtonHovered.png";
 
-//    Refresh button Image
+    //    Refresh button Image
     public static final String RESET_BUTTON_IMAGE = ASSETS_PATH + "/refreshButton.png";
 
     //    Stars images
@@ -55,11 +54,11 @@ public class ImageContract {
     //    Team introduction image
     public static final String TEAM_INTRODUCTION_IMAGE = ASSETS_PATH + "/teamIntroduction.png";
 
-//    Special move button images
+    //    Special move button images
     public static final String RESET_BOARD_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/resetBoardSpecialMoveButton.png";
     public static final String SWAP_SQUARE_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/swapSquareSpecialMoveButton.png";
-    public static final String REMOVE_TILE_SPECIAL_MOVE_IMAGE = ASSETS_PATH +"/removeTailSpecialMoveButton.png";
-
+    public static final String REMOVE_TILE_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/removeTailSpecialMoveButton.png";
+    static final String BADGES_PATH = "/badges";
     //    Badge image list
     public static final String[] BADGE_IMAGE_LIST = {
             BADGES_PATH + "/1.png",
@@ -76,6 +75,4 @@ public class ImageContract {
             BADGES_PATH + "/12.png",
 
     };
-
-    public static final int A_BADGE = 0;
 }

@@ -1,12 +1,9 @@
 package SixesWild.Controllers.GameScreen;
 
-import SixesWild.Controllers.ViewBadgeScreen.ResetBadgeButtonController;
-import SixesWild.Moves.SpecialMoves.ClearTileSpecialMove;
 import SixesWild.Moves.SpecialMoves.ResetBoardSpecialMove;
 import SixesWild.Views.Application;
-import SixesWild.Views.Components.ScoreSpecialMoveNavigationBar;
-import SixesWild.Views.Components.StyledButton;
 import SixesWild.Views.Components.SpecialMoveNavigationBar;
+import SixesWild.Views.Components.StyledButton;
 
 import java.awt.event.MouseEvent;
 
@@ -27,8 +24,8 @@ public class ResetBoardSpecialMoveController extends SpecialMoveButtonController
     public void mousePressed(MouseEvent e) {
         if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMoveLetf().getValue() > 0) {
             super.mousePressed(e);
-            ResetBoardSpecialMove move = new ResetBoardSpecialMove(app.getGameScreen().getGridView().getGrid(),app.getGameScreen().getLevel());
-            if(move.isValid()) {
+            ResetBoardSpecialMove move = new ResetBoardSpecialMove(app.getGameScreen().getGridView().getGrid(), app.getGameScreen().getLevel());
+            if (move.isValid()) {
                 move.doMove(app);
 
                 SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());

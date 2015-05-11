@@ -1,17 +1,19 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Tile {
+public class Tile implements Serializable {
 
 
     Value number;
-    BonusMultiplier mutiplier;
+    BonusMultiplier multiplier;
 
-    public Tile(Value number, BonusMultiplier mutiplier) {
+    public Tile(Value number, BonusMultiplier multiplier) {
         this.number = number;
-        this.mutiplier = mutiplier;
+        this.multiplier = multiplier;
     }
 
     public Value getNumber() {
@@ -23,10 +25,10 @@ public class Tile {
     }
 
     public BonusMultiplier getMutiplier() {
-        return mutiplier;
+        return multiplier;
     }
 
     public void setMutiplier(BonusMultiplier mutiplier) {
-        this.mutiplier = mutiplier;
+        this.multiplier = mutiplier;
     }
 }

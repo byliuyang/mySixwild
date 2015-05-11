@@ -31,20 +31,20 @@ public class BadgeListPanel extends ListPanel {
 //        }
 
 
-            for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < 16; i++) {
 
-                BadgeView badgeView = new BadgeView(null, this,badgeDetailPanel);
+            BadgeView badgeView = new BadgeView(null, this, badgeDetailPanel);
 
-                badgeView.setPreferredSize(ListPanel.VIEW_SIZE);
-                badgeView.setMinimumSize(ListPanel.VIEW_SIZE);
-                badgeView.setMaximumSize(ListPanel.VIEW_SIZE);
+            badgeView.setPreferredSize(ListPanel.VIEW_SIZE);
+            badgeView.setMinimumSize(ListPanel.VIEW_SIZE);
+            badgeView.setMaximumSize(ListPanel.VIEW_SIZE);
 
-                if(i % 2 == 0) {
-                    badgeView.getBadgeButton().unlock();
-                }
-
-                getViews().add(badgeView);
+            if (i % 2 == 0) {
+                badgeView.getBadgeButton().unlock();
             }
+
+            getViews().add(badgeView);
+        }
 
     }
 }

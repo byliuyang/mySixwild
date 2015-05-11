@@ -36,7 +36,7 @@ public class BufferedComponent extends JComponent {
     }
 
     public void paint(Graphics g) {
-        if(g==null) {
+        if (g == null) {
             return;
         }
 

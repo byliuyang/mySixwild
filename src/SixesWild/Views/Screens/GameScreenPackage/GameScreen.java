@@ -25,18 +25,14 @@ import java.util.Timer;
  *
  */
 public class GameScreen extends NavigableScreen implements IModelUpdated {
-    //    Refresh button round
-    final int RESET_BUTTON_ROUND = 10;
-
     //    Grid view bounds
     public static final Rectangle GRID_VIEW_BOUNDS = new Rectangle(192, NAV_BAR_HEIGHT + STATUS_BAR_HEIGHT + 20, 640, 640);
-
     //    Score progress view bounds
     public static final Rectangle SCORE_PROGRESS_VIEW_BOUNDS = new Rectangle(50, NAV_BAR_HEIGHT + STATUS_BAR_HEIGHT + 20, 126, 562);
-
     //    Score progress view size
     public static final Dimension SCORE_PROGRESS_VIEW_SIZE = new Dimension(126, 562);
-
+    //    Refresh button round
+    final int RESET_BUTTON_ROUND = 10;
     //    Reset button size
     final Dimension RESET_BUTTON_SIZE = new Dimension(78, 78);
     //    Reset button bounds
@@ -244,8 +240,8 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 
     public void gameOver() {
         if (level.hasWon()) {
-            if(level instanceof LightningLevel) {
-                if(timer!=null) {
+            if (level instanceof LightningLevel) {
+                if (timer != null) {
                     timer.cancel();
                 }
             }

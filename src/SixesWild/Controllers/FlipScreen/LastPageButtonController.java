@@ -12,7 +12,7 @@ public class LastPageButtonController extends FlipPageButtonController {
 
     public LastPageButtonController(StyledButton button, FlipPagePanel flipPagePanel) {
         super(button, flipPagePanel);
-        if(flipPagePanel.getListPanel().isAtListHead()){
+        if (flipPagePanel.getListPanel().isAtListHead()) {
             button.disabled();
         }
     }
@@ -20,17 +20,17 @@ public class LastPageButtonController extends FlipPageButtonController {
     @Override
     public void mouseClicked(MouseEvent e) {
 
-        if(!flipPagePanel.getListPanel().isAtListHead()){
+        if (!flipPagePanel.getListPanel().isAtListHead()) {
             flipPagePanel.lastPage();
 
-            if(flipPagePanel.getListPanel().isAtListHead()){
+            if (flipPagePanel.getListPanel().isAtListHead()) {
                 button.disabled();
             } else {
                 button.enabled();
             }
         }
 
-        if(!flipPagePanel.getListPanel().isAtListEnd()) {
+        if (!flipPagePanel.getListPanel().isAtListEnd()) {
             flipPagePanel.getNextPageButton().enabled();
         }
     }

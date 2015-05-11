@@ -76,15 +76,15 @@ public class SwapNeighborMove implements IMove {
                     count.multiply(activeSquares.get(i).getTile().getMutiplier().getMultiplier().getValue());
                     grid.getActiveSquare().get(i).setTile(null);
 
-                    if(level instanceof EliminationLevel) {
+                    if (level instanceof EliminationLevel) {
                         grid.getActiveSquare().get(i).mark();
                         app.getGameScreen().getGridView().getActiveSquareViews().get(i).repaint();
                     }
                 }
             }
 
-            if(level instanceof EliminationLevel) {
-                ((EliminationLevel)level).getNotMarked();
+            if (level instanceof EliminationLevel) {
+                ((EliminationLevel) level).getNotMarked();
             }
 
             app.getGameScreen().getTileDisappearSound().play();

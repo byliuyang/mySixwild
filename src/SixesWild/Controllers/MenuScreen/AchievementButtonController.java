@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
  */
 public class AchievementButtonController extends ButtonController {
     Application app;
+
     public AchievementButtonController(StyledButton button, Application app) {
         super(button);
         this.app = app;

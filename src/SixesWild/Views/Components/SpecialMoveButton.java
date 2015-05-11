@@ -11,7 +11,7 @@ import java.awt.font.GlyphVector;
 /**
  * Created by harryliu on 5/5/15.
  */
-public class SpecialMoveButton extends ImageButton implements IModelUpdated{
+public class SpecialMoveButton extends ImageButton implements IModelUpdated {
 
     //    Special move button size
     public static final Dimension SPECIAL_MOVE_BUTTON_SIZE = new Dimension(42, 42);
@@ -38,7 +38,7 @@ public class SpecialMoveButton extends ImageButton implements IModelUpdated{
             Color activeBackColor,
             Color disableBackColor,
             Value moveLeft) {
-        super(normalImage, hoveredImage, activedImage, disabledImage, normalBackColor, hoverBackColor, activeBackColor, disableBackColor,NavigationBar.NO_ROUND);
+        super(normalImage, hoveredImage, activedImage, disabledImage, normalBackColor, hoverBackColor, activeBackColor, disableBackColor, NavigationBar.NO_ROUND);
 
         this.moveLeft = moveLeft;
 
@@ -122,7 +122,7 @@ public class SpecialMoveButton extends ImageButton implements IModelUpdated{
 
     @Override
     public void modelChanged() {
-        if(moveLeft.getValue()<=0) {
+        if (moveLeft.getValue() <= 0) {
             disabled();
         } else {
             repaint();

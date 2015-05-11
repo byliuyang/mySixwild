@@ -17,10 +17,10 @@ public class SquareView extends StyledButton {
 
     //    Tile view size
     public static final Dimension TILE_VIEW_SIZE = new Dimension(50, 50);
-
+    //    Square size
+    public static final Dimension SQUARE_VIEW_SIZE = new Dimension(70, 70);
     //    Tile font size
     final float FONT_SIZE = 24L;
-
     //    Tile background color
     final Color[] TILE_BACK_COLOR = {
             new Color(236, 113, 113),
@@ -30,25 +30,17 @@ public class SquareView extends StyledButton {
             new Color(62, 152, 199),
             new Color(124, 62, 182)
     };
-
     //    Rounded arc x
     final int ROUNDED_ARC_X = 10;
     //    Rounded arc y
     final int ROUNDED_ARC_Y = 10;
-
     //    Multiplier font size
     final float MULTIPLIER_FONT_SIZE = 12L;
-
     //    Multiply sign
     final String MULTIPLY_SIGN = "×";
-
     //    Multiplier padding
     final int MULTIPLIER_PADDING_RIGHT = 5;
     final int MULTIPLIER_PADDING_BOTTOM = 5;
-
-    //    Square size
-    public static final Dimension SQUARE_VIEW_SIZE = new Dimension(70, 70);
-
     //    Six label of container
     final String SIX = "6";
 

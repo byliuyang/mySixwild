@@ -2,13 +2,15 @@ package SixesWild.Moves.AutoMoves;
 
 import SixesWild.Models.Grid;
 import SixesWild.Models.Levels.Level;
-import SixesWild.Models.Levels.ReleaseLevel;
 import SixesWild.Models.Square;
 import SixesWild.Moves.IMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Screens.GameScreenPackage.SquareView;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by harryliu on 5/6/15.
@@ -98,7 +100,7 @@ public class DropDownAutoMove implements IMove {
 
         @Override
         public void run() {
-            for(Iterator<SquareView> squareViewIterator= droppedSquareView.iterator();squareViewIterator.hasNext();) {
+            for (Iterator<SquareView> squareViewIterator = droppedSquareView.iterator(); squareViewIterator.hasNext(); ) {
                 SquareView squareView = squareViewIterator.next();
                 squareView.inactive();
                 squareView.normal();

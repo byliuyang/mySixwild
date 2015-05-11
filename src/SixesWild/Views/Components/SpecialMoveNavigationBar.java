@@ -7,14 +7,11 @@ import SixesWild.Controllers.GameScreen.ResetBoardSpecialMoveController;
 import SixesWild.Controllers.GameScreen.SwapSquareSpecialMoveController;
 import SixesWild.Models.SpecialMoveLeft;
 import SixesWild.Views.Application;
-import SixesWild.Views.Components.IntegerLabelView;
-import SixesWild.Views.Components.NavigationBar;
-import SixesWild.Views.Components.SpecialMoveButton;
 import SixesWild.Views.IModelUpdated;
 
 import java.awt.*;
 
-public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpdated{
+public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpdated {
 
     //    Special move button colors
     final Color SPECIAL_MOVE_DISABLED_BACK_COLOR = new Color(162, 162, 162);
@@ -71,7 +68,7 @@ public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpd
 //        Swap square special move button
         getSwapSquareSpecialMoveView().setBounds(SWAP_SQUARE_SPECIAL_MOVE_BOUNDS);
 
-        SwapSquareSpecialMoveController swapSquareSpecialMoveController = new SwapSquareSpecialMoveController(getSwapSquareSpecialMoveView(), this,app);
+        SwapSquareSpecialMoveController swapSquareSpecialMoveController = new SwapSquareSpecialMoveController(getSwapSquareSpecialMoveView(), this, app);
         getSwapSquareSpecialMoveView().addMouseListener(swapSquareSpecialMoveController);
         getSwapSquareSpecialMoveView().addMouseMotionListener(swapSquareSpecialMoveController);
 
@@ -95,7 +92,7 @@ public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpd
 //        Clear tile special move button
         getClearSquareSpecialMoveView().setBounds(REMOVE_TILE_SPECIAL_MOVE_BOUNDS);
 
-        ClearTileSpecialMoveController clearTileSpecialMoveController = new ClearTileSpecialMoveController(getClearSquareSpecialMoveView(), this,app);
+        ClearTileSpecialMoveController clearTileSpecialMoveController = new ClearTileSpecialMoveController(getClearSquareSpecialMoveView(), this, app);
         getClearSquareSpecialMoveView().addMouseListener(clearTileSpecialMoveController);
         getClearSquareSpecialMoveView().addMouseMotionListener(clearTileSpecialMoveController);
 

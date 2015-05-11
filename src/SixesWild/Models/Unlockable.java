@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Unlockable {
+public class Unlockable implements Serializable {
 
     boolean unlockState;
 
@@ -12,9 +14,14 @@ public class Unlockable {
     }
 
     public void lock() {
-
+        unlockState = true;
     }
+
     public void unlock() {
+        unlockState =false;
     }
 
+    public boolean isLocked() {
+        return unlockState;
+    }
 }

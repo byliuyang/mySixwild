@@ -1,10 +1,8 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Contracts.TextContact;
-import SixesWild.Models.Levels.Level;
 import SixesWild.Models.Score;
 import SixesWild.Models.SpecialMoveLeft;
-import SixesWild.Models.Value;
 import SixesWild.Views.Application;
 import SixesWild.Views.IModelUpdated;
 
@@ -15,6 +13,8 @@ import java.awt.*;
  */
 public class ScoreSpecialMoveNavigationBar extends SpecialMoveNavigationBar implements IModelUpdated {
 
+    //    Left align
+    protected final boolean LEFT_ALIGN = true;
     //    Score view text width
     final int SCORE_VIEW_TEXT_WIDTH = 74;
     //    Score view size
@@ -23,8 +23,6 @@ public class ScoreSpecialMoveNavigationBar extends SpecialMoveNavigationBar impl
     final float SCORE_VIEW_FONT_SIZE = 22l;
     //    Score view integer underline thickness
     final int SCORE_VIEW_UNDERLINE_THICKNESS = 2;
-    //    Left align
-    protected final boolean LEFT_ALIGN = true;
     //    Score view bounds
     final Rectangle SCORE_VIEW_BOUNDS = new Rectangle(78, 0, 200, 58);
 

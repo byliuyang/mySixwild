@@ -61,12 +61,11 @@ public class SquareButtonController extends ButtonController {
 
                 gridView.finishMakingMove();
 
-            } else if(gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
+            } else if (gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
 
                 gridView.addActiveSquareView((SquareView) button);
                 button.actived();
-            }
-            else if (!gridView.hasSpecialMove()) {
+            } else if (!gridView.hasSpecialMove()) {
 
                 gridView.beginMakeingMove();
                 mouseEntered(e);
@@ -98,7 +97,7 @@ public class SquareButtonController extends ButtonController {
     public void mouseReleased(MouseEvent e) {
 
         if (!gridView.hasSpecialMove()) {
-            SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid(),app.getGameScreen().getLevel());
+            SwapNeighborMove move = new SwapNeighborMove(gridView.getGrid(), app.getGameScreen().getLevel());
             if (move.isValid()) {
                 move.doMove(app);
                 gridView.finishMakingMove();
@@ -123,9 +122,9 @@ public class SquareButtonController extends ButtonController {
 
             gridView.setSpecialMove(null);
 
-        } else if(gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
-            SwapSquareSpecialMove move = (SwapSquareSpecialMove)gridView.getSpecialMove();
-            if(move.isValid()) {
+        } else if (gridView.getSpecialMove() instanceof SwapSquareSpecialMove) {
+            SwapSquareSpecialMove move = (SwapSquareSpecialMove) gridView.getSpecialMove();
+            if (move.isValid()) {
 
                 move.doMove(app);
                 gridView.finishMakingMove();

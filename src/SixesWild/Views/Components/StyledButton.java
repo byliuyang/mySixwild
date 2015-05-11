@@ -1,10 +1,6 @@
 package SixesWild.Views.Components;
 
-import SixesWild.Utilities;
-
-import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 /**
  *
@@ -34,7 +30,7 @@ public class StyledButton extends BufferedComponent {
      * @param activedBackColor  Mouse pressed background color
      * @param disabledBackColor Disabled background color
      */
-    public StyledButton(Color normalBackColor, Color hoveredBackColor, Color activedBackColor, Color disabledBackColor,int roundRadius) {
+    public StyledButton(Color normalBackColor, Color hoveredBackColor, Color activedBackColor, Color disabledBackColor, int roundRadius) {
         this.normalBackColor = normalBackColor;
         this.hoveredBackColor = hoveredBackColor;
         this.activedBackColor = activedBackColor;

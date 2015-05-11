@@ -17,7 +17,7 @@ import java.awt.*;
  */
 public class MenuScreen extends Screen {
 
-//    Level button rounds
+    //    Level button rounds
     public static final int LEVEL_BUTTON_ROUND = 12;
 
     //    Menu screen banner background color
@@ -44,7 +44,7 @@ public class MenuScreen extends Screen {
     //    Bounds of buttons
     final int BUTTON_PADDING_LEFT = (Application.WINDOW_WIDTH - (int) BUTTON_SIZE.getWidth()) / 2;
 
-//    Padding top of the first button
+    //    Padding top of the first button
     final int BUTTON_GROUP_PADDING_TOP = 110;
 
     //    Vertical space between buttons
@@ -108,17 +108,17 @@ public class MenuScreen extends Screen {
         getContinueButton().addMouseMotionListener(continueGameButtonController);
         getContinueButton().setToolTipText(TipContract.CONTINUE_GAME_BUTTON_TIP);
 
-        ViewLevelsButtonController viewLevelsButtonController = new ViewLevelsButtonController(levelsButton,app);
+        ViewLevelsButtonController viewLevelsButtonController = new ViewLevelsButtonController(levelsButton, app);
         getLevelsButton().addMouseListener(viewLevelsButtonController);
         getLevelsButton().addMouseMotionListener(viewLevelsButtonController);
         getLevelsButton().setToolTipText(TipContract.VIEW_PAST_LEVEL_BUTTON_TIP);
 
-        AchievementButtonController achievementButtonController = new AchievementButtonController(badgeButton,app);
+        AchievementButtonController achievementButtonController = new AchievementButtonController(badgeButton, app);
         getBadgeButton().addMouseListener(achievementButtonController);
         getBadgeButton().addMouseMotionListener(achievementButtonController);
         getBadgeButton().setToolTipText(TipContract.VIEW_ACHIEVEMENT_BUTTON_TIP);
 
-        AboutButtonController aboutButtonController = new AboutButtonController(aboutButton,app);
+        AboutButtonController aboutButtonController = new AboutButtonController(aboutButton, app);
         getAboutButton().addMouseListener(aboutButtonController);
         getAboutButton().addMouseMotionListener(aboutButtonController);
         getAboutButton().setToolTipText(TipContract.ABOUT_BUTTON_TIP);

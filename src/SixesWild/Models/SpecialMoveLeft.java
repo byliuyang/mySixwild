@@ -1,26 +1,32 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class SpecialMoveLeft {
+public class SpecialMoveLeft implements Serializable {
 
-    Value resetBoardSpecialMoveLetf;
+    Value resetBoardSpecialMove;
     Value removeTileSpecialMove;
     Value swapTileSpecialMove;
 
-    public SpecialMoveLeft(Value resetBoardSpecialMoveLetf, Value removeTileSpecialMove, Value swapTileSpecialMove) {
-        this.resetBoardSpecialMoveLetf = resetBoardSpecialMoveLetf;
+
+    public SpecialMoveLeft(
+            Value resetBoardSpecialMove,
+            Value removeTileSpecialMove,
+            Value swapTileSpecialMove) {
+        this.resetBoardSpecialMove = resetBoardSpecialMove;
         this.removeTileSpecialMove = removeTileSpecialMove;
         this.swapTileSpecialMove = swapTileSpecialMove;
     }
 
     public Value getResetBoardSpecialMoveLetf() {
-        return resetBoardSpecialMoveLetf;
+        return resetBoardSpecialMove;
     }
 
     public void setResetBoardSpecialMoveLetf(Value resetBoardSpecialMoveLetf) {
-        this.resetBoardSpecialMoveLetf = resetBoardSpecialMoveLetf;
+        this.resetBoardSpecialMove = resetBoardSpecialMoveLetf;
     }
 
     public Value getRemoveTileSpecialMove() {

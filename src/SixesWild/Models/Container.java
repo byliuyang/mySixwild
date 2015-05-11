@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  * Created by harryliu on 5/6/15.
  */
-public class Container extends Square {
+public class Container extends Square implements Serializable {
 
     public Container() {
     }

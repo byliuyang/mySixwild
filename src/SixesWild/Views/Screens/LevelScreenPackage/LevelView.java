@@ -80,7 +80,7 @@ public class LevelView extends LockableButtonView {
 
         getLevelButton().setBounds(LEVEL_BUTTON_BOUNDS);
 
-        LevelButtonController levelButtonController = new LevelButtonController(getLevelButton(), (LevelListPanel)getListPanel(), this, level, levelDetailPanel);
+        LevelButtonController levelButtonController = new LevelButtonController(getLevelButton(), (LevelListPanel) getListPanel(), this, level, levelDetailPanel);
         getLevelButton().addMouseListener(levelButtonController);
         getLevelButton().addMouseMotionListener(levelButtonController);
 
@@ -98,12 +98,12 @@ public class LevelView extends LockableButtonView {
 
     public LockableButton getLevelButton() {
         if (getButton() == null) {
-//            int levelNumber = level.getLevelOrder();
-            int levelNumber = 2;
+
+            long levelNumber = level.getId().getValue();
 
             setButton(
                     new LevelButton(
-                            new Integer(levelNumber).toString(),
+                            new Long(levelNumber).toString(),
                             LEVEL_BUTTON_FONT_SIZE,
                             Color.WHITE,
                             Color.WHITE,
@@ -129,8 +129,7 @@ public class LevelView extends LockableButtonView {
 
     public SmallStarsView getSmallStars() {
         if (smallStars == null) {
-//            int starNumber = level.getScore.getNumStar();
-            int starNumber = 2;
+            int starNumber = level.getScore().getStarNumber();
 
             smallStars = new SmallStarsView(starNumber);
 

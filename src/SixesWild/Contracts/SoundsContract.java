@@ -13,14 +13,14 @@ public class SoundsContract {
     //    Level win sound
     public static final String WIN_LEVEL_SOUND = SOUNDS_PATH + "/win.wav";
 
-//    Remove tile special move sound
-    public static final String REMOVE_TILE_SPECIAL_MOVE_SOUND = SOUNDS_PATH +"/removeTileSpecialMove.wav";
+    //    Remove tile special move sound
+    public static final String REMOVE_TILE_SPECIAL_MOVE_SOUND = SOUNDS_PATH + "/removeTileSpecialMove.wav";
 
     //    Swap square special move sound
-    public static final String SWAP_SQUARE_SPECIAL_MOVE_SOUND = SOUNDS_PATH +"/swap.wav";
+    public static final String SWAP_SQUARE_SPECIAL_MOVE_SOUND = SOUNDS_PATH + "/swap.wav";
 
     //    Reset board special move sound
-    public static final String RESET_BOARD_SPECIAL_MOVE_SOUND = SOUNDS_PATH +"/refresh.wav";
+    public static final String RESET_BOARD_SPECIAL_MOVE_SOUND = SOUNDS_PATH + "/refresh.wav";
 
-    public static final String RESTART_LEVEL_SOUND = SOUNDS_PATH +"/refresh.wav";
+    public static final String RESTART_LEVEL_SOUND = SOUNDS_PATH + "/refresh.wav";
 }

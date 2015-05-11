@@ -27,10 +27,11 @@ public class LevelFlipPagePanel extends FlipPagePanel {
     }
 
     public LevelListPanel getLevelListPanel() {
-        if(getListPanel() == null) {
+        if (getListPanel() == null) {
+
             setListPanel(new LevelListPanel(levels, (LevelDetailPanel) getFlipPageScreen().getDetailPanel()));
         }
 
-        return (LevelListPanel)getListPanel();
+        return (LevelListPanel) getListPanel();
     }
 }

@@ -12,7 +12,7 @@ import java.awt.*;
 /**
  * Created by harryliu on 5/5/15.
  */
-public class LevelNavigationBar extends NumberRemainNavigationBar implements IModelUpdated{
+public class LevelNavigationBar extends NumberRemainNavigationBar implements IModelUpdated {
     //    Level view text width
     final int LEVEL_VIEW_TEXT_WIDTH = 70;
     //    Level view size

@@ -18,11 +18,11 @@ public class Utilities {
     public static final int FIVE = 5;
     public static final int SIX = 6;
 
-//    Time
+    //    Time
     public static final int ONE_SECOND = 1000;
     public static final int NO_DELAY = 0;
 
-//    Percentage
+    //    Percentage
     public static final int ONE_HUNDRED = 100;
     public static final int ZERO = 0;
 
@@ -35,7 +35,7 @@ public class Utilities {
      */
     public static void setHighQuality(Graphics g) {
 
-        Graphics2D graphics2D=(Graphics2D)g;
+        Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         graphics2D.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
     }

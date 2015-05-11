@@ -1,7 +1,10 @@
 package SixesWild.Views.Screens.LevelScreenPackage;
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Contracts.TextContact;
 import SixesWild.Controllers.ViewLevelScreen.StartLevelButtonController;
+import SixesWild.Models.Levels.*;
+import SixesWild.Utilities;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.DetailPanel;
 import SixesWild.Views.Components.ImageButton;
@@ -10,7 +13,6 @@ import SixesWild.Views.Components.NavigationBar;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 
 /**
  *
@@ -22,19 +24,19 @@ public class LevelDetailPanel extends DetailPanel {
     final float LEVEL_NAME_FONT_SIZE = 36L;
 
     //    Level name label bounds
-    final Rectangle LEVEL_NAME_BOUNDS = new Rectangle(40, 42, 130, 50);
+    final Rectangle LEVEL_NAME_BOUNDS = new Rectangle(190, 42, 130, 50);
 
     //    Level type font size
     final float LEVEL_TYPE_FONT_SIZE = 24L;
 
     //    Level name label bounds
-    final Rectangle LEVEL_TYPE_BOUNDS = new Rectangle(40, 72, 130, 50);
+    final Rectangle LEVEL_TYPE_BOUNDS = new Rectangle(190, 72, 130, 50);
 
     //    Level introduction font size
-    final float LEVEL_INTRO_FONT_SIZE = 16L;
+    final float LEVEL_INTRO_FONT_SIZE = 18L;
 
     //    Level introduction label bounds
-    final Rectangle LEVEL_INTRO_BOUNDS = new Rectangle(170, 20, 550, 100);
+    final Rectangle LEVEL_INTRO_BOUNDS = new Rectangle(320, 20, 480, 100);
 
     //    Start level button size
     final Dimension START_LEVEL_BUTTON_SIZE = new Dimension(140, 46);
@@ -48,6 +50,8 @@ public class LevelDetailPanel extends DetailPanel {
     //    Star view bounds
     final Rectangle STAR_VIEW_BOUNDS = new Rectangle(893, 30, 96, 28);
 
+    final Rectangle PREVIEW_GRID_VIEW_BOUNDS  = new Rectangle(6, 6, 142, 142);
+
 
     JLabel levelNameLabel;
 
@@ -59,37 +63,39 @@ public class LevelDetailPanel extends DetailPanel {
 
     ImageButton startLevelButton;
 
-    //    Current font of Text
-    Font currentFont;
+    Level level;
 
-    public LevelDetailPanel() {
+    PreviewGridView previewGridView;
+
+    Application app;
+
+    public LevelDetailPanel(Application app) {
+
 
         setLayout(null);
         setBackground(DETAIL_PANEL_BACK_COLOR);
 
+        Utilities.normalFont = Utilities.normalFont.deriveFont(LEVEL_NAME_FONT_SIZE);
         //       Setup level name label
-        setRegularFont(LEVEL_NAME_FONT_SIZE);
-        levelNameLabel = new JLabel("Level 1");
-        levelNameLabel.setFont(currentFont);
+        levelNameLabel = new JLabel();
+        levelNameLabel.setFont(Utilities.normalFont);
         levelNameLabel.setForeground(Color.WHITE);
         levelNameLabel.setOpaque(false);
         levelNameLabel.setBounds(LEVEL_NAME_BOUNDS);
         add(levelNameLabel);
 
-        //        Setup level type label
-        setRegularFont(LEVEL_TYPE_FONT_SIZE);
-        levelTypeLabel = new JLabel("Puzzle");
-        levelTypeLabel.setFont(currentFont);
+        Utilities.normalFont = Utilities.normalFont.deriveFont(LEVEL_TYPE_FONT_SIZE);
+        levelTypeLabel = new JLabel();
+        levelTypeLabel.setFont(Utilities.normalFont);
         levelTypeLabel.setForeground(Color.WHITE);
         levelTypeLabel.setOpaque(false);
         levelTypeLabel.setBounds(LEVEL_TYPE_BOUNDS);
         add(levelTypeLabel);
 
+        Utilities.normalFont = Utilities.normalFont.deriveFont(LEVEL_INTRO_FONT_SIZE);
         //        Setup level intro label
-        setRegularFont(LEVEL_INTRO_FONT_SIZE);
-        levelIntroLabel = new JLabel("<html><ul><li>Each move removes squares from grid</li>" +
-                "<li>Contents repopulated by shifting downward to fill in holes, with new squares appearing at top</li></ul></html>");
-        levelIntroLabel.setFont(currentFont);
+        levelIntroLabel = new JLabel();
+        levelIntroLabel.setFont(Utilities.normalFont);
         levelIntroLabel.setForeground(Color.WHITE);
         levelIntroLabel.setOpaque(false);
         levelIntroLabel.setBounds(LEVEL_INTRO_BOUNDS);
@@ -123,9 +129,8 @@ public class LevelDetailPanel extends DetailPanel {
         add(startLevelButton);
 
 
-
 //        Large star view
-        largeStars = new LargeStarsView(2);
+        largeStars = new LargeStarsView(0);
         largeStars.setPreferredSize(STAR_VIEW_SIZE);
         largeStars.setMaximumSize(STAR_VIEW_SIZE);
         largeStars.setMinimumSize(STAR_VIEW_SIZE);
@@ -136,55 +141,53 @@ public class LevelDetailPanel extends DetailPanel {
         largeStars.repaint();
     }
 
-    public void setRegularFont(float fontSize) {
+    public void setLevel(Level level) {
 
-        //  Setup font
-        Font font;
+        this.level = level;
 
-        try {
+        //        Setup level type label
 
-            font = Font.createFont(Font.TRUETYPE_FONT, new File(System.getProperty(Application.ROOT_PATH) + Application.REGULAR_FONT_LOCATION));
-            font = font.deriveFont(fontSize);
-            currentFont = font;
+        levelNameLabel.setText(TextContact.LEVEL + " " + level.getId().toString());
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return;
+        String levelType = null;
+        String levelIntro = null;
+
+        if (level instanceof PuzzleLevel) {
+
+            levelType = TextContact.LEVEL_TYPE_PUZZLE;
+            levelIntro = TextContact.LEVEL_INTRO_PUZZLE;
+
+        } else if(level instanceof LightningLevel) {
+
+            levelType = TextContact.LEVEL_TYPE_LIGHTNING;
+            levelIntro = TextContact.LEVEL_INTRO_LIGHTNING;
+
+        } else if(level instanceof EliminationLevel) {
+
+            levelType = TextContact.LEVEL_TYPE_ELIMINATION;
+            levelIntro = TextContact.LEVEL_INTRO_ELIMINATION;
+
+        } else if(level instanceof ReleaseLevel) {
+
+            levelType = TextContact.LEVEL_TYPE_RELEASE;
+            levelIntro = TextContact.LEVEL_INTRO_RELEASE;
         }
+
+        levelTypeLabel.setText(levelType);
+        levelIntroLabel.setText(levelIntro);
+
+        getPreviewGridView().setBounds(PREVIEW_GRID_VIEW_BOUNDS);
+        add(getPreviewGridView());
+
+        largeStars.setStar(level.getScore().getStarNumber());
     }
 
-    public void setItalicFont(float fontSize) {
+    public PreviewGridView getPreviewGridView() {
+        if (previewGridView == null) {
 
-
-        //  Setup font
-        Font font;
-
-        try {
-
-            font = Font.createFont(Font.TRUETYPE_FONT, new File(System.getProperty(Application.ROOT_PATH) + Application.ITALIC_FONT_LOCATION));
-            font = font.deriveFont(fontSize);
-            currentFont = font;
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return;
+            previewGridView = new PreviewGridView(app, level);
         }
-    }
 
-    public void setBoldFont(float fontSize) {
-
-        //  Setup font
-        Font font;
-
-        try {
-
-            font = Font.createFont(Font.TRUETYPE_FONT, new File(System.getProperty(Application.ROOT_PATH) + Application.BOLD_FONT_LOCATION));
-            font = font.deriveFont(fontSize);
-            currentFont = font;
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return;
-        }
+        return previewGridView;
     }
 }

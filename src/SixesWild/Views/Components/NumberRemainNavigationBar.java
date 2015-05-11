@@ -1,6 +1,5 @@
 package SixesWild.Views.Components;
 
-import SixesWild.Models.Levels.Level;
 import SixesWild.Models.Score;
 import SixesWild.Models.SpecialMoveLeft;
 import SixesWild.Models.Value;
@@ -12,7 +11,7 @@ import java.awt.*;
 /**
  * Created by harryliu on 5/5/15.
  */
-public class NumberRemainNavigationBar extends ScoreSpecialMoveNavigationBar implements IModelUpdated{
+public class NumberRemainNavigationBar extends ScoreSpecialMoveNavigationBar implements IModelUpdated {
     //    Number  view text width
     final int NUM_VIEW_TEXT_WIDTH = 154;
     //    Number view size

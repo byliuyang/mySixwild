@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Value {
+public class Value implements Serializable{
 
     long value;
 

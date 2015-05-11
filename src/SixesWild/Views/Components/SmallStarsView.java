@@ -5,12 +5,9 @@ package SixesWild.Views.Components;
  */
 
 import SixesWild.Contracts.ImageContract;
-import SixesWild.Utilities;
 import SixesWild.Views.Application;
-import SixesWild.Views.Screens.Screen;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.File;
 
 /**

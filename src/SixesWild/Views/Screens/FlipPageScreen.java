@@ -52,7 +52,6 @@ public class FlipPageScreen extends NavigableScreen {
 
         setLayout(null);
         setOpaque(true);
-
     }
 
     public FlipPagePanel getFlipPagePanel() {

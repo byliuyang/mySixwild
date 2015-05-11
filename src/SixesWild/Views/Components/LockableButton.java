@@ -7,8 +7,8 @@ import java.awt.*;
  */
 public class LockableButton extends StyledButton {
 
-//    Background color for locked button
-    public static Color LOCKED_BACK_COLOR = new Color(99,99,99);
+    //    Background color for locked button
+    public static Color LOCKED_BACK_COLOR = new Color(99, 99, 99);
 
     boolean lockStatus;
 

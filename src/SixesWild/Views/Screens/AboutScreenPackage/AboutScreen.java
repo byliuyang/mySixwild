@@ -1,7 +1,6 @@
 package SixesWild.Views.Screens.AboutScreenPackage;
 
 import SixesWild.Views.Application;
-import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.NavigableScreen;
 
 import java.awt.*;
@@ -9,7 +8,7 @@ import java.awt.*;
 /**
  *
  */
-public class AboutScreen extends NavigableScreen{
+public class AboutScreen extends NavigableScreen {
 
     //    Developer introduction canvas dimension
     final Dimension DEV_INTRO_CANVAS_SIZE = new Dimension(
@@ -39,8 +38,8 @@ public class AboutScreen extends NavigableScreen{
     }
 
     @Override
-    public void repaint(){
-        if(developerIntroPicture != null) {
+    public void repaint() {
+        if (developerIntroPicture != null) {
             developerIntroPicture.repaint();
         }
     }

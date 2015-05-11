@@ -6,9 +6,9 @@ import SixesWild.Views.IModelUpdated;
 import javax.swing.*;
 import java.awt.*;
 
-public class IntegerLabelView extends JPanel implements IModelUpdated{
+public class IntegerLabelView extends JPanel implements IModelUpdated {
 
-//    Center align
+    //    Center align
     final boolean CENTER_ALIGN = false;
 
     //    Padding top

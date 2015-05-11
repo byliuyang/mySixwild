@@ -18,7 +18,13 @@ public class ReleaseLevel extends Level {
         super(unlockState);
     }
 
-    public ReleaseLevel(boolean unlockState, Value id, Score score, Grid grid, SpecialMoveLeft specialMoveLeft, Probabilities probabilities) {
+    public ReleaseLevel(
+            boolean unlockState,
+            Value id,
+            Score score,
+            Grid grid,
+            SpecialMoveLeft specialMoveLeft,
+            Probabilities probabilities) {
         super(unlockState, id, score, grid, specialMoveLeft, probabilities);
 
         sixReceivers = new ArrayList<>();
@@ -26,7 +32,7 @@ public class ReleaseLevel extends Level {
     }
 
     public boolean hasWon() {
-        if(getNumNotEmpty().getValue()==0) {
+        if (getNumNotEmpty().getValue() == 0) {
             return true;
         }
 
@@ -35,9 +41,9 @@ public class ReleaseLevel extends Level {
 
     public Value getNumNotEmpty() {
         int count = sixReceivers.size();
-        for(Iterator<Square> squareIterator = sixReceivers.iterator(); squareIterator.hasNext();) {
+        for (Iterator<Square> squareIterator = sixReceivers.iterator(); squareIterator.hasNext(); ) {
             Square square = squareIterator.next();
-            if(square.getTile()!=null && square.getTile().getNumber().getValue() == Utilities.SIX) {
+            if (square.getTile() != null && square.getTile().getNumber().getValue() == Utilities.SIX) {
                 count--;
             }
         }

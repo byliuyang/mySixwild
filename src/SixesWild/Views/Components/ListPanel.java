@@ -46,9 +46,6 @@ public abstract class ListPanel extends JPanel {
 
         setOpaque(false);
         setLayout(null);
-
-        setUpViews();
-        showViews();
     }
 
     /**
@@ -63,7 +60,7 @@ public abstract class ListPanel extends JPanel {
                 int currentView = currentPage * NUMBER_LINE_EACH_PAGE * NUMBER_VIEWS_EACH_LINE
                         + line * NUMBER_VIEWS_EACH_LINE
                         + viewNum;
-                if (currentView + 1 < totalViews) {
+                if (currentView < totalViews) {
 
                     views.get(currentView).setBounds(
                             viewNum * ((int) VIEW_SIZE.getWidth() + VIEW_SPACE),

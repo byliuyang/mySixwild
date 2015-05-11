@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Time {
+public class Time implements Serializable {
 
     Value currentTime;
 
@@ -46,8 +48,8 @@ public class Time {
         this.endTime = endTime;
     }
 
-    public boolean isUsedUp(){
-        if(currentTime.getValue()>=endTime.getValue()) {
+    public boolean isUsedUp() {
+        if (currentTime.getValue() >= endTime.getValue()) {
             return true;
         } else {
             return false;

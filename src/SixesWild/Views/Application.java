@@ -16,6 +16,8 @@ import SixesWild.Views.Screens.Screen;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 /**
  *
@@ -37,6 +39,8 @@ public class Application extends JFrame {
 
     //    Root path of application
     public static final String ROOT_PATH = "user.dir";
+
+    public static final String LEVEL_PATH = "/levels";
 
     //    Font locations of regular, italic and bold.
     public static final String REGULAR_FONT_LOCATION = "/assets/AvenirNextRegular.ttf";
@@ -114,10 +118,10 @@ public class Application extends JFrame {
 
     public GameScreen getGameScreen() {
         if (gameScreen == null) {
-//            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
-//            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyLightningLevel());
-//            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyEliminationLevel());
-            gameScreen = new GameScreen(APPLICATION_TITLE,this,generateDummyReleaseLevel());
+            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
+            generateDummyLightningLevel();
+            generateDummyEliminationLevel();
+            generateDummyReleaseLevel();
 
             getGameScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(gameScreen);
@@ -171,13 +175,15 @@ public class Application extends JFrame {
     }
 
     PuzzleLevel generateDummyPuzzleLevel() {
-        boolean unlockState = false;
+        boolean unlockState = true;
         Value id = new Value(1);
         Score score = new Score(
                 new Value(2000),
                 new Value(7000),
                 new Value(10000)
         );
+
+        score.setCurrentScore(new Value(8000));
 
         Probabilities probabilities = new Probabilities(
                 new Value(20),
@@ -228,12 +234,23 @@ public class Application extends JFrame {
                 swapNeighborMoveLeft
         );
 
+        try {
+
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/1.level")
+            );
+
+            objectOutputStream.writeObject(puzzleLevel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return puzzleLevel;
     }
 
     LightningLevel generateDummyLightningLevel() {
         boolean unlockState = false;
-        Value id = new Value(1);
+        Value id = new Value(2);
         Score score = new Score(
                 new Value(2000),
                 new Value(7000),
@@ -292,12 +309,24 @@ public class Application extends JFrame {
                 time
         );
 
+        try {
+
+
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/2.level")
+            );
+
+            objectOutputStream.writeObject(lightningLevel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return lightningLevel;
     }
 
     EliminationLevel generateDummyEliminationLevel() {
         boolean unlockState = false;
-        Value id = new Value(1);
+        Value id = new Value(3);
         Score score = new Score(
                 new Value(2000),
                 new Value(7000),
@@ -350,12 +379,22 @@ public class Application extends JFrame {
                 probabilities
         );
 
+        try {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/3.level")
+            );
+
+            objectOutputStream.writeObject(eliminationLevel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return eliminationLevel;
     }
 
     ReleaseLevel generateDummyReleaseLevel() {
         boolean unlockState = false;
-        Value id = new Value(1);
+        Value id = new Value(4);
         Score score = new Score(
                 new Value(2000),
                 new Value(7000),
@@ -405,12 +444,21 @@ public class Application extends JFrame {
         grid.removeSquare(8, 4);
         grid.removeSquare(8, 3);
 
-        releaseLevel.addContainer(3,4);
-        releaseLevel.addContainer(2,7);
-        releaseLevel.addContainer(1,4);
-        releaseLevel.addContainer(7,3);
-
+        releaseLevel.addContainer(3, 4);
+        releaseLevel.addContainer(2, 7);
+        releaseLevel.addContainer(1, 4);
+        releaseLevel.addContainer(7, 3);
         grid.generateTiles();
+
+        try {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/4.level")
+            );
+
+            objectOutputStream.writeObject(releaseLevel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return releaseLevel;
     }

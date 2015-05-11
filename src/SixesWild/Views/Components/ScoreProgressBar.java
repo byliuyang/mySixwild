@@ -1,7 +1,6 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Models.Value;
-import SixesWild.Views.Components.BufferedCanvas;
 import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.Screen;
 
@@ -10,17 +9,15 @@ import java.awt.*;
 /**
  * Created by harryliu on 5/4/15.
  */
-public class ScoreProgressBar extends BufferedCanvas implements IModelUpdated{
+public class ScoreProgressBar extends BufferedCanvas implements IModelUpdated {
 
     //    Score progress bar size
     public static final Dimension SCORE_PROGRESS_BAR_SIZE = new Dimension(15, 526);
+    //    Milestone label bar height
+    public static final int MILESTONE_LABEL_HEIGHT = 4;
     //    Colors
     final Color TRANSPARENT_DARK = new Color(0, 0, 0, 80);
     final Color PROGRESS_RED = new Color(208, 102, 102);
-
-    //    Milestone label bar height
-    public static final int MILESTONE_LABEL_HEIGHT = 4;
-
     Value current;
 
     Value oneStarScore;

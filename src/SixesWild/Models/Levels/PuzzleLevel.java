@@ -2,6 +2,8 @@ package SixesWild.Models.Levels;
 
 import SixesWild.Models.*;
 
+import java.io.Serializable;
+
 public class PuzzleLevel extends Level {
 
     Value swapNeighborMoveLeft;
@@ -10,7 +12,14 @@ public class PuzzleLevel extends Level {
         super(unlockState);
     }
 
-    public PuzzleLevel(boolean unlockState, Value id, Score score, Grid grid, SpecialMoveLeft specialMoveLeft, Probabilities probabilities, Value swapNeighborMoveLeft) {
+    public PuzzleLevel(
+            boolean unlockState,
+            Value id,
+            Score score,
+            Grid grid,
+            SpecialMoveLeft specialMoveLeft,
+            Probabilities probabilities,
+            Value swapNeighborMoveLeft) {
         super(unlockState, id, score, grid, specialMoveLeft, probabilities);
         this.swapNeighborMoveLeft = swapNeighborMoveLeft;
     }

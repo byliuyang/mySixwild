@@ -36,7 +36,7 @@ public class BufferedCanvas extends Canvas {
     }
 
     public void paint(Graphics g) {
-        if(g==null) {
+        if (g == null) {
             return;
         }
 

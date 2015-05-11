@@ -31,7 +31,7 @@ public class SwapSquareSpecialMove implements ISpecialMove {
 
     @Override
     public boolean doMove(Application app) {
-        if(isValid()) {
+        if (isValid()) {
 
             Square firstSquare = grid.getActiveSquare().get(0);
             Square secondSquare = grid.getActiveSquare().get(1);

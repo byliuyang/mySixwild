@@ -55,7 +55,7 @@ public class ResetBoardSpecialMove implements ISpecialMove {
                 for (int column = 0; column < Grid.MAX_COLUMNS; column++) {
                     if (grid.getSquares()[row][column] != null
                             && grid.getSquares()[row][column].getTile() == null) {
-                        if(tiles.size()>0) {
+                        if (tiles.size() > 0) {
                             int tileIndex = random.nextInt(tiles.size());
                             grid.getSquares()[row][column].setTile(tiles.get(tileIndex));
                             tiles.remove(tileIndex);

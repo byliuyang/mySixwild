@@ -2,7 +2,6 @@ package SixesWild.Controllers.FlipScreen;
 
 import SixesWild.Controllers.ButtonController;
 import SixesWild.Views.Components.FlipPagePanel;
-import SixesWild.Views.Components.ListPanel;
 import SixesWild.Views.Components.StyledButton;
 
 /**

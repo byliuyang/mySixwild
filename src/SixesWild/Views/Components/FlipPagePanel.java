@@ -1,7 +1,6 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Contracts.ImageContract;
-import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.FlipScreen.LastPageButtonController;
 import SixesWild.Controllers.FlipScreen.NextPageButtonController;
 import SixesWild.Views.Application;
@@ -163,18 +162,13 @@ public class FlipPagePanel extends JPanel {
         return nextPageButton;
     }
 
-
-    public void setListPanel(ListPanel listPanel) {
-        this.listPanel = listPanel;
-    }
-
     public PageIndicator getPageIndicator() {
         if (pageIndicator == null) {
 
             int totalPage = getListPanel().getViews().size() % (ListPanel.NUMBER_LINE_EACH_PAGE * ListPanel.NUMBER_VIEWS_EACH_LINE);
 
             if (totalPage != 0) {
-                totalPage = getListPanel().getViews().size() / (ListPanel.NUMBER_LINE_EACH_PAGE * ListPanel.NUMBER_VIEWS_EACH_LINE) +1;
+                totalPage = getListPanel().getViews().size() / (ListPanel.NUMBER_LINE_EACH_PAGE * ListPanel.NUMBER_VIEWS_EACH_LINE) + 1;
             } else {
                 totalPage = getListPanel().getViews().size() / (ListPanel.NUMBER_LINE_EACH_PAGE * ListPanel.NUMBER_VIEWS_EACH_LINE);
             }
@@ -198,6 +192,10 @@ public class FlipPagePanel extends JPanel {
 
     public ListPanel getListPanel() {
         return listPanel;
+    }
+
+    public void setListPanel(ListPanel listPanel) {
+        this.listPanel = listPanel;
     }
 
     public FlipPageScreen getFlipPageScreen() {

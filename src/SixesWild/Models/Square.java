@@ -1,6 +1,8 @@
 package SixesWild.Models;
 
-public class Square {
+import java.io.Serializable;
+
+public class Square implements Serializable {
 
     Location location;
     Tile tile;
@@ -49,7 +51,7 @@ public class Square {
         return containerState;
     }
 
-    public void mark(){
+    public void mark() {
         markState = true;
     }
 
@@ -57,7 +59,7 @@ public class Square {
         return markState;
     }
 
-    public void container(){
+    public void container() {
         containerState = true;
     }
 

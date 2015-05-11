@@ -1,7 +1,6 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Contracts.ImageContract;
-import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.NavigationBar.GoBackButtonController;
 import SixesWild.Views.Application;
 
@@ -13,12 +12,8 @@ import java.awt.*;
  */
 public class NavigationBar extends JPanel {
 
-//    No round
+    //    No round
     public static final int NO_ROUND = 0;
-
-    //    Back button
-    ImageButton backButton;
-
     //    Button background color
     final Color BUTTON_BACK_COLOR = new Color(112, 147, 113);
     //  Button actived background color
@@ -27,7 +22,6 @@ public class NavigationBar extends JPanel {
     final Dimension BACK_BUTTON_SIZE = new Dimension(58, 58);
     //    Back button bounds
     final Rectangle BACK_BUTTON_BOUNDS = new Rectangle(0, 0, 58, 58);
-
     //    Navigation bar background color
     final Color Nav_BAR_COLOR = new Color(112, 147, 113);
     //    Navigation bar title label font size
@@ -38,7 +32,8 @@ public class NavigationBar extends JPanel {
     final Dimension NAV_LABEL_SIZE = new Dimension(280, 58);
     //    Navigation bar title label alignment
     final boolean NAV_LABEL_LEFT_ALIGN = true;
-
+    //    Back button
+    ImageButton backButton;
     //    Application reference
     Application app;
 

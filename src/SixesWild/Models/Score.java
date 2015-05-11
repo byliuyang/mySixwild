@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class Score {
+public class Score implements Serializable {
 
     Value currentScore;
 
@@ -11,17 +13,12 @@ public class Score {
     Value twoStarScore;
     Value threeStarScore;
 
-
     public Score(Value oneStarScore, Value twoStarScore, Value threeStarScore) {
         this.oneStarScore = oneStarScore;
         this.twoStarScore = twoStarScore;
         this.threeStarScore = threeStarScore;
 
         this.currentScore = new Value(0);
-    }
-
-    public int getNumStar() {
-        return 0;
     }
 
     public Value getCurrentScore() {
@@ -54,5 +51,17 @@ public class Score {
 
     public void setThreeStarScore(Value threeStarScore) {
         this.threeStarScore = threeStarScore;
+    }
+
+    public int getStarNumber(){
+        if(currentScore.getValue()>=threeStarScore.getValue()) {
+            return 3;
+        } else if(currentScore.getValue()>=twoStarScore.getValue()){
+            return 2;
+        } else if(currentScore.getValue()>=oneStarScore.getValue()){
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

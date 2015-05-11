@@ -1,13 +1,11 @@
 package SixesWild.Views.Components;
 
-import SixesWild.Views.Components.StyledButton;
-
 import javax.swing.*;
 
 /**
  * Created by harryliu on 5/3/15.
  */
-public class LockableButtonView extends JPanel{
+public class LockableButtonView extends JPanel {
     LockableButton button;
     ListPanel listPanel;
 

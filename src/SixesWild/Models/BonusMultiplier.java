@@ -1,9 +1,11 @@
 package SixesWild.Models;
 
+import java.io.Serializable;
+
 /**
  *
  */
-public class BonusMultiplier {
+public class BonusMultiplier implements Serializable {
 
     Value multiplier;
 

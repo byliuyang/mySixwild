@@ -28,10 +28,10 @@ public class BadgeFlipPagePanel extends FlipPagePanel {
     }
 
     public BadgeListPanel getBadgelListPanel() {
-        if(getListPanel() == null) {
+        if (getListPanel() == null) {
             setListPanel(new BadgeListPanel(badges, (BadgeDetailPanel) getFlipPageScreen().getDetailPanel()));
         }
 
-        return (BadgeListPanel)getListPanel();
+        return (BadgeListPanel) getListPanel();
     }
 }

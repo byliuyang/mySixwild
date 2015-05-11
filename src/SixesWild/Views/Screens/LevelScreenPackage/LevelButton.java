@@ -107,7 +107,7 @@ public class LevelButton extends LockableButton {
             getGraphics2D().drawString(text, textPaddingLeft, textPaddingTop);
 
         } else {
-            if(!isActiveState()) {
+            if (!isActiveState()) {
                 setCurrentBackColor(getDisabledBackColor());
             }
             super.redrawState();
@@ -125,7 +125,7 @@ public class LevelButton extends LockableButton {
 
     @Override
     public void hovered() {
-        if(!isLocked()) {
+        if (!isLocked()) {
             super.hovered();
         } else {
             setCurrentBackColor(LOCKED_BACK_COLOR);

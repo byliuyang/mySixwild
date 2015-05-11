@@ -1,10 +1,6 @@
 package SixesWild.Views.Components;
 
-import SixesWild.Utilities;
-import SixesWild.Views.Screens.Screen;
-
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public abstract class StarsView extends BufferedCanvas {
 
@@ -81,7 +77,7 @@ public abstract class StarsView extends BufferedCanvas {
 //        3rd star
         smallStarPaddingLeft = ((int) getPreferredSize().getWidth()
                 + starInactiveImage.getWidth(this)) / 2
-                +gapBetweenStars;
+                + gapBetweenStars;
         graphics2D.drawImage(
                 starInactiveImage,
                 smallStarPaddingLeft,
@@ -121,7 +117,7 @@ public abstract class StarsView extends BufferedCanvas {
         //        3rd star
         smallStarPaddingLeft = ((int) getPreferredSize().getWidth()
                 + starInactiveImage.getWidth(this)) / 2
-                +gapBetweenStars;
+                + gapBetweenStars;
         graphics2D.drawImage(
                 starInactiveImage,
                 smallStarPaddingLeft,
@@ -161,7 +157,7 @@ public abstract class StarsView extends BufferedCanvas {
         //        3rd star
         smallStarPaddingLeft = ((int) getPreferredSize().getWidth()
                 + starActiveImage.getWidth(this)) / 2
-                +gapBetweenStars;
+                + gapBetweenStars;
         graphics2D.drawImage(
                 starActiveImage,
                 smallStarPaddingLeft,
@@ -169,5 +165,10 @@ public abstract class StarsView extends BufferedCanvas {
                 starActiveImage.getWidth(this),
                 starActiveImage.getHeight(this),
                 this);
+    }
+
+    public void setStar(int star) {
+        this.star = star;
+        repaint();
     }
 }

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsonlib">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/jsonlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

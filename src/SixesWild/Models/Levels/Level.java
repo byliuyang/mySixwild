@@ -3,12 +3,11 @@ package SixesWild.Models.Levels;
 import SixesWild.Models.*;
 import SixesWild.Moves.ISpecialMove;
 
+import java.io.Serializable;
 import java.util.Stack;
 
-/**
- *
- */
-public abstract class Level extends Unlockable {
+
+public abstract class Level extends Unlockable{
 
     Value id;
     Score score;
@@ -25,7 +24,12 @@ public abstract class Level extends Unlockable {
         super(unlockState);
     }
 
-    public Level(boolean unlockState, Value id, Score score, Grid grid, SpecialMoveLeft specialMoveLeft, Probabilities probabilities) {
+    public Level(boolean unlockState,
+                 Value id,
+                 Score score,
+                 Grid grid,
+                 SpecialMoveLeft specialMoveLeft,
+                 Probabilities probabilities) {
         super(unlockState);
         this.id = id;
         this.score = score;
@@ -61,6 +65,10 @@ public abstract class Level extends Unlockable {
 
     public boolean isMakeingMove() {
         return makeingMove;
+    }
+
+    public void setMakeingMove(boolean makeingMove) {
+        this.makeingMove = makeingMove;
     }
 
     public Score getScore() {
@@ -101,10 +109,6 @@ public abstract class Level extends Unlockable {
 
     public void setSpecialMove(ISpecialMove specialMove) {
         this.specialMove = specialMove;
-    }
-
-    public void setMakeingMove(boolean makeingMove) {
-        this.makeingMove = makeingMove;
     }
 
     public Value getId() {

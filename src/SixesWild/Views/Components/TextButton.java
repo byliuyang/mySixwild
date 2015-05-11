@@ -1,12 +1,10 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Utilities;
-import SixesWild.Views.Application;
 
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
-import java.io.File;
 
 /**
  *
@@ -43,7 +41,7 @@ public class TextButton extends StyledButton {
             Color disableBackColor,
             int roundRadius) {
 
-        super(normalBackColor, hoverBackColor, activeBackColor, disableBackColor,roundRadius);
+        super(normalBackColor, hoverBackColor, activeBackColor, disableBackColor, roundRadius);
         this.text = text;
         this.fontSize = fontSize;
         this.normalTextColor = normalTextColor;
@@ -87,7 +85,7 @@ public class TextButton extends StyledButton {
 
         //  Setup font
 
-        Utilities.normalFont= Utilities.normalFont.deriveFont(fontSize);
+        Utilities.normalFont = Utilities.normalFont.deriveFont(fontSize);
 
         Utilities.setHighQuality(graphics2D);
 

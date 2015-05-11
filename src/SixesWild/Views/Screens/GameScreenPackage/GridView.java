@@ -124,7 +124,7 @@ public class GridView extends TransitableView implements IModelUpdated {
 
         grid.getActiveSquare().clear();
 
-        if(level.hasWon()) {
+        if (level.hasWon()) {
             app.getGameScreen().gameOver();
         }
     }
@@ -137,12 +137,12 @@ public class GridView extends TransitableView implements IModelUpdated {
         return level.hasSpecialMove();
     }
 
-    public void setSpecialMove(ISpecialMove specialMove) {
-        level.setSpecialMove(specialMove);
-    }
-
     public ISpecialMove getSpecialMove() {
         return level.getSpecialMove();
+    }
+
+    public void setSpecialMove(ISpecialMove specialMove) {
+        level.setSpecialMove(specialMove);
     }
 
     public Grid getGrid() {

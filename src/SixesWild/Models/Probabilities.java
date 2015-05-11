@@ -1,11 +1,11 @@
 package SixesWild.Models;
 
-import SixesWild.Models.Value;
+import java.io.Serializable;
 
 /**
  * Created by harryliu on 5/5/15.
  */
-public class Probabilities {
+public class Probabilities implements Serializable {
 
     Value tileOne;
     Value tileTwo;
@@ -18,7 +18,17 @@ public class Probabilities {
     Value multiplierTwo;
     Value multiplierThree;
 
-    public Probabilities(Value tileOne, Value tileTwo, Value tileThree, Value tileFour, Value tileFive, Value tileSix, Value multiplierOne, Value multiplierTwo, Value multiplierThree) {
+
+    public Probabilities(
+            Value tileOne,
+            Value tileTwo,
+            Value tileThree,
+            Value tileFour,
+            Value tileFive,
+            Value tileSix,
+            Value multiplierOne,
+            Value multiplierTwo,
+            Value multiplierThree) {
         this.tileOne = tileOne;
         this.tileTwo = tileTwo;
         this.tileThree = tileThree;

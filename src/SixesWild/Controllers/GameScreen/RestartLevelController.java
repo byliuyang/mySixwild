@@ -2,17 +2,15 @@ package SixesWild.Controllers.GameScreen;
 
 import SixesWild.Controllers.ButtonController;
 import SixesWild.Moves.RestartLevelMove;
-import SixesWild.Moves.SpecialMoves.ResetBoardSpecialMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.StyledButton;
-import SixesWild.Views.Screens.GameScreenPackage.GameScreen;
 
 import java.awt.event.MouseEvent;
 
 /**
  *
  */
-public class RestartLevelController extends ButtonController{
+public class RestartLevelController extends ButtonController {
     Application app;
 
     public RestartLevelController(StyledButton button, Application app) {
@@ -26,7 +24,7 @@ public class RestartLevelController extends ButtonController{
 
         RestartLevelMove move = new RestartLevelMove(app.getGameScreen().getLevel());
 
-        if(move.isValid()) {
+        if (move.isValid()) {
             move.doMove(app);
             app.getGameScreen().modelChanged();
 

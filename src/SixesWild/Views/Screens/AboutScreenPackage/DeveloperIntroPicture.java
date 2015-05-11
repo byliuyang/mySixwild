@@ -1,7 +1,6 @@
 package SixesWild.Views.Screens.AboutScreenPackage;
 
 import SixesWild.Contracts.ImageContract;
-import SixesWild.Utilities;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.BufferedCanvas;
 

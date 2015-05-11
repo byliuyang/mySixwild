@@ -4,6 +4,7 @@ import SixesWild.Models.Levels.Level;
 import SixesWild.Views.Components.ListPanel;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -19,30 +20,37 @@ public class LevelListPanel extends ListPanel {
         this.levels = levels;
 
         setPreferredSize(LIST_PANEL_SIZE);
+
+        setUpViews();
+        showViews();
+
+        getViews().get(0).getButton().actived();
+        levelDetailPanel.setLevel(levels.get(0));
     }
 
     @Override
     public void setUpViews() {
-//        for (Iterator<Level> level = levels.iterator(); level.hasNext();) {
-//            LevelView levelView = new LevelView(level.next(), levelDetailPanel);
-//            levelView.setPreferredSize(ListPanel.VIEW_SIZE);
-//
-//            getViews().add(levelView);
-//        }
 
-        for (int i = 0; i < 50; i++) {
+        for (Iterator<Level> levelIterator = levels.iterator();levelIterator.hasNext();) {
 
-            LevelView levelView = new LevelView(null, this,levelDetailPanel);
+            Level level = levelIterator.next();
 
-            levelView.setPreferredSize(ListPanel.VIEW_SIZE);
-            levelView.setMinimumSize(ListPanel.VIEW_SIZE);
-            levelView.setMaximumSize(ListPanel.VIEW_SIZE);
+            try {
 
-            if(i % 2 == 0) {
-                levelView.getLevelButton().unlock();
+                LevelView levelView = new LevelView(level, this, levelDetailPanel);
+
+                levelView.setPreferredSize(ListPanel.VIEW_SIZE);
+                levelView.setMinimumSize(ListPanel.VIEW_SIZE);
+                levelView.setMaximumSize(ListPanel.VIEW_SIZE);
+
+                if (level.isLocked() == true) {
+                    levelView.getLevelButton().unlock();
+                }
+
+                getViews().add(levelView);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-            getViews().add(levelView);
         }
     }
 }

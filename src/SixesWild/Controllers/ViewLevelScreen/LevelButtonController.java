@@ -3,9 +3,9 @@ package SixesWild.Controllers.ViewLevelScreen;
 import SixesWild.Controllers.FlipScreen.LockableButtonController;
 import SixesWild.Models.Levels.Level;
 import SixesWild.Views.Components.LockableButton;
+import SixesWild.Views.Components.LockableButtonView;
 import SixesWild.Views.Screens.LevelScreenPackage.LevelDetailPanel;
 import SixesWild.Views.Screens.LevelScreenPackage.LevelListPanel;
-import SixesWild.Views.Components.LockableButtonView;
 
 import java.awt.event.MouseEvent;
 

@@ -42,8 +42,8 @@ public class StatusBarController extends MouseAdapter {
             int windowX = app.getX();
             int windowY = app.getY();
 
-            int windowNewX = windowX + (int)(e.getX() - origin.getX());
-            int windowNewY = windowY + (int)(e.getY() - origin.getY());
+            int windowNewX = windowX + (int) (e.getX() - origin.getX());
+            int windowNewY = windowY + (int) (e.getY() - origin.getY());
 
             app.setLocation(windowNewX, windowNewY);
         }
