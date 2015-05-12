@@ -1,6 +1,7 @@
 package SixesWild.Views.Screens.AboutScreenPackage;
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Utilities;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.BufferedCanvas;
 
@@ -33,6 +34,8 @@ public class DeveloperIntroPicture extends BufferedCanvas {
 
         int padddingLeft = ((int) getPreferredSize().getWidth() - imageWidth) / 2;
         int padddingTop = ((int) getPreferredSize().getHeight() - imageHeight) / 2;
+
+        Utilities.setHighQuality(graphics2D);
 
         graphics2D.drawImage(teamIntroductionImage, padddingLeft, padddingTop, imageWidth, imageHeight, this);
     }

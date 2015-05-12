@@ -6,11 +6,8 @@ import SixesWild.Models.Square;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.NavigationBar;
 import SixesWild.Views.IModelUpdated;
-import SixesWild.Views.Screens.GameScreenPackage.SquareView;
-import SixesWild.Views.Screens.Screen;
 import SixesWild.Views.TransitableView;
 
-import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -24,35 +21,31 @@ public class PreviewGridView extends TransitableView implements IModelUpdated {
     final int GRID_VIEW_PADDING_LEFT = 4;
     final int GRID_VIEW_PADDING_TOP = 4;
 
-    final Color SQUARE_NORMAL_BACK_COLOR = new Color(0, 0, 0, 0);
+    final Color SQUARE_NORMAL_BACK_COLOR = new Color(72, 111, 74);
     final Color SQUARE_HOVERED_BACK_COLOR = new Color(250, 212, 0);
     final Color SQUARE_DISABLED_BACK_COLOR = new Color(165, 165, 165);
 
-    final Color PREVIEW_GRID_BACK_COLOR = new Color(0,0,0,40);
+    final Color PREVIEW_GRID_BACK_COLOR = new Color(72,111,74);
 
     PreviewSquareView[][] previewSquareViews;
     Application app;
 
-    Grid grid;
-    Level level;
-
-    public PreviewGridView(Application app, Level level) {
-        this.grid = level.getGrid();
+    public PreviewGridView(Application app) {
         this.app = app;
-        this.level = level;
 
         setPreferredSize(GRID_VIEW_SIZE);
         setMaximumSize(GRID_VIEW_SIZE);
         setMinimumSize(GRID_VIEW_SIZE);
 
         setBackground(PREVIEW_GRID_BACK_COLOR);
-
-        initialize();
+        setLayout(null);
     }
 
-    public void initialize() {
+    public void initialize(Level level) {
 
-        setLayout(null);
+        removeAll();
+
+        Grid grid = level.getGrid();
 
         previewSquareViews = new PreviewSquareView[Grid.MAX_ROWS][Grid.MAX_COLUMNS];
 
@@ -85,23 +78,10 @@ public class PreviewGridView extends TransitableView implements IModelUpdated {
                     );
 
                     add(previewSquareView);
-
-//                    SquareButtonController squareButtonController = new SquareButtonController(previewSquareView, this, app);
-//                    previewSquareView.addMouseListener(squareButtonController);
-//                    previewSquareView.addMouseMotionListener(squareButtonController);
-
                     previewSquareView.normal();
                 }
             }
         }
-    }
-
-    public Grid getGrid() {
-        return grid;
-    }
-
-    public PreviewSquareView[][] getSquareViews() {
-        return previewSquareViews;
     }
 
     @Override

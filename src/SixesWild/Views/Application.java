@@ -1,5 +1,6 @@
 package SixesWild.Views;
 
+import SixesWild.Contracts.TextContact;
 import SixesWild.Models.*;
 import SixesWild.Models.Levels.EliminationLevel;
 import SixesWild.Models.Levels.LightningLevel;
@@ -27,11 +28,6 @@ public class Application extends JFrame {
     //    Application name
     public static final String APP_NAME = "SixesWild";
 
-    //    window padding top
-    public static final int WINDOW_PADDING_TOP = 0;
-    //    window padding left
-    public static final int WINDOW_PADDING_LEFT = 0;
-
     //    window width
     public static final int WINDOW_WIDTH = 1024;
     //    windows height
@@ -50,13 +46,6 @@ public class Application extends JFrame {
     //    Application running state. 0 when execution when fine.
     public static final int EXECUTION_FINE = 0;
 
-    //    Title of application
-    final String APPLICATION_TITLE = "SixesWild";
-
-    //    Title of individual screens
-    final String ABOUT_SCREEN_TITLE = "Developers";
-    final String LEVELS_SCREEN_TITLE = "Levels";
-    final String BADGE_SCREEN_TITLE = "Achievement Badges";
     //    Default Screen paddings
     final int DEFAULT_SCREEN_PADDING_LEFT = 0;
     final int DEFAULT_SCREEN_PADDING_TOP = 0;
@@ -98,6 +87,19 @@ public class Application extends JFrame {
 
     public void switchTo(Screen screen) {
         if (currentScreen != null && screen != null) {
+
+            if(currentScreen instanceof GameScreen) {
+                ((GameScreen)currentScreen).suspend();
+            }
+
+            if((screen instanceof MenuScreen)) {
+                if(getGameScreen().getLevel()!=null) {
+                    getMenuScreen().getContinueButton().enabled();
+                } else {
+                    getMenuScreen().getContinueButton().disabled();
+                }
+            }
+
             getGraphics().clearRect(0, 0, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             screen.setVisible(true);
             currentScreen.setVisible(false);
@@ -110,7 +112,7 @@ public class Application extends JFrame {
 
     public MenuScreen getMenuScreen() {
         if (menuScreen == null) {
-            menuScreen = new MenuScreen(APPLICATION_TITLE, this);
+            menuScreen = new MenuScreen(TextContact.APPLICATION_TITLE, this);
         }
 
         return menuScreen;
@@ -118,10 +120,7 @@ public class Application extends JFrame {
 
     public GameScreen getGameScreen() {
         if (gameScreen == null) {
-            gameScreen = new GameScreen(APPLICATION_TITLE, this, generateDummyPuzzleLevel());
-            generateDummyLightningLevel();
-            generateDummyEliminationLevel();
-            generateDummyReleaseLevel();
+            gameScreen = new GameScreen(TextContact.APPLICATION_TITLE, this);
 
             getGameScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(gameScreen);
@@ -133,7 +132,7 @@ public class Application extends JFrame {
 
     public BadgesScreen getBadgesScreen() {
         if (badgesScreen == null) {
-            badgesScreen = new BadgesScreen(APPLICATION_TITLE, this, BADGE_SCREEN_TITLE);
+            badgesScreen = new BadgesScreen(TextContact.APPLICATION_TITLE, this, TextContact.BADGE_SCREEN_TITLE);
 
             getBadgesScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(badgesScreen);
@@ -145,7 +144,7 @@ public class Application extends JFrame {
 
     public LevelsScreen getLevelsScreen() {
         if (levelsScreen == null) {
-            levelsScreen = new LevelsScreen(APPLICATION_TITLE, this, LEVELS_SCREEN_TITLE);
+            levelsScreen = new LevelsScreen(TextContact.APPLICATION_TITLE, this, TextContact.LEVELS_SCREEN_TITLE);
 
             getLevelsScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(levelsScreen);
@@ -157,7 +156,7 @@ public class Application extends JFrame {
 
     public AboutScreen getAboutScreen() {
         if (aboutScreen == null) {
-            aboutScreen = new AboutScreen(APPLICATION_TITLE, this, ABOUT_SCREEN_TITLE);
+            aboutScreen = new AboutScreen(TextContact.APPLICATION_TITLE, this, TextContact.ABOUT_SCREEN_TITLE);
 
             getAboutScreen().setBounds(DEFAULT_SCREEN_PADDING_LEFT, DEFAULT_SCREEN_PADDING_TOP, Application.WINDOW_WIDTH, Application.WINDOW_HEIGHT);
             this.add(aboutScreen);
@@ -178,12 +177,12 @@ public class Application extends JFrame {
         boolean unlockState = true;
         Value id = new Value(1);
         Score score = new Score(
-                new Value(2000),
-                new Value(7000),
-                new Value(10000)
+                new Value(200),
+                new Value(500),
+                new Value(1000)
         );
 
-        score.setCurrentScore(new Value(8000));
+        score.setCurrentScore(700);
 
         Probabilities probabilities = new Probabilities(
                 new Value(20),
@@ -252,9 +251,9 @@ public class Application extends JFrame {
         boolean unlockState = false;
         Value id = new Value(2);
         Score score = new Score(
-                new Value(2000),
-                new Value(7000),
-                new Value(10000)
+                new Value(200),
+                new Value(500),
+                new Value(1000)
         );
 
         Probabilities probabilities = new Probabilities(
@@ -297,7 +296,7 @@ public class Application extends JFrame {
                 new Value(7)
         );
 
-        Time time = new Time(10);
+        Time time = new Time(60);
 
         LightningLevel lightningLevel = new LightningLevel(
                 unlockState,

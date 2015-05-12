@@ -1,6 +1,7 @@
 package SixesWild.Views.Components;
 
 import SixesWild.Contracts.ImageContract;
+import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.FlipScreen.LastPageButtonController;
 import SixesWild.Controllers.FlipScreen.NextPageButtonController;
 import SixesWild.Views.Application;
@@ -88,7 +89,7 @@ public class FlipPagePanel extends JPanel {
 
         getLastPageButton().addMouseListener(lastPageButtonController);
         getLastPageButton().addMouseMotionListener(lastPageButtonController);
-//        getLastPageButton().setToolTipText(TipContract.LAST_PAGE_BUTTON_TIP);
+        getLastPageButton().setToolTipText(TipContract.LAST_PAGE_BUTTON_TIP);
 
         add(lastPageButton);
 
@@ -107,7 +108,7 @@ public class FlipPagePanel extends JPanel {
 
         getNextPageButton().addMouseListener(nextPageButtonController);
         getNextPageButton().addMouseMotionListener(nextPageButtonController);
-//        getNextPageButton().setToolTipText(TipContract.NEXT_PAGE_BUTTON_TIP);
+        getNextPageButton().setToolTipText(TipContract.NEXT_PAGE_BUTTON_TIP);
 
         add(nextPageButton);
 

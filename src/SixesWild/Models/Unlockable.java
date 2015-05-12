@@ -14,14 +14,14 @@ public class Unlockable implements Serializable {
     }
 
     public void lock() {
-        unlockState = true;
+        unlockState = false;
     }
 
     public void unlock() {
-        unlockState =false;
+        unlockState =true;
     }
 
     public boolean isLocked() {
-        return unlockState;
+        return !unlockState;
     }
 }

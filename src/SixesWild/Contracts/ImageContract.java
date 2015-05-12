@@ -52,7 +52,7 @@ public class ImageContract {
     public static final String PAGE_INDICATOR_TAB_INACTIVE_IMAGE = ASSETS_PATH + "/tabInactive.png";
 
     //    Team introduction image
-    public static final String TEAM_INTRODUCTION_IMAGE = ASSETS_PATH + "/teamIntroduction.png";
+    public static final String TEAM_INTRODUCTION_IMAGE = ASSETS_PATH + "/developer.png";
 
     //    Special move button images
     public static final String RESET_BOARD_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/resetBoardSpecialMoveButton.png";

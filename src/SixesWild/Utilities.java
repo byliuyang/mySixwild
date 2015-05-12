@@ -1,9 +1,11 @@
 package SixesWild;
 
+import SixesWild.Models.Levels.Level;
 import SixesWild.Views.Application;
 
 import java.awt.*;
-import java.io.File;
+import java.io.*;
+import java.nio.file.Files;
 
 /**
  * Created by harryliu on 5/2/15.
@@ -48,6 +50,35 @@ public class Utilities {
         } catch (Exception ex) {
             ex.printStackTrace();
             return;
+        }
+    }
+
+    public static void updateLevelState(Level level){
+
+        long levelID = level.getId().getValue();
+
+        try {
+
+//                Read level information from file
+            ObjectInputStream objectInputStream = new ObjectInputStream(
+                    new FileInputStream(System.getProperty(Application.ROOT_PATH)+Application.LEVEL_PATH + "/" + new Long(levelID).toString() + ".level")
+            );
+
+//                Track current score
+
+            Level levelTmp = (Level) objectInputStream.readObject();
+            levelTmp.getScore().setCurrentScore(level.getScore().getCurrentScore().getValue());
+            levelTmp.unlock();
+
+//                Save level
+            Files.delete(new File(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/" + new Long(levelID).toString() + ".level").toPath());
+
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/" + new Long(levelID).toString() + ".level"));
+            objectOutputStream.writeObject(levelTmp);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

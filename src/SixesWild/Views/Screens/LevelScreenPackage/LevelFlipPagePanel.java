@@ -34,4 +34,8 @@ public class LevelFlipPagePanel extends FlipPagePanel {
 
         return (LevelListPanel) getListPanel();
     }
+
+    public ArrayList<Level> getLevels() {
+        return levels;
+    }
 }

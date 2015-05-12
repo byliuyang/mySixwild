@@ -20,8 +20,10 @@ public class ButtonController extends MouseAdapter {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        button.hovered();
-        button.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        if(!button.isDisableState()) {
+            button.hovered();
+            button.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        }
     }
 
     @Override

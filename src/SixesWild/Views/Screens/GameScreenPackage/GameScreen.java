@@ -18,7 +18,8 @@ import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.awt.*;
-import java.io.File;
+import java.io.*;
+import java.nio.file.Files;
 import java.util.Timer;
 
 /**
@@ -57,13 +58,9 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
     AudioClip resetBoardSpecialMoveSound;
     AudioClip restartLevelSpecialMoveSound;
 
-    public GameScreen(String title, Application app, Level level) {
+    public GameScreen(String title, Application app) {
 
         super(title, app);
-
-        this.level = level;
-
-        initialize();
     }
 
     public void initialize() {
@@ -113,6 +110,10 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
                     level.getId()
             );
 
+            if(timer !=null) {
+                timer.cancel();
+                timer = null;
+            }
             timer = new Timer();
             timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
 
@@ -126,10 +127,14 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 
 //        Setup score progress view
         add(getScoreProgressView());
+        getScoreProgressView().setScore(level.getScore());
         getScoreProgressView().initialize();
+
+
 //        Setup grid view
         getGridView().setBounds(GRID_VIEW_BOUNDS);
         add(getGridView());
+        getGridView().initialize();
 
         getRefreshButton().setBounds(RESET_BUTTON_BOUNDS);
 
@@ -215,7 +220,7 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
 
     public ScoreProgressView getScoreProgressView() {
         if (scoreProgressView == null) {
-            scoreProgressView = new ScoreProgressView(level.getScore());
+            scoreProgressView = new ScoreProgressView();
             scoreProgressView.setBounds(SCORE_PROGRESS_VIEW_BOUNDS);
         }
         return scoreProgressView;
@@ -238,15 +243,32 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
         getGridView().modelChanged();
     }
 
-    public void gameOver() {
+    public void levelCompleted() {
+
+
         if (level.hasWon()) {
             if (level instanceof LightningLevel) {
                 if (timer != null) {
                     timer.cancel();
+                    timer = null;
                 }
             }
             app.getGameScreen().getWinLevelSound().play();
-            JOptionPane.showMessageDialog(app, "Game over!");
+            JOptionPane.showMessageDialog(app, "Level complete!");
+
+            long levelID = level.getId().getValue();
+
+            Utilities.updateLevelState(level);
+
+//            Unlock next level
+            if (levelID < app.getLevelsScreen().getNumberLevels()) {
+                if(level.getScore().getStarNumber()>=1) {
+                    app.getLevelsScreen().getLevelFlipPagePanel().getLevelListPanel().unlockLevel(levelID + 1);
+                }
+            }
+
+            //                Go to level screen
+            app.switchTo(app.getLevelsScreen());
         }
     }
 
@@ -278,7 +300,31 @@ public class GameScreen extends NavigableScreen implements IModelUpdated {
         return timer;
     }
 
+    public void setLevel(Level level) {
+        this.level = level;
+        getGridView().setLevel(level);
+
+        if(level instanceof LightningLevel) {
+            timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
+        }
+    }
+
     public void setTimer(Timer timer) {
         this.timer = timer;
+    }
+
+    public void suspend() {
+        if (timer != null) {
+            timer.cancel();
+            timer = null;
+        }
+    }
+
+    public void resume() {
+        if (level instanceof LightningLevel) {
+            timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
+        }
     }
 }

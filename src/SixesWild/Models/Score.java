@@ -25,8 +25,8 @@ public class Score implements Serializable {
         return currentScore;
     }
 
-    public void setCurrentScore(Value currentScore) {
-        this.currentScore = currentScore;
+    public void setCurrentScore(long currentScore) {
+        this.currentScore.setValue(currentScore);
     }
 
     public Value getOneStarScore() {

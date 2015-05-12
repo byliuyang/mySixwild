@@ -50,18 +50,18 @@ public class GridView extends TransitableView implements IModelUpdated {
         setBackground(Color.WHITE);
         setBorder(BorderFactory.createLineBorder(Screen.BORDER_COLOR));
 
-        initialize();
+        setLayout(null);
     }
 
     public void initialize() {
 
-        setLayout(null);
-
+        removeAll();
         activeSquareViews = new ArrayList<SquareView>();
         squareViews = new SquareView[Grid.MAX_ROWS][Grid.MAX_COLUMNS];
 
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
+
 
                 Square square = grid.getSquare(row, column);
                 if (square != null) {
@@ -125,7 +125,7 @@ public class GridView extends TransitableView implements IModelUpdated {
         grid.getActiveSquare().clear();
 
         if (level.hasWon()) {
-            app.getGameScreen().gameOver();
+            app.getGameScreen().levelCompleted();
         }
     }
 
@@ -157,6 +157,7 @@ public class GridView extends TransitableView implements IModelUpdated {
     public void modelChanged() {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
+
                 if (squareViews[row][column] != null) {
                     squareViews[row][column].repaint();
                 }
@@ -166,5 +167,10 @@ public class GridView extends TransitableView implements IModelUpdated {
 
     public ArrayList<SquareView> getActiveSquareViews() {
         return activeSquareViews;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
+        this.grid = level.getGrid();
     }
 }

@@ -21,9 +21,12 @@ public class LevelsScreen extends FlipPageScreen {
 
     LevelFlipPagePanel levelFlipPagePanel;
 
+    int numberLevels;
+
     public LevelsScreen(String title, Application app, String navTitle) {
 
         super(title, app, navTitle);
+        numberLevels = 0;
         setUpLevelList();
     }
 
@@ -38,7 +41,7 @@ public class LevelsScreen extends FlipPageScreen {
             }
         };
 
-        int numberLevels = new File(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH).listFiles(fileFilter).length;
+        numberLevels = new File(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH).listFiles(fileFilter).length;
 
         for (int i = 1; i <= numberLevels; i++) {
 
@@ -87,5 +90,13 @@ public class LevelsScreen extends FlipPageScreen {
         }
 
         return levelFlipPagePanel;
+    }
+
+    public int getNumberLevels() {
+        return numberLevels;
+    }
+
+    public ArrayList<Level> getLevels() {
+        return levels;
     }
 }

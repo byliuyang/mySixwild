@@ -30,7 +30,23 @@ public class LevelButtonController extends LockableButtonController {
     }
 
     @Override
+    public void mouseEntered(MouseEvent e) {
+        if(!button.isDisableState()) {
+            super.mouseEntered(e);
+        }
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        if(!button.isDisableState()) {
+            super.mouseExited(e);
+        }
+    }
+
+    @Override
     public void mouseClicked(MouseEvent e) {
-        super.mouseClicked(e);
+        if(!button.isDisableState()) {
+            levelDetailPanel.setLevel(level);
+        }
     }
 }

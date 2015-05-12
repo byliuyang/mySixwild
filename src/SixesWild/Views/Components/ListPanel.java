@@ -52,6 +52,8 @@ public abstract class ListPanel extends JPanel {
      * Show list of views in current page
      */
     public void showViews() {
+        removeAll();
+
         int totalViews = views.size();
 
         for (int line = 0; line < NUMBER_LINE_EACH_PAGE; line++) {
@@ -123,5 +125,7 @@ public abstract class ListPanel extends JPanel {
         return currentPage;
     }
 
-
+    public DetailPanel getDetailPanel() {
+        return detailPanel;
+    }
 }

@@ -1,6 +1,7 @@
 package SixesWild.Controllers.MenuScreen;
 
 import SixesWild.Controllers.ButtonController;
+import SixesWild.Models.Levels.LightningLevel;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.StyledButton;
 
@@ -20,6 +21,12 @@ public class ContinueGameButtonController extends ButtonController {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        app.switchTo(app.getGameScreen());
+        if(!button.isDisableState()) {
+            app.switchTo(app.getGameScreen());
+
+            if (app.getGameScreen().getLevel() instanceof LightningLevel) {
+                app.getGameScreen().resume();
+            }
+        }
     }
 }

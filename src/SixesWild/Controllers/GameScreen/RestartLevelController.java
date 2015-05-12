@@ -1,6 +1,7 @@
 package SixesWild.Controllers.GameScreen;
 
 import SixesWild.Controllers.ButtonController;
+import SixesWild.Models.Value;
 import SixesWild.Moves.RestartLevelMove;
 import SixesWild.Views.Application;
 import SixesWild.Views.Components.StyledButton;

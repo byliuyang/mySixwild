@@ -50,7 +50,7 @@ public class LevelDetailPanel extends DetailPanel {
     //    Star view bounds
     final Rectangle STAR_VIEW_BOUNDS = new Rectangle(893, 30, 96, 28);
 
-    final Rectangle PREVIEW_GRID_VIEW_BOUNDS  = new Rectangle(6, 6, 142, 142);
+    final Rectangle PREVIEW_GRID_VIEW_BOUNDS = new Rectangle(6, 6, 142, 142);
 
 
     JLabel levelNameLabel;
@@ -119,7 +119,7 @@ public class LevelDetailPanel extends DetailPanel {
         startLevelButton.setMaximumSize(START_LEVEL_BUTTON_SIZE);
 
         startLevelButton.setBounds(START_LEVEL_BUTTON_BOUNDS);
-        StartLevelButtonController startLevelButtonController = new StartLevelButtonController(startLevelButton);
+        StartLevelButtonController startLevelButtonController = new StartLevelButtonController(startLevelButton, this, app);
 
         startLevelButton.addMouseListener(startLevelButtonController);
         startLevelButton.addMouseMotionListener(startLevelButtonController);
@@ -139,12 +139,14 @@ public class LevelDetailPanel extends DetailPanel {
 
         add(largeStars);
         largeStars.repaint();
+
+        getPreviewGridView().setBounds(PREVIEW_GRID_VIEW_BOUNDS);
+        add(getPreviewGridView());
     }
 
     public void setLevel(Level level) {
 
         this.level = level;
-
         //        Setup level type label
 
         levelNameLabel.setText(TextContact.LEVEL + " " + level.getId().toString());
@@ -157,17 +159,17 @@ public class LevelDetailPanel extends DetailPanel {
             levelType = TextContact.LEVEL_TYPE_PUZZLE;
             levelIntro = TextContact.LEVEL_INTRO_PUZZLE;
 
-        } else if(level instanceof LightningLevel) {
+        } else if (level instanceof LightningLevel) {
 
             levelType = TextContact.LEVEL_TYPE_LIGHTNING;
             levelIntro = TextContact.LEVEL_INTRO_LIGHTNING;
 
-        } else if(level instanceof EliminationLevel) {
+        } else if (level instanceof EliminationLevel) {
 
             levelType = TextContact.LEVEL_TYPE_ELIMINATION;
             levelIntro = TextContact.LEVEL_INTRO_ELIMINATION;
 
-        } else if(level instanceof ReleaseLevel) {
+        } else if (level instanceof ReleaseLevel) {
 
             levelType = TextContact.LEVEL_TYPE_RELEASE;
             levelIntro = TextContact.LEVEL_INTRO_RELEASE;
@@ -176,18 +178,21 @@ public class LevelDetailPanel extends DetailPanel {
         levelTypeLabel.setText(levelType);
         levelIntroLabel.setText(levelIntro);
 
-        getPreviewGridView().setBounds(PREVIEW_GRID_VIEW_BOUNDS);
-        add(getPreviewGridView());
-
         largeStars.setStar(level.getScore().getStarNumber());
+
+        getPreviewGridView().initialize(level);
+        getPreviewGridView().modelChanged();
     }
 
     public PreviewGridView getPreviewGridView() {
         if (previewGridView == null) {
-
-            previewGridView = new PreviewGridView(app, level);
+            previewGridView = new PreviewGridView(app);
         }
 
         return previewGridView;
+    }
+
+    public Level getLevel() {
+        return level;
     }
 }

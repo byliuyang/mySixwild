@@ -58,12 +58,7 @@ public class ScoreProgressView extends JPanel implements IModelUpdated {
     Value twoStarScore;
     Value threeStarScore;
 
-    public ScoreProgressView(Score score) {
-        this.current = score.getCurrentScore();
-        this.oneStarScore = score.getOneStarScore();
-        this.twoStarScore = score.getTwoStarScore();
-        this.threeStarScore = score.getThreeStarScore();
-
+    public ScoreProgressView() {
         setPreferredSize(GameScreen.SCORE_PROGRESS_VIEW_SIZE);
         setMaximumSize(GameScreen.SCORE_PROGRESS_VIEW_SIZE);
         setMinimumSize(GameScreen.SCORE_PROGRESS_VIEW_SIZE);
@@ -233,5 +228,15 @@ public class ScoreProgressView extends JPanel implements IModelUpdated {
     public void modelChanged() {
 
         getScoreProgressBar().modelChanged();
+    }
+
+    public void setScore(Score score) {
+        this.current = score.getCurrentScore();
+        this.oneStarScore = score.getOneStarScore();
+        this.twoStarScore = score.getTwoStarScore();
+        this.threeStarScore = score.getThreeStarScore();
+        removeAll();
+
+        getScoreProgressBar().setScore(score);
     }
 }

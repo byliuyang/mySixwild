@@ -104,13 +104,15 @@ public class RestartLevelMove implements IMove {
 
                     app.getGameScreen().getTimer().cancel();
 
-                    ((LightningLevel) level).getTime().setCurrentTime(new Value(0));
+                    ((LightningLevel) level).getTime().setCurrentTime(Utilities.ZERO);
 
                     Timer timer = new Timer();
                     app.getGameScreen().setTimer(timer);
                     timer.scheduleAtFixedRate(new TimerAutoMove(app, level, ((LightningLevel) level).getTime()), Utilities.ONE_SECOND, Utilities.ONE_SECOND);
                 }
             }
+
+            level.getScore().setCurrentScore(0);
 
             app.getGameScreen().getRestartLevelSpecialMoveSound().play();
 

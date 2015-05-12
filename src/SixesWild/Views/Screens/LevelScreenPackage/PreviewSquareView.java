@@ -4,7 +4,6 @@ import SixesWild.Models.Square;
 import SixesWild.Models.Value;
 import SixesWild.Utilities;
 import SixesWild.Views.Components.StyledButton;
-import SixesWild.Views.Screens.Screen;
 
 import java.awt.*;
 import java.awt.font.FontRenderContext;
@@ -34,13 +33,6 @@ public class PreviewSquareView extends StyledButton {
     final int ROUNDED_ARC_X = 4;
     //    Rounded arc y
     final int ROUNDED_ARC_Y = 4;
-    //    Multiplier font size
-    final float MULTIPLIER_FONT_SIZE = 4L;
-    //    Multiply sign
-    final String MULTIPLY_SIGN = "×";
-    //    Multiplier padding
-    final int MULTIPLIER_PADDING_RIGHT = 2;
-    final int MULTIPLIER_PADDING_BOTTOM = 2;
     //    Six label of container
     final String SIX = "6";
 
@@ -57,6 +49,7 @@ public class PreviewSquareView extends StyledButton {
 
     public void redrawState() {
         super.redrawState();
+
         if (square.isContainer()) {
             int containerWidth = (int) getMinimumSize().getWidth();
             int containerHeight = (int) getMinimumSize().getHeight();
@@ -107,6 +100,7 @@ public class PreviewSquareView extends StyledButton {
             int fontWidth = metrics.stringWidth(text);
 
             FontRenderContext renderContext = graphics2D.getFontRenderContext();
+
             GlyphVector glyphVector = Utilities.normalFont.createGlyphVector(renderContext, text);
             Rectangle visualBounds = glyphVector.getVisualBounds().getBounds();
 

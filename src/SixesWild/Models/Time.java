@@ -36,8 +36,8 @@ public class Time implements Serializable {
         return currentTime;
     }
 
-    public void setCurrentTime(Value currentTime) {
-        this.currentTime = currentTime;
+    public void setCurrentTime(int currentTime) {
+        this.currentTime.setValue(currentTime);
     }
 
     public Value getEndTime() {

@@ -4,6 +4,24 @@ package SixesWild.Contracts;
  * Created by harryliu on 5/5/15.
  */
 public class TextContact {
+
+    //    Banner title
+    public static final String BANNER_TITLE = "SixesWild";
+
+    //    Text of navigation buttons
+    public static final String CONTINUE_BUTTON_TEXT = "Contiune Game";
+    public static final String LEVEL_BUTTON_TEXT = "View Levels";
+    public static final String BADGE_BUTTON_TEXT = "Achievements";
+    public static final String ABOUT_BUTTON_TEXT = "Developer";
+
+    //    Title of application
+    public static final String APPLICATION_TITLE = "SixesWild";
+
+    //    Title of individual screens
+    public static final String ABOUT_SCREEN_TITLE = "Developer";
+    public static final String LEVELS_SCREEN_TITLE = "Levels";
+    public static final String BADGE_SCREEN_TITLE = "Achievement Badges";
+
     //    Score label text
     public static final String SCORE_LABEL_TEXT = "Score: ";
 
@@ -48,7 +66,7 @@ public class TextContact {
             "<html>" +
                     "<ul>" +
                         "<li>Each “6” is a block</li>" +
-                        "<li>As regions are formed, the “6” fall downward<li>" +
+                        "<li>As regions are formed, the “6” fall downward</li>" +
                         "<li>Once all are moved to their proper place, level completes</li>" +
                     "</ul>" +
             "</html>";

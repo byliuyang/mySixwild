@@ -1,5 +1,6 @@
 package SixesWild.Views.Screens.MenuScreenPackage;
 
+import SixesWild.Contracts.TextContact;
 import SixesWild.Contracts.TipContract;
 import SixesWild.Controllers.MenuScreen.AboutButtonController;
 import SixesWild.Controllers.MenuScreen.AchievementButtonController;
@@ -29,12 +30,10 @@ public class MenuScreen extends Screen {
             (int) MenuScreenBanner.BANNER_SIZE.getHeight()
     );
 
-    //    Banner title
-    final String BANNER_TITLE = "SixesWild";
-
     //    Button background colors
     final Color BUTTON_BACK_COLOR = new Color(115, 146, 116);
     final Color BUTTON_HOVERED_COLOR = new Color(86, 106, 87);
+    final Color BUTTON_DISABLED_COLOR = new Color(167, 167, 167);
 
     //    Button font size
     final float BUTTON_FONT_SIZE = 26L;
@@ -75,12 +74,6 @@ public class MenuScreen extends Screen {
             (int) BUTTON_SIZE.getHeight()
     );
 
-    //    Text of navigation buttons
-    final String CONTINUE_BUTTON_TEXT = "Contiune Game";
-    final String LEVEL_BUTTON_TEXT = "View Levels";
-    final String BADGE_BUTTON_TEXT = "Achievements";
-    final String ABOUT_BUTTON_TEXT = "Developers";
-
     //    Navigation buttons
     TextButton continueButton;
     TextButton levelsButton;
@@ -91,7 +84,7 @@ public class MenuScreen extends Screen {
         super(title, app);
 
 //        Setup banner bar
-        MenuScreenBanner bannerBar = new MenuScreenBanner(BANNER_TITLE, BANNER_BACK_COLOR);
+        MenuScreenBanner bannerBar = new MenuScreenBanner(TextContact.BANNER_TITLE, BANNER_BACK_COLOR);
         bannerBar.setBounds(BANNER_BOUNDS);
         add(bannerBar);
 
@@ -140,7 +133,7 @@ public class MenuScreen extends Screen {
     public TextButton getContinueButton() {
         if (continueButton == null) {
             continueButton = new TextButton(
-                    CONTINUE_BUTTON_TEXT,
+                    TextContact.CONTINUE_BUTTON_TEXT,
                     BUTTON_FONT_SIZE,
                     Color.WHITE,
                     Color.WHITE,
@@ -149,13 +142,17 @@ public class MenuScreen extends Screen {
                     BUTTON_BACK_COLOR,
                     BUTTON_HOVERED_COLOR,
                     BUTTON_BACK_COLOR,
-                    BUTTON_BACK_COLOR,
+                    BUTTON_DISABLED_COLOR,
                     NavigationBar.NO_ROUND
             );
 
             continueButton.setPreferredSize(BUTTON_SIZE);
             continueButton.setMinimumSize(BUTTON_SIZE);
             continueButton.setMaximumSize(BUTTON_SIZE);
+
+            continueButton.disabled();
+
+
         }
 
         return continueButton;
@@ -164,7 +161,7 @@ public class MenuScreen extends Screen {
     public TextButton getLevelsButton() {
         if (levelsButton == null) {
             levelsButton = new TextButton(
-                    LEVEL_BUTTON_TEXT,
+                    TextContact.LEVEL_BUTTON_TEXT,
                     BUTTON_FONT_SIZE,
                     Color.WHITE,
                     Color.WHITE,
@@ -173,7 +170,7 @@ public class MenuScreen extends Screen {
                     BUTTON_BACK_COLOR,
                     BUTTON_HOVERED_COLOR,
                     BUTTON_BACK_COLOR,
-                    BUTTON_BACK_COLOR,
+                    BUTTON_DISABLED_COLOR,
                     NavigationBar.NO_ROUND
             );
 
@@ -188,7 +185,7 @@ public class MenuScreen extends Screen {
     public TextButton getBadgeButton() {
         if (badgeButton == null) {
             badgeButton = new TextButton(
-                    BADGE_BUTTON_TEXT,
+                    TextContact.BADGE_BUTTON_TEXT,
                     BUTTON_FONT_SIZE,
                     Color.WHITE,
                     Color.WHITE,
@@ -197,7 +194,7 @@ public class MenuScreen extends Screen {
                     BUTTON_BACK_COLOR,
                     BUTTON_HOVERED_COLOR,
                     BUTTON_BACK_COLOR,
-                    BUTTON_BACK_COLOR,
+                    BUTTON_DISABLED_COLOR,
                     NavigationBar.NO_ROUND
             );
 
@@ -212,7 +209,7 @@ public class MenuScreen extends Screen {
     public TextButton getAboutButton() {
         if (aboutButton == null) {
             aboutButton = new TextButton(
-                    ABOUT_BUTTON_TEXT,
+                    TextContact.ABOUT_BUTTON_TEXT,
                     BUTTON_FONT_SIZE,
                     Color.WHITE,
                     Color.WHITE,
@@ -221,7 +218,7 @@ public class MenuScreen extends Screen {
                     BUTTON_BACK_COLOR,
                     BUTTON_HOVERED_COLOR,
                     BUTTON_BACK_COLOR,
-                    BUTTON_BACK_COLOR,
+                    BUTTON_DISABLED_COLOR,
                     NavigationBar.NO_ROUND
             );
 

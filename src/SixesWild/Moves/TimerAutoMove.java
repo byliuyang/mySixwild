@@ -28,7 +28,7 @@ public class TimerAutoMove extends TimerTask {
             time.increase(1);
             ((LevelTimeRemainNavigationBar) app.getGameScreen().getNavigationBar()).modelChanged();
         } else {
-            app.getGameScreen().gameOver();
+            app.getGameScreen().levelCompleted();
         }
     }
 }

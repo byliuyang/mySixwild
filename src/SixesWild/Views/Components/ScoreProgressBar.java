@@ -1,5 +1,6 @@
 package SixesWild.Views.Components;
 
+import SixesWild.Models.Score;
 import SixesWild.Models.Value;
 import SixesWild.Views.IModelUpdated;
 import SixesWild.Views.Screens.Screen;
@@ -18,6 +19,7 @@ public class ScoreProgressBar extends BufferedCanvas implements IModelUpdated {
     //    Colors
     final Color TRANSPARENT_DARK = new Color(0, 0, 0, 80);
     final Color PROGRESS_RED = new Color(208, 102, 102);
+
     Value current;
 
     Value oneStarScore;
@@ -62,5 +64,12 @@ public class ScoreProgressBar extends BufferedCanvas implements IModelUpdated {
     @Override
     public void modelChanged() {
         repaint();
+    }
+
+    public void setScore(Score score) {
+        this.current = score.getCurrentScore();
+        this.oneStarScore = score.getOneStarScore();
+        this.twoStarScore = score.getTwoStarScore();
+        this.threeStarScore = score.getThreeStarScore();
     }
 }
