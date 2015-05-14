@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mySixesWild:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/mySixesWild_jar</output-path>
+    <root id="archive" name="mySixesWild.jar">
+      <element id="module-output" name="mySixesWild" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
