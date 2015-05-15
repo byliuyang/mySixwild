@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08f5d030-2172-4ee9-ab97-6eebcdb659e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Contracts/TextContact.java" afterPath="$PROJECT_DIR$/src/application/Contracts/TextContact.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/AvenirNextBold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/AvenirNextIt.ttf" afterPath="" />
     </list>
     <ignored path="mySixesWild.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +67,8 @@
       <file leaf-file-name="TextContact.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Contracts/TextContact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.26418152">
-              <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.027552674">
+              <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -973,12 +974,12 @@
       <workItem from="1431470330259" duration="1500000" />
       <workItem from="1431550703873" duration="3775000" />
       <workItem from="1431667807525" duration="108000" />
-      <workItem from="1431667961022" duration="3477000" />
+      <workItem from="1431667961022" duration="3620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321505000" />
+    <option name="totallyTimeSpent" value="321648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="956" extended-state="6" />
@@ -1470,8 +1471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Contracts/TextContact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.26418152">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.027552674">
+          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
           <folding />
         </state>
       </provider>
