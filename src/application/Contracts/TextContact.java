@@ -25,7 +25,7 @@ public class TextContact {
     //    Score label text
     public static final String SCORE_LABEL_TEXT = "Score: ";
 
-    public static final String MOVE_LEFT_LABEL_TEXT = "application.Moves remain: ";
+    public static final String MOVE_LEFT_LABEL_TEXT = "Moves remain: ";
 
     public static final String NOT_MARKED_LABEL_TEXT = "Marks remain: ";
 
