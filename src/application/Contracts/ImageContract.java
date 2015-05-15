@@ -58,6 +58,7 @@ public class ImageContract {
     public static final String RESET_BOARD_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/resetBoardSpecialMoveButton.png";
     public static final String SWAP_SQUARE_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/swapSquareSpecialMoveButton.png";
     public static final String REMOVE_TILE_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/removeTailSpecialMoveButton.png";
+
     static final String BADGES_PATH = "/badges";
     //    Badge image list
     public static final String[] BADGE_IMAGE_LIST = {

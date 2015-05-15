@@ -24,7 +24,7 @@ public class DeveloperIntroPicture extends BufferedCanvas {
         }
     }
 
-
+    @Override
     protected void redrawState() {
 
         super.redrawState();
@@ -38,5 +38,16 @@ public class DeveloperIntroPicture extends BufferedCanvas {
         Utilities.setHighQuality(graphics2D);
 
         graphics2D.drawImage(teamIntroductionImage, padddingLeft, padddingTop, imageWidth, imageHeight, this);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        if (g == null) {
+            return;
+        }
+
+        Utilities.setHighQuality(g);
+
+        g.drawImage(bufferedImage, PADDING_TOP, PADDING_LEFT, (int) getMinimumSize().getWidth(), (int) getMinimumSize().getHeight(), this);
     }
 }
