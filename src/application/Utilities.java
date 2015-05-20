@@ -53,15 +53,14 @@ public class Utilities {
         }
     }
 
-    public static void updateLevelState(Level level){
+    public static void updateLevelState(Level level) {
 
         long levelID = level.getId().getValue();
 
         try {
-
 //                Read level information from file
             ObjectInputStream objectInputStream = new ObjectInputStream(
-                    new FileInputStream(System.getProperty(Application.ROOT_PATH)+Application.LEVEL_PATH + "/" + new Long(levelID).toString() + ".level")
+                    new FileInputStream(System.getProperty(Application.ROOT_PATH) + Application.LEVEL_PATH + "/" + new Long(levelID).toString() + ".level")
             );
 
 //                Track current score

@@ -27,6 +27,9 @@ public class StartLevelButtonController extends ButtonController {
     @Override
     public void mouseClicked(MouseEvent e) {
         Level level = levelDetailPanel.getLevel();
+
+        level.getGrid().generateTiles();
+
         level.getScore().setCurrentScore(Utilities.ZERO);
 
         if (level instanceof LightningLevel) {
@@ -34,10 +37,10 @@ public class StartLevelButtonController extends ButtonController {
             ((LightningLevel) level).getTime().setCurrentTime(Utilities.ZERO);
         }
 
-        app.switchTo(app.getGameScreen());
-
         app.getGameScreen().setLevel(level);
         app.getGameScreen().initialize();
         app.getGameScreen().modelChanged();
+
+        app.switchTo(app.getGameScreen());
     }
 }

@@ -21,7 +21,7 @@ public class PreviewGridView extends TransitableView implements IModelUpdated {
     final int GRID_VIEW_PADDING_LEFT = 4;
     final int GRID_VIEW_PADDING_TOP = 4;
 
-    final Color SQUARE_NORMAL_BACK_COLOR = new Color(72, 111, 74);
+    final Color SQUARE_NORMAL_BACK_COLOR = new Color(60, 94, 62, 50);
     final Color SQUARE_HOVERED_BACK_COLOR = new Color(250, 212, 0);
     final Color SQUARE_DISABLED_BACK_COLOR = new Color(165, 165, 165);
 

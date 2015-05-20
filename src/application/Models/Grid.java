@@ -43,7 +43,7 @@ public class Grid implements Serializable {
                 Value rowValue = new Value(row);
                 Value columnValue = new Value(column);
 
-                Location location = new Location(rowValue, columnValue);
+                Location location = new Location(columnValue, rowValue);
                 squares[row][column] = new Square(location, null);
             }
         }

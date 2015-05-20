@@ -130,7 +130,7 @@ public class SpecialMoveNavigationBar extends NavigationBar implements IModelUpd
                     RESET_BOARD_SPECIAL_MOVE_HOVERED_BACK_COLOR,
                     RESET_BOARD_SPECIAL_MOVE_ACTIVED_BACK_COLOR,
                     SPECIAL_MOVE_DISABLED_BACK_COLOR,
-                    specialMoveLeft.getResetBoardSpecialMoveLetf()
+                    specialMoveLeft.getResetBoardSpecialMove()
             );
         }
         return resetBoardSpecialMoveView;

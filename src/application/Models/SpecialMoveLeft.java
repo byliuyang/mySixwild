@@ -7,41 +7,41 @@ import java.io.Serializable;
  */
 public class SpecialMoveLeft implements Serializable {
 
-    Value resetBoardSpecialMove;
-    Value removeTileSpecialMove;
-    Value swapTileSpecialMove;
+        Value resetBoardSpecialMove;
+        Value removeTileSpecialMove;
+        Value swapTileSpecialMove;
 
 
-    public SpecialMoveLeft(
-            Value resetBoardSpecialMove,
-            Value removeTileSpecialMove,
-            Value swapTileSpecialMove) {
-        this.resetBoardSpecialMove = resetBoardSpecialMove;
-        this.removeTileSpecialMove = removeTileSpecialMove;
-        this.swapTileSpecialMove = swapTileSpecialMove;
-    }
+        public SpecialMoveLeft(
+                Value resetBoardSpecialMove,
+                Value removeTileSpecialMove,
+                Value swapTileSpecialMove) {
+            this.resetBoardSpecialMove = resetBoardSpecialMove;
+            this.removeTileSpecialMove = removeTileSpecialMove;
+            this.swapTileSpecialMove = swapTileSpecialMove;
+        }
 
-    public Value getResetBoardSpecialMoveLetf() {
-        return resetBoardSpecialMove;
-    }
+        public Value getResetBoardSpecialMove() {
+            return resetBoardSpecialMove;
+        }
 
-    public void setResetBoardSpecialMoveLetf(Value resetBoardSpecialMoveLetf) {
-        this.resetBoardSpecialMove = resetBoardSpecialMoveLetf;
-    }
+        public void setResetBoardSpecialMove(Value resetBoardSpecialMove) {
+            this.resetBoardSpecialMove = resetBoardSpecialMove;
+        }
 
-    public Value getRemoveTileSpecialMove() {
-        return removeTileSpecialMove;
-    }
+        public Value getRemoveTileSpecialMove() {
+            return removeTileSpecialMove;
+        }
 
-    public void setRemoveTileSpecialMove(Value removeTileSpecialMove) {
-        this.removeTileSpecialMove = removeTileSpecialMove;
-    }
+        public void setRemoveTileSpecialMove(Value removeTileSpecialMove) {
+            this.removeTileSpecialMove = removeTileSpecialMove;
+        }
 
-    public Value getSwapTileSpecialMove() {
-        return swapTileSpecialMove;
-    }
+        public Value getSwapTileSpecialMove() {
+            return swapTileSpecialMove;
+        }
 
-    public void setSwapTileSpecialMove(Value swapTileSpecialMove) {
-        this.swapTileSpecialMove = swapTileSpecialMove;
-    }
+        public void setSwapTileSpecialMove(Value swapTileSpecialMove) {
+            this.swapTileSpecialMove = swapTileSpecialMove;
+        }
 }

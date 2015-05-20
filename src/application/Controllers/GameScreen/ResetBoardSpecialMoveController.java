@@ -15,14 +15,14 @@ public class ResetBoardSpecialMoveController extends SpecialMoveButtonController
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMoveLetf().getValue() > 0) {
+        if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMove().getValue() > 0) {
             super.mouseEntered(e);
         }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMoveLetf().getValue() > 0) {
+        if (specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMove().getValue() > 0) {
             super.mousePressed(e);
             ResetBoardSpecialMove move = new ResetBoardSpecialMove(app.getGameScreen().getGridView().getGrid(), app.getGameScreen().getLevel());
             if (move.isValid()) {
@@ -30,7 +30,7 @@ public class ResetBoardSpecialMoveController extends SpecialMoveButtonController
 
                 SpecialMoveNavigationBar specialMoveNavigationBar = ((SpecialMoveNavigationBar) app.getGameScreen().getNavigationBar());
 
-                specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMoveLetf().decrease(1);
+                specialMoveNavigationBar.getSpecialMoveLeft().getResetBoardSpecialMove().decrease(1);
                 specialMoveNavigationBar.setAllMoveButtonNormal();
 
                 specialMoveNavigationBar.getResetBoardSpecialMoveView().modelChanged();

@@ -33,7 +33,7 @@ public class DeveloperIntroPicture extends BufferedCanvas {
         int imageHeight = teamIntroductionImage.getHeight(this);
 
         int padddingLeft = ((int) getPreferredSize().getWidth() - imageWidth) / 2;
-        int padddingTop = ((int) getPreferredSize().getHeight() - imageHeight) / 2;
+        int padddingTop = ((int) getPreferredSize().getHeight() - imageHeight) / 2 - 16;
 
         Utilities.setHighQuality(graphics2D);
 

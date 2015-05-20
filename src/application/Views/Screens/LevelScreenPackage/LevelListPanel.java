@@ -23,6 +23,7 @@ public class LevelListPanel extends ListPanel {
         setUpViews();
         showViews();
 
+        unlockLevel(1);
         setActiveView(getViews().get(0));
         getViews().get(0).getButton().actived();
         levelDetailPanel.setLevel(levels.get(0));
