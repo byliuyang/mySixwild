@@ -1,6 +1,6 @@
 package application.Views.Screens.BadgeScreenPackage;
 
-import application.Models.Badge;
+import application.Models.Badges.Badge;
 import application.Views.Components.ListPanel;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class BadgeListPanel extends ListPanel {
     @Override
     public void setUpViews() {
 
-//        for (Iterator<Badge> badge = badges.iterator(); badge.hasNext();) {
+//        for (Iterator<Badges> badge = badges.iterator(); badge.hasNext();) {
 //            LevelView levelView = new LevelView(level.next(), levelDetailPanel);
 //            levelView.setPreferredSize(ListPanel.VIEW_SIZE);
 //

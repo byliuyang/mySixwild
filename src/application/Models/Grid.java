@@ -55,7 +55,7 @@ public class Grid implements Serializable {
     }
 
     public void removeSquare(int row, int column) {
-        Location location = new Location(new Value(row), new Value(column));
+        Location location = new Location(new Value(column), new Value(row));
         squares[(int) location.getRow().getValue()][(int) location.getColumn().getValue()] = null;
     }
 

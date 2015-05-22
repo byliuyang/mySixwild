@@ -1,6 +1,6 @@
 package application.Views.Screens.BadgeScreenPackage;
 
-import application.Models.Badge;
+import application.Models.Badges.Badge;
 import application.Views.Components.FlipPagePanel;
 import application.Views.Components.ListPanel;
 import application.Views.Screens.FlipPageScreen;

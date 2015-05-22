@@ -1,6 +1,6 @@
 package application.Views.Screens.BadgeScreenPackage;
 
-import application.Models.Badge;
+import application.Models.Badges.Badge;
 import application.Views.Application;
 import application.Views.Components.DetailPanel;
 import application.Views.Screens.FlipPageScreen;
@@ -24,7 +24,7 @@ public class BadgesScreen extends FlipPageScreen {
 
     void setUpBadgeList() {
 
-//        Read badge files here, and add badge into ArrayList<Badge> badges
+//        Read badge files here, and add badge into ArrayList<Badges> badges
 
 
         badges = null;

@@ -27,9 +27,9 @@ public class NavigationBar extends JPanel {
     //    Navigation bar title label font size
     final float TITLE_FONT_SIZE = 30L;
     //    Title label bounds
-    final Rectangle NAV_LABEL_BOUNDS = new Rectangle(78, 0, 280, 58);
+    final Rectangle NAV_LABEL_BOUNDS = new Rectangle(78, 0, 320, 58);
     //    Back button dimension
-    final Dimension NAV_LABEL_SIZE = new Dimension(280, 58);
+    final Dimension NAV_LABEL_SIZE = new Dimension(320, 58);
     //    Navigation bar title label alignment
     final boolean NAV_LABEL_LEFT_ALIGN = true;
     //    Back button

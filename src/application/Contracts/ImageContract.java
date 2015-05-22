@@ -30,7 +30,7 @@ public class ImageContract {
     //    Level button locked image
     public static final String LEVEL_BUTTON_LOCKED_IMAGE = ASSETS_PATH + "/levelLocked.png";
 
-    //    Badge button locked image
+    //    Badges button locked image
     public static final String BADGE_BUTTON_LOCKED_IMAGE = ASSETS_PATH + "/badgeLocked.png";
 
     //    Reset badge button image
@@ -60,7 +60,7 @@ public class ImageContract {
     public static final String REMOVE_TILE_SPECIAL_MOVE_IMAGE = ASSETS_PATH + "/removeTailSpecialMoveButton.png";
 
     static final String BADGES_PATH = "/badges";
-    //    Badge image list
+    //    Badges image list
     public static final String[] BADGE_IMAGE_LIST = {
             BADGES_PATH + "/1.png",
             BADGES_PATH + "/2.png",

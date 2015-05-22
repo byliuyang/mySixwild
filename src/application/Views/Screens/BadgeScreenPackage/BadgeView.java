@@ -2,7 +2,7 @@ package application.Views.Screens.BadgeScreenPackage;
 
 import application.Contracts.ImageContract;
 import application.Controllers.ViewBadgeScreen.BadgeButtonController;
-import application.Models.Badge;
+import application.Models.Badges.Badge;
 import application.Views.Components.ListPanel;
 import application.Views.Components.LockableButton;
 import application.Views.Components.LockableButtonView;
@@ -15,10 +15,10 @@ import java.awt.*;
  * Created by harryliu on 5/4/15.
  */
 public class BadgeView extends LockableButtonView {
-    //    Badge button size
+    //    Badges button size
     final Dimension BADGE_BUTTON_SIZE = new Dimension(72, 72);
 
-    //    Badge button bounds
+    //    Badges button bounds
     final Rectangle BADGE_BUTTON_BOUNDS = new Rectangle(
             0,
             0,
@@ -26,7 +26,7 @@ public class BadgeView extends LockableButtonView {
             (int) BADGE_BUTTON_SIZE.getHeight()
     );
 
-    //    Badge button background color
+    //    Badges button background color
     final Color BADGE_BUTTON_HOVERED_BACK_COLOR = new Color(236, 233, 230);
     final Color BADGE_BUTTON_ACTIVED_BACK_COLOR = new Color(239, 229, 214);
     final Color BADGE_BUTTON_LOCKED_BACK_COLOR = new Color(149, 149, 149);
@@ -34,7 +34,7 @@ public class BadgeView extends LockableButtonView {
     //    Default lock state
     final boolean DEFAULT_LOCK_STATE = true;
 
-    //    Badge entity
+    //    Badges entity
     Badge badge;
     BadgeDetailPanel badgeDetailPanel;
 

@@ -16,21 +16,21 @@ import java.io.File;
  */
 public class BadgeDetailPanel extends DetailPanel {
 
-    //    Badge canvas size
+    //    Badges canvas size
     final Dimension BADGE_CANVAS_SIZE = new Dimension(82, 82);
-    //    Badge canvas bounds
+    //    Badges canvas bounds
     final Rectangle BADGE_CANVAS_BOUNDS = new Rectangle(42, 38, 82, 82);
 
-    //    Badge name font size
+    //    Badges name font size
     final float BADGE_NAME_FONT_SIZE = 26L;
 
-    //    Badge name label bounds
+    //    Badges name label bounds
     final Rectangle BADGE_NAME_BOUNDS = new Rectangle(186, 22, 162, 40);
 
-    //    Badge introduction font size
+    //    Badges introduction font size
     final float BADGE_INTRO_FONT_SIZE = 20L;
 
-    //    Badge introduction label bounds
+    //    Badges introduction label bounds
     final Rectangle BADGE_INTRO_BOUNDS = new Rectangle(186, 60, 500, 40);
 
     //    Reset badge button size
@@ -58,7 +58,7 @@ public class BadgeDetailPanel extends DetailPanel {
         setLayout(null);
         setBackground(DetailPanel.DETAIL_PANEL_BACK_COLOR);
 
-//        Badge canvas
+//        Badges canvas
 
         badgeCanvas = new BadgeCanvas(ImageContract.BADGE_IMAGE_LIST[2]);
 

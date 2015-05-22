@@ -1,7 +1,7 @@
 package application.Controllers.ViewBadgeScreen;
 
 import application.Controllers.FlipScreen.LockableButtonController;
-import application.Models.Badge;
+import application.Models.Badges.Badge;
 import application.Views.Components.LockableButton;
 import application.Views.Components.LockableButtonView;
 import application.Views.Screens.BadgeScreenPackage.BadgeDetailPanel;
