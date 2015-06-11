@@ -1,5 +1,7 @@
 package application;
 
+import application.Models.Badges.Badge;
+import application.Models.Badges.ScoreBadge;
 import application.Models.Levels.Level;
 import application.Views.Application;
 
@@ -79,5 +81,8 @@ public class Utilities {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void  generateBadges(){
     }
 }

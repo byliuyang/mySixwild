@@ -3,7 +3,9 @@ package application.Models.Badges;
 import application.Models.Unlockable;
 import application.Views.Application;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
 
 /**
  *
@@ -20,11 +22,15 @@ public abstract class Badge extends Unlockable {
         super(unlockState);
     }
 
-    public Badge(boolean unlockState, String name, String introduction, Image icon) {
+    public Badge(boolean unlockState, String name, String introduction, String icon) {
         super(unlockState);
         this.name = name;
         this.introduction = introduction;
-        this.icon = icon;
+        try {
+            this.icon = ImageIO.read(new File(System.getProperty(Application.ROOT_PATH) + icon));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public abstract boolean isValid(Application app);

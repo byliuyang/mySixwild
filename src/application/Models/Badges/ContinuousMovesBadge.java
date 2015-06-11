@@ -8,10 +8,18 @@ import application.Views.Application;
 public class ContinuousMovesBadge extends Badge {
 
     int numberContinuousMove;
+    int numberTiles;
 
-    public ContinuousMovesBadge(boolean unlockState, int numberContinuousMove) {
+    public ContinuousMovesBadge(boolean unlockState, int numberContinuousMove, int numberTiles) {
         super(unlockState);
         this.numberContinuousMove = numberContinuousMove;
+        this.numberTiles = numberTiles;
+    }
+
+    public ContinuousMovesBadge(boolean unlockState, String name, String introduction, String icon, int numberContinuousMove, int numberTiles) {
+        super(unlockState, name, introduction, icon);
+        this.numberContinuousMove = numberContinuousMove;
+        this.numberTiles = numberTiles;
     }
 
     @Override

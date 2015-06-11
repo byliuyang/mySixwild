@@ -16,7 +16,7 @@ public class ScoreBadge extends Badge {
         this.score = score;
     }
 
-    public ScoreBadge(boolean unlockState, String name, String introduction, Image icon, int score) {
+    public ScoreBadge(boolean unlockState, String name, String introduction, String icon, int score) {
         super(unlockState, name, introduction, icon);
         this.score = score;
     }
